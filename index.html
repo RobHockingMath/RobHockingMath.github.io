@@ -10,35 +10,63 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+	<!-- Language Toggle Button in the Top-Right Corner -->
+    <button onclick="toggleLanguage()" class="language-toggle">中文</button>
+
     <div class="container">
         <!-- Sidebar with Navigation at the Top and Name at the Bottom -->
         <nav class="sidebar">
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a>
-				    <!-- Submenu for Projects -->
+                <li><a href="#" data-lang="en">Home</a><a href="#" data-lang="cn" style="display:none;">首頁</a></li>
+                <li><a href="#" data-lang="en">About</a><a href="#" data-lang="cn" style="display:none;">關於我</a></li>
+                <li>
+                    <a href="#" data-lang="en">Projects</a>
+                    <a href="#" data-lang="cn" style="display:none;">項目</a>
+                    <!-- Submenu for Projects -->
                     <ul class="submenu">
                         <li>
-							<a href="digital_holography.html">Digital Holography</a>
+                            <a href="digital_holography.html" data-lang="en">Digital Holography</a>
+                            <a href="digital_holography.html" data-lang="cn" style="display:none;">數位全像圖</a>
+						</li>
 						<li>
-                            <a href="project2.html">Fractal Geometry</a>
+                            <a href="#" data-lang="en">Fractal Geometry</a>
+                            <a href="#" data-lang="cn" style="display:none;">碎形幾何</a>
 						<li>
-                            <a href="project3.html">Relativistic Visualization</a>
+                            <a href="#">Relativistic Visualization</a>
+							<a href="#" data-lang="cn" style="display:none;">相對論可視化</a>
                         </li>
                     </ul>
 				</li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" data-lang="en">Gallery</a><a href="#" data-lang="cn">畫廊</a></li>
+                <li><a href="#">Contact</a><a href="#">Contact</a>聯絡</li>
             </ul>
             <div class="name-section">
-                <h1>Rob Hocking</h1>
-                <p>Mathematical Artist and Holographer</p>
+                <h1 data-lang="en">Rob Hocking</h1>
+				<h1 data-lang="cm" style="display:none;">龍崎</h1>
+                <p data-lang="en">Mathematical Artist and Holographer</p>
             </div>
         </nav>
 
         <!-- Main Content Area -->
         <div class="content"></div>
     </div>
+	
+<!-- JavaScript function for language toggle -->
+    <script>
+        function toggleLanguage() {
+            const englishElements = document.querySelectorAll('[data-lang="en"]');
+            const chineseElements = document.querySelectorAll('[data-lang="cn"]');
+            const toggleButton = document.querySelector('.language-toggle');
+
+            // Toggle visibility of each language
+            englishElements.forEach(el => el.style.display = el.style.display === 'none' ? 'block' : 'none');
+            chineseElements.forEach(el => el.style.display = el.style.display === 'none' ? 'block' : 'none');
+
+            // Update button text
+            toggleButton.textContent = toggleButton.textContent === '中文' ? 'English' : '中文';
+        }
+    </script>	
+
 </body>
 </html>
