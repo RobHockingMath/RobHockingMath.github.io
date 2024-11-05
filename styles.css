@@ -138,3 +138,13 @@ body {
 .content {
     flex-grow: 1;
 }
+
+/* Text styling with white color and black outline */
+.outlined-text {
+    color: white;
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000; /* Creates a thin black outline around the text */
+}
