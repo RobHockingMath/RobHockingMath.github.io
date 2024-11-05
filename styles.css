@@ -80,13 +80,12 @@ body {
     white-space: nowrap; /* Prevent text wrapping */
 }
 
-/* Secondary (nested) submenu styling */
+/* Secondary (nested) submenu styling for vertical stacking */
 .submenu .submenu {
-    margin-left: 20px; /* Shift nested submenu to the right */
-    position: absolute;
-    top: 0;
-    left: 100%; /* Position it to the right of the parent submenu */
-    padding: 10px; /* Extra padding for hover zone */
+    margin-left: 0; /* Remove right offset for sub-submenus */
+    margin-top: 5px; /* Slight vertical offset to appear below the parent */
+    padding-left: 20px; /* Indent to visually separate */
+    position: relative; /* Align directly below the parent item */
     transition: opacity 0.2s ease-in-out;
     opacity: 0;
 }
