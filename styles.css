@@ -19,7 +19,7 @@
 
 /* Background for Digital Holography page */
 .holography-container {
-    background-image: url('Sydney.jpg'); /* Replace with your image path */
+    background-image: url('Sydney.jpg') !important; /* Replace with your image path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
