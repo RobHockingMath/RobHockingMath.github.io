@@ -80,6 +80,12 @@ body {
     display: block;
 }
 
+/* Show secondary submenu (nested) on hover */
+.submenu li:hover > .submenu {
+    display: block;
+    margin-left: 20px; /* Additional indent for deeper submenu levels */
+}
+
 /* Name and occupation styling at the bottom of the sidebar */
 .name-section {
     text-align: left; /* Ensure left alignment */
