@@ -12,10 +12,10 @@ body {
     display: flex;
 }
 
-/* Sidebar styling with fixed position */
+/* Sidebar styling */
 .sidebar {
     width: 200px;
-    background-color: transparent; /* Fully transparent background */
+    background-color: transparent;
     position: fixed;
     height: 100vh;
     display: flex;
@@ -23,6 +23,8 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 10;
+    font-size: 1.2em;
+    font-family: 'Itim', cursive;
 }
 
 .sidebar ul {
@@ -59,16 +61,20 @@ body {
     position: relative; /* Position content to enable z-index layering */
 }
 
+/* Name overlay with left alignment */
 .overlay {
-    background-color: transparent; /* Fully transparent overlay */
+    background-color: transparent;
     width: 100%;
-    padding: 20px;
-    text-align: left;
+    padding: 20px 0; /* Remove left padding to align with sidebar */
+    text-align: left; /* Aligns text to the left */
+    padding-left: 200px; /* Aligns with sidebar */
 }
 
 .overlay h1 {
-    font-size: 3em;
-    color: #fff; /* White text color for readability */
+    font-size: 4em; /* Larger font for your name */
+    font-family: 'Itim', cursive;
+    color: #fff;
+    margin-left: 0; /* Remove any default indentation */
 }
 
 /* CSS class for Itim font */
