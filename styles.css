@@ -32,9 +32,11 @@
     background-position: top left; /* Aligns image to the top left */
 }
 
-html, body {
+body {
     height: 100%;
-    overflow: hidden; /* Prevents any extra scrolling issues */
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
 }
 
 /* Sidebar styling with semi-transparent background */
@@ -161,6 +163,7 @@ html, body {
 .content iframe {
     border: 5px solid black; /* Adjust the thickness and color as needed */
     border-radius: 8px; /* Optional: rounded corners */
+	overflow-y: auto
 }
 
 .video-container {
