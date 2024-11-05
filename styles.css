@@ -34,7 +34,7 @@
 
 body {
     height: 100%;
-    overflow-y: auto;
+    overflow: hidden; /* Prevents page-wide scrolling */
     margin: 0;
     padding: 0;
 }
