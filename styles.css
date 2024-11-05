@@ -35,7 +35,6 @@ body {
     text-align: left;
 	font-size: 1.5em; /* 50% larger font size for sidebar links */
     z-index: 10;
-    position: relative;
 }
 
 /* Main menu styling */
@@ -62,7 +61,7 @@ body {
     padding: 10px 0; /* Added padding for hover zone */
     margin: 10px 0 0 20px;
     display: none;
-    position: relative;
+    position: static;
     transition: opacity 0.2s ease-in-out; /* Smooth transition */
     opacity: 0; /* Start hidden */
 }
@@ -85,7 +84,7 @@ body {
     margin-left: 0; /* Remove right offset for sub-submenus */
     margin-top: 5px; /* Slight vertical offset to appear below the parent */
     padding-left: 20px; /* Indent to visually separate */
-    position: relative; /* Align directly below the parent item */
+    position: static; /* Align directly below the parent item */
     transition: opacity 0.2s ease-in-out;
     opacity: 0;
 }
