@@ -23,8 +23,10 @@
 	background-color: white;
 	background-image: none;
     color: black; /* Ensure text is visible on a black background */
-    height: 100vh; /* Cover full viewport height */
+    min-height: 100vh;
     display: flex;
+	padding: 0;
+	margin: 0;
     /**flex-direction: column;**/
 }
 
