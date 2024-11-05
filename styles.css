@@ -37,6 +37,8 @@ body {
 
 /* Sidebar styling with semi-transparent background */
 .sidebar {
+	display: flex;
+    flex-direction: column;
     width: 500px;
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
     color: #fff;
@@ -122,6 +124,7 @@ body {
 
 /* Name and occupation styling at the bottom of the sidebar */
 .name-section {
+	margin-top: auto; /* Pushes the name-section to the bottom */
     text-align: left; /* Ensure left alignment */
 }
 
