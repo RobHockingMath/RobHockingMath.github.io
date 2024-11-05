@@ -38,7 +38,7 @@ body {
     position: relative;
 }
 
-/* Larger font and left-alignment for navigation links */
+/* Main menu styling */
 .nav-links {
     list-style: none;
     width: 100%;
@@ -46,13 +46,38 @@ body {
 }
 
 .nav-links li {
+    position: relative;
     margin-bottom: 20px;
 }
 
 .nav-links li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.5em; /* Increase font size for links */
+    font-size: 1.5em;
+}
+
+/* Submenu styling */
+.submenu {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 20px; /* Indent submenu items slightly */
+    display: none; /* Hide submenu by default */
+}
+
+.submenu li {
+    margin: 5px 0; /* Space between submenu items */
+}
+
+.submenu li a {
+    font-size: 1.2em; /* Slightly smaller font for submenu */
+    color: #ccc; /* Lighter color for submenu links */
+    padding: 5px 0;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Show submenu on hover, pushing other items down */
+.nav-links li:hover > .submenu {
+    display: block;
 }
 
 /* Name and occupation styling at the bottom of the sidebar */
