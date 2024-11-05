@@ -15,7 +15,7 @@
 /* Sidebar styling with semi-transparent background and left-aligned text */
 .sidebar {
     width: 250px;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    background-color: rgba(0, 0, 0, 0.7) !important; /* Semi-transparent black */
     color: #fff;
     display: flex;
     flex-direction: column;
