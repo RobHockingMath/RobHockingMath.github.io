@@ -12,16 +12,22 @@ body {
     display: flex;
 }
 
+/* Flex container to align sidebar and content */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
 /* Sidebar styling */
 .sidebar {
     width: 200px;
     background-color: transparent;
-    position: fixed;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Align links to the left */
+    padding-left: 20px;
     z-index: 10;
     font-size: 1.2em;
     font-family: 'Itim', cursive;
@@ -54,28 +60,23 @@ body {
     background-size: cover;
     background-position: center;
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding-left: 200px; /* Offset for the sidebar */
-    z-index: 1; /* Lower z-index to stay beneath the sidebar */
-    position: relative; /* Position content to enable z-index layering */
+    align-items: flex-end; /* Align name to the bottom */
+    padding-left: 200px; /* Offset for the sidebar width */
 }
 
 /* Name overlay with left alignment */
 .overlay {
     background-color: transparent;
-    position: absolute; /* Make the overlay position absolute */
-    left: 0; /* Align overlay to the far left */
-    bottom: 20px; /* Position name closer to the bottom */
-    padding-left: 200px; /* Offset to align with sidebar width */
-    width: calc(100% - 200px); /* Ensures overlay doesn't overlap sidebar */
+    padding: 0 20px;
+    width: 100%;
 }
 
 .overlay h1 {
-    font-size: 4em; /* Larger font for your name */
+    font-size: 4em;
     font-family: 'Itim', cursive;
     color: #fff;
-    margin: 0; /* Remove any additional margin */
+    margin: 0;
+    text-align: left;
 }
 
 /* CSS class for Itim font */
