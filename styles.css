@@ -24,6 +24,7 @@
     height: 100vh; /* Ensures full viewport height */
     padding: 0;
     margin: 0;
+	overflow: hidden; /* Prevents scrolling and hides any overflow */
     background-color: white; /* Fills uncovered areas with white */
     background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.6)), 
                       url('Sydney_crop.png');
@@ -35,6 +36,7 @@
 html, body {
     height: 100%;
     overflow: hidden; /* Prevents any extra scrolling issues */
+	overflow-y: auto; /* Only adds scrollbar if needed */
 }
 
 /* Sidebar styling with semi-transparent background */
