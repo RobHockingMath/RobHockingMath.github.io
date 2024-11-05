@@ -138,7 +138,6 @@ body {
 /* Content area */
 .content {
     flex-grow: 1;
-	color: #ccc; /* Lighter color for distinction */
 }
 
 .outlined-text {
