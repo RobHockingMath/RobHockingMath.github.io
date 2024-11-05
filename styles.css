@@ -159,3 +159,9 @@ body {
     border: 5px solid black; /* Adjust the thickness and color as needed */
     border-radius: 8px; /* Optional: rounded corners */
 }
+
+.video-container {
+    display: flex;
+    justify-content: center; /* Centers the iframe horizontally */
+    margin: 20px 0; /* Adds optional spacing above and below */
+}
