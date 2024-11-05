@@ -10,8 +10,8 @@
     display: flex;
     width: 100%;
     height: 100vh;
-    background-image: url('background.jpg');
-    background-size: contain; /* Keep the image’s original dimensions */
+    background-image: url('background2.jpg');
+    background-size: auto; /* Keep the image’s original dimensions */
     background-position: top left; /* Align image to the top left */
     background-repeat: no-repeat; /* Prevents repeating */
 }
