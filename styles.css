@@ -15,14 +15,14 @@ body {
 /* Sidebar styling with fixed position */
 .sidebar {
     width: 200px;
-    background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
-    position: fixed; /* Fixes the sidebar in place */
-    height: 100vh; /* Full viewport height */
+    background-color: transparent; /* Fully transparent background */
+    position: fixed;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 10; /* Increased z-index for layering above the content */
+    z-index: 10;
 }
 
 .sidebar ul {
@@ -60,13 +60,13 @@ body {
 }
 
 .overlay {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: transparent; /* Fully transparent overlay */
     width: 100%;
     padding: 20px;
-    text-align: center;
+    text-align: left;
 }
 
 .overlay h1 {
     font-size: 3em;
-    color: #fff;
+    color: #fff; /* White text color for readability */
 }
