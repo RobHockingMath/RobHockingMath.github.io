@@ -22,7 +22,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 1; /* Ensures it stays above the background image */
+    z-index: 10; /* Increased z-index for layering above the content */
 }
 
 .sidebar ul {
@@ -45,7 +45,7 @@ body {
     color: #007acc;
 }
 
-/* Background image styling */
+/* Background image and main content styling */
 .content {
     flex-grow: 1;
     background-image: url('background.jpg');
@@ -55,6 +55,8 @@ body {
     align-items: flex-end;
     justify-content: center;
     padding-left: 200px; /* Offset for the sidebar */
+    z-index: 1; /* Lower z-index to stay beneath the sidebar */
+    position: relative; /* Position content to enable z-index layering */
 }
 
 .overlay {
