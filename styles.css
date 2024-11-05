@@ -17,6 +17,15 @@
     background-repeat: no-repeat; /* Prevents repeating */
 }
 
+/* Background for Digital Holography page */
+.holography-container {
+    background-image: url('Sydney.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Ensures the image covers the full viewport height */
+}
+
 body {
     margin: 0;
     background-color: black; /* Fallback background color */
