@@ -18,7 +18,7 @@
 
 /* Sidebar styling with semi-transparent background */
 .sidebar {
-    width: 250px;
+    width: 500px;
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
     color: #fff;
     display: flex;
@@ -55,7 +55,7 @@
 }
 
 .name-section h1 {
-    font-size: 5.0em; /* Larger font size for name */
+    font-size: 3.0em; /* Larger font size for name */
     margin: 0;
 }
 
