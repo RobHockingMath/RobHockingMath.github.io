@@ -152,3 +152,8 @@ body {
         -2px  0px 0 #000,
          2px  0px 0 #000; /* Adds a stronger black outline */
 }
+
+.content iframe {
+    border: 5px solid black; /* Adjust the thickness and color as needed */
+    border-radius: 8px; /* Optional: rounded corners */
+}
