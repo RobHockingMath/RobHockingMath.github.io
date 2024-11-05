@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body style="background-color: white; background-image: none; color: black;">
-    <div class="container holography-container">
+    <!-- Apply black background and set height to container to ensure content alignment -->
+    <div class="container" style="background-color: black; color: white; min-height: 100vh; display: flex; flex-direction: column;">
         <!-- Sidebar with Navigation at the Top and Name at the Bottom -->
         <nav class="sidebar">
             <ul class="nav-links">
@@ -34,7 +35,7 @@
 		</nav>
 	
 
-        <div class="content">
+        <div class="content" style="flex-grow: 1;">
             <h1>Digital Holography</h1>
             <p>My friend Sydney Introduced me to holography</p>
 			
