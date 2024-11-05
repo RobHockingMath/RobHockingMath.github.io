@@ -12,8 +12,9 @@
     width: 100%;
     height: 100vh;
     background-image: url('background.jpg'); /* Move background image here */
-    background-size: cover;
-    background-position: center;
+    background-size: cover; /* Covers entire container while keeping aspect ratio */
+    background-position: top; /* Aligns image to the top to avoid cropping */
+    background-repeat: no-repeat; /* Prevents repeating if the image is smaller */
 }
 
 /* Sidebar styling with semi-transparent background */
