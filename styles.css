@@ -1,15 +1,8 @@
-/* Reset basic styling */
+/* Basic reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    color: #fff;
-    height: 100vh;
-    display: flex;
 }
 
 /* Flex container to align sidebar and content */
@@ -22,35 +15,25 @@ body {
 /* Sidebar styling */
 .sidebar {
     width: 200px;
-    background-color: transparent;
+    background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent for testing */
+    position: fixed;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; /* Align links to the left */
+    align-items: flex-start;
     padding-left: 20px;
-    z-index: 10;
     font-size: 1.2em;
     font-family: 'Itim', cursive;
+    color: #fff; /* White text for visibility */
+    z-index: 10;
 }
 
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-}
-
-.sidebar li {
-    margin: 15px 0;
-}
-
+/* Sidebar links */
 .sidebar a {
     color: #fff;
     text-decoration: none;
-    font-size: 18px;
-}
-
-.sidebar a:hover {
-    color: #007acc;
+    margin-bottom: 15px;
 }
 
 /* Background image and main content styling */
@@ -59,12 +42,12 @@ body {
     background-image: url('background.jpg');
     background-size: cover;
     background-position: center;
-    display: flex;
-    align-items: flex-end; /* Align name to the bottom */
     padding-left: 200px; /* Offset for the sidebar width */
+    display: flex;
+    align-items: flex-end;
 }
 
-/* Name overlay with left alignment */
+/* Name overlay styling */
 .overlay {
     background-color: transparent;
     padding: 0 20px;
@@ -77,11 +60,4 @@ body {
     color: #fff;
     margin: 0;
     text-align: left;
-}
-
-/* CSS class for Itim font */
-.itim-regular {
-    font-family: "Itim", cursive;
-    font-weight: 400;
-    font-style: normal;
 }
