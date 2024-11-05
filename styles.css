@@ -32,11 +32,11 @@
     background-position: top left; /* Aligns image to the top left */
 }
 
-body {
+html, body {
     height: 100%;
-    overflow: hidden; /* Prevents page-wide scrolling */
     margin: 0;
     padding: 0;
+    overflow-y: auto; /* Allow scrolling if page content exceeds viewport */
 }
 
 /* Sidebar styling with semi-transparent background */
@@ -150,6 +150,7 @@ body {
     padding: 20px; /* Adjust if needed */
     margin: 0 auto; /* Centers content */
 	background-color: transparent;
+	overflow-y: auto
 }
 
 .outlined-text {
@@ -163,7 +164,6 @@ body {
 .content iframe {
     border: 5px solid black; /* Adjust the thickness and color as needed */
     border-radius: 8px; /* Optional: rounded corners */
-	overflow-y: auto
 }
 
 .video-container {
