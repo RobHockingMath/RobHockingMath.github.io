@@ -56,17 +56,22 @@ body {
     font-size: 1.5em;
 }
 
-/* Submenu styling */
+/* Primary submenu styling */
 .submenu {
     list-style: none;
-    padding: 0;
-    margin: 10px 0 0 20px; /* Indent submenu items slightly */
-    display: none; /* Hide submenu by default */
+    padding: 10px 0; /* Added padding for hover zone */
+    margin: 10px 0 0 20px;
+    display: none;
+    position: relative;
+    transition: opacity 0.2s ease-in-out; /* Smooth transition */
+    opacity: 0; /* Start hidden */
 }
 
 .submenu li {
-    margin: 5px 0; /* Space between submenu items */
+    margin: 5px 0;
+    position: relative;
 }
+
 
 .submenu li a {
     font-size: 1.2em; /* Slightly smaller font for submenu */
@@ -81,7 +86,9 @@ body {
     position: absolute;
     top: 0;
     left: 100%; /* Position it to the right of the parent submenu */
-    padding-left: 10px; /* Additional padding for a better hover zone */
+    padding: 10px; /* Extra padding for hover zone */
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
 }
 
 /* Secondary (nested) submenu styling */
@@ -94,12 +101,14 @@ body {
 /* Show submenu on hover, pushing other items down */
 .nav-links li:hover > .submenu {
     display: block;
+	opacity: 1; /* Fade in for smoother experience */
 }
 
 /* Show secondary submenu (nested) on hover */
 .submenu li:hover > .submenu {
     display: block;
     margin-left: 20px; /* Additional indent for deeper submenu levels */
+	opacity: 1; /* Fade in for smoother experience */
 }
 
 /* Name and occupation styling at the bottom of the sidebar */
