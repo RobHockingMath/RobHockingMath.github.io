@@ -32,11 +32,9 @@
     background-repeat: no-repeat; /* Prevents the image from repeating */
 }
 
-body {
-    margin: 0;
-	padding: 0;
-	height: 100%;
-    background-color: black; /* Fallback background color */
+html, body {
+    height: 100%;
+    overflow: hidden; /* Prevents any extra scrolling issues */
 }
 
 /* Sidebar styling with semi-transparent background */
@@ -149,6 +147,8 @@ body {
     flex-grow: 1;
     padding: 20px; /* Adjust if needed */
     margin: 0 auto; /* Centers content */
+	overflow-y: auto;
+	background-color: transparent;
 }
 
 .outlined-text {
