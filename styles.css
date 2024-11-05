@@ -30,13 +30,11 @@
                       url('Sydney_crop.png');
     background-size: cover; /* Scales the image to cover the container */
     background-position: top left; /* Aligns image to the top left */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
 }
 
 html, body {
     height: 100%;
     overflow: hidden; /* Prevents any extra scrolling issues */
-	overflow-y: auto; /* Only adds scrollbar if needed */
 }
 
 /* Sidebar styling with semi-transparent background */
@@ -149,7 +147,6 @@ html, body {
     flex-grow: 1;
     padding: 20px; /* Adjust if needed */
     margin: 0 auto; /* Centers content */
-	overflow-y: auto;
 	background-color: transparent;
 }
 
