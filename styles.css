@@ -76,6 +76,15 @@ body {
 }
 
 /* Secondary (nested) submenu styling */
+.submenu .submenu {
+    margin-left: 20px; /* Shift nested submenu to the right */
+    position: absolute;
+    top: 0;
+    left: 100%; /* Position it to the right of the parent submenu */
+    padding-left: 10px; /* Additional padding for a better hover zone */
+}
+
+/* Secondary (nested) submenu styling */
 .submenu .submenu li a {
     font-size: 1em; /* Even smaller font for nested sub-submenu */
     color: #bbb; /* Slightly lighter color for sub-submenu links */
