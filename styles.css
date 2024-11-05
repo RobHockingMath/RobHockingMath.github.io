@@ -75,6 +75,13 @@ body {
     white-space: nowrap; /* Prevent text wrapping */
 }
 
+/* Secondary (nested) submenu styling */
+.submenu .submenu li a {
+    font-size: 1em; /* Even smaller font for nested sub-submenu */
+    color: #bbb; /* Slightly lighter color for sub-submenu links */
+    padding-left: 10px; /* Additional padding to distinguish sub-submenu items */
+}
+
 /* Show submenu on hover, pushing other items down */
 .nav-links li:hover > .submenu {
     display: block;
