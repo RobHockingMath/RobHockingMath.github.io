@@ -70,3 +70,10 @@ body {
     font-size: 3em;
     color: #fff; /* White text color for readability */
 }
+
+/* CSS class for Itim font */
+.itim-regular {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
