@@ -139,18 +139,12 @@ body {
     flex-grow: 1;
 }
 
-/* Text styling with stronger white text and black outline */
 .outlined-text {
     color: white;
-    text-shadow: 
-        -2px -2px 0 #000,  
-         2px -2px 0 #000,
-        -2px  2px 0 #000,
-         2px  2px 0 #000,
-        0px -2px 0 #000,
-        0px  2px 0 #000,
-        -2px  0px 0 #000,
-         2px  0px 0 #000; /* Adds a stronger black outline */
+    background-color: rgba(0, 0, 0, 0.6); /* Black with 60% opacity */
+    padding: 5px 10px; /* Adds padding around the text */
+    border-radius: 4px; /* Optional: rounded corners */
+    display: inline-block; /* Ensures the background only covers the text */
 }
 
 .content iframe {
