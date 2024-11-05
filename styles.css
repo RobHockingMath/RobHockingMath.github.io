@@ -25,7 +25,7 @@
     color: black; /* Ensure text is visible on a black background */
     height: 100vh; /* Cover full viewport height */
     display: flex;
-    flex-direction: column;
+    /**flex-direction: column;**/
 }
 
 body {
