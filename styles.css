@@ -64,17 +64,18 @@ body {
 /* Name overlay with left alignment */
 .overlay {
     background-color: transparent;
-    width: 100%;
-    padding: 20px 0; /* Remove left padding to align with sidebar */
-    text-align: left; /* Aligns text to the left */
-    padding-left: 200px; /* Aligns with sidebar */
+    position: absolute; /* Make the overlay position absolute */
+    left: 0; /* Align overlay to the far left */
+    bottom: 20px; /* Position name closer to the bottom */
+    padding-left: 200px; /* Offset to align with sidebar width */
+    width: calc(100% - 200px); /* Ensures overlay doesn't overlap sidebar */
 }
 
 .overlay h1 {
     font-size: 4em; /* Larger font for your name */
     font-family: 'Itim', cursive;
     color: #fff;
-    margin-left: 0; /* Remove any default indentation */
+    margin: 0; /* Remove any additional margin */
 }
 
 /* CSS class for Itim font */
