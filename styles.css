@@ -15,7 +15,7 @@
 /* Sidebar styling */
 .sidebar {
     width: 200px;
-    background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent for testing */
+    background-color: transparent; /* Transparent background */
     position: fixed;
     height: 100vh;
     display: flex;
@@ -25,7 +25,7 @@
     padding-left: 20px;
     font-size: 1.2em;
     font-family: 'Itim', cursive;
-    color: #fff; /* White text for visibility */
+    color: #fff;
     z-index: 10;
 }
 
@@ -60,4 +60,5 @@
     color: #fff;
     margin: 0;
     text-align: left;
+    padding-left: 20px; /* Align with sidebar */
 }
