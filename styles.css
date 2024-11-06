@@ -204,7 +204,7 @@ html, body {
 /* Individual image containers */
 .image-gallery figure {
     text-align: center; /* Centers the caption below each image */
-    width: 500px; /* Set a fixed width for each image (adjust as needed) */
+    width: 1000px; /* Set a fixed width for each image (adjust as needed) */
 }
 
 /* Image styling */
