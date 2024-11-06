@@ -215,7 +215,7 @@ html, body {
 
 /* Container for the image gallery */
 .image-gallery {
-	text-align: left !important;
+	text-align: center !important;
     display: flex;
     gap: 20px; /* Adds space between images */
     justify-content: center; /* Centers the images in the container */
@@ -224,7 +224,7 @@ html, body {
 
 /* Individual image containers */
 .image-gallery figure {
-	text-align: left !important;
+	text-align: center !important;
     width: 350px; /* Set a fixed width for each image (adjust as needed) */
 }
 
