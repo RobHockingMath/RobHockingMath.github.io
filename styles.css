@@ -163,8 +163,14 @@ html, body {
     flex-grow: 1;
     padding: 20px; /* Adjust if needed */
     margin: 0 auto; /* Centers content */
+	text-align: left;
 	background-color: transparent;
 	overflow-y: auto;
+}
+
+.content h1, .content h2, .content img {
+    text-align: center;
+    margin: 0 auto;
 }
 
 .outlined-text {
@@ -178,6 +184,7 @@ html, body {
 .content iframe {
     border: 5px solid black; /* Adjust the thickness and color as needed */
     border-radius: 8px; /* Optional: rounded corners */
+	
 }
 
 /* Ensure text and video containers are block-level with space around them */
