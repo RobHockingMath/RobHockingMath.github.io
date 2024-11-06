@@ -163,7 +163,7 @@ html, body {
     flex-grow: 1;
     padding: 20px; /* Adjust if needed */
     margin: 0 auto; /* Centers content */
-	text-align: left !important;
+	text-align: left;
 	background-color: transparent;
 	overflow-y: auto;
 }
@@ -175,7 +175,6 @@ html, body {
 
 .content p {
     text-align: left !important;
-	margin: 0 auto; /* Centers block elements while keeping text left-aligned */
 }
 
 .outlined-text {
@@ -221,29 +220,26 @@ html, body {
     gap: 20px; /* Adds space between images */
     justify-content: center; /* Centers the images in the container */
     flex-wrap: wrap; /* Allows images to wrap to the next line on smaller screens */
-	margin: 0 auto; /* Centers block elements while keeping text left-aligned */
 }
 
 /* Individual image containers */
 .image-gallery figure {
 	text-align: left !important;
     width: 350px; /* Set a fixed width for each image (adjust as needed) */
-	margin: 0 auto; /* Centers block elements while keeping text left-aligned */
 }
 
 /* Image styling */
 .gallery-image {
-    display: block;
-    margin: 0 auto;
+    width: 100%; /* Ensures the image fills the figure container */
+    height: auto; /* Maintains the image's original aspect ratio */
 }
 
 /* Caption styling */
 .image-gallery figcaption {
-	text-align: left !important;
+	text-align: left;
     margin-top: 8px; /* Adds space between the image and caption */
     font-size: 1.0em;
     color: black; /* Adjust color and size as desired */
-	margin: 0 auto; /* Centers block elements while keeping text left-aligned */
 }
 
 sup, sup a {
