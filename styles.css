@@ -185,3 +185,37 @@ html, body {
     justify-content: center; /* Centers the iframe horizontally */
     margin: 20px 0; /* Adds optional spacing above and below */
 }
+
+.centered-image {
+    display: block;
+    margin: 0 auto; /* Centers the image */
+    max-width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintains original aspect ratio */
+}
+
+/* Container for the image gallery */
+.image-gallery {
+    display: flex;
+    gap: 20px; /* Adds space between images */
+    justify-content: center; /* Centers the images in the container */
+    flex-wrap: wrap; /* Allows images to wrap to the next line on smaller screens */
+}
+
+/* Individual image containers */
+.image-gallery figure {
+    text-align: center; /* Centers the caption below each image */
+    width: 200px; /* Set a fixed width for each image (adjust as needed) */
+}
+
+/* Image styling */
+.gallery-image {
+    width: 100%; /* Ensures the image fills the figure container */
+    height: auto; /* Maintains the image's original aspect ratio */
+}
+
+/* Caption styling */
+.image-gallery figcaption {
+    margin-top: 8px; /* Adds space between the image and caption */
+    font-size: 0.9em;
+    color: #666; /* Adjust color and size as desired */
+}
