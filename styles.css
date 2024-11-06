@@ -181,7 +181,7 @@ html, body {
 }
 
 .video-container {
-    display: flex;
+	display: block;
     justify-content: center; /* Centers the iframe horizontally */
     margin: 20px 0; /* Adds optional spacing above and below */
 }
