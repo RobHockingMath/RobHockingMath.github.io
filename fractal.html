@@ -75,17 +75,12 @@
 			</figure>
 			<br>
 			<br>
-			It's a bit hard to tell from the photo, but this is a truncated tetrahedron, each hexagonal face of which is the central diagonal cross-section of the 3D Menger sponge.  This was unexpected, but very interesting.
-			br>
+			The video below makes it easier to make sense of the 3D structure of this object.  It is a truncated tetrahedron, each hexagonal face of which is the central diagonal cross-section of the 3D Menger sponge.
 			<br>
-			<div class="image-gallery">
-			<figure>
-				<img src="4D_Slice.JPG" alt="Description of Image 1" class="gallery-image">
-				<figcaption>Together.</figcaption>
-			</figure>
-			<br>
-			<br>
-			Things started making more sense once I sat down and thought hard about what a 4D Menger sponge really is.  I found it helpful to define the sponge by labeling a rubik's cube with integer coordinates in {0,1,2} like this:
+			<div class="video-container">
+			<iframe width="800" height="450" src="https://www.youtube.com/embed/V6IbbllOxVk?si=9VsBLoHzvIZihsjV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+			</div>
+			This was unexpected, but very interesting, and I got work figuring out what was going on.  The first thing to do is to figure out what a 4D Menger sponge really is.  I found it helpful to define the 3D sponge by labeling a rubik's cube with integer coordinates in {0,1,2} like this:
 			<br>
 			<div class="image-gallery">
 			<figure>
@@ -94,13 +89,17 @@
 			</figure>
 			<br>
 			<br>
+			The Menger sponge could then be defined by the following rule: "Add up the coordinates of each subcube.  If that sum is at most one, the subcube is allowed to stay - otherwise it goes.  Likewise Partition all surviving subcubes and repeat".
+			This formulation is useful because the upper bound on the sum is begging to be changed - let's call the bound "k".  If k is zero, and you end up with a 3D Cantor set.  Change it to two, and you get a kind of 3D Sierpiński carpet.  Change it to three, and you get the whole cube.
+			
+			You can play the same game in 2D.  If k is at most one, you get the 2D Cantor set.  If it's at most one, you get the Sierpiński carpet, if it's at most two you get the unit square.  In general, one can define in this way
+			an n-dimensional Menger sponge of type k, where k is an integer between 0 and n.  This gives n+1 different Menger sponges in n-dimensional space.  I realized that the implementation of a 4D Menger sponge I had guessed was equivalent
+			to a 4D Menger sponge of type one, but that I needed a 4D Menger sponge of type two to get the cross sections I had intuitively expected.  When I modified my code to generate a 4D sponge of type two, exactly the sections I had conjectured popped out.
+			
+			This was great, but it didn't explain why the cross-sections of 4D Menger sponge of type one all contained the central cross section of the 3D Menger sponge.  This puzzled me for several months, until one day it occured to me that every hyper-face of a 4D Menger sponge
+			of type one would be an ordinary 3D Menger sponge.  It follows from that the faces of any cross-section of such a 4D menger sponge with a 3D hyperplane will all be intersections of the regular 3D Menger sponge with an associated 2D plane.
 			
 			
-			Preliminary reasoning 
-			seemed to support this.  I knew from George Hart's video that the hexagon in the 3D Menger slice was the central intersection of a cube with a diagonal plane, while the hexagrams (six-pointed stars) came about because the Menger sponge is full of triplets
-			of mutually orthogonal square based cylinders, and their central interesection with the same plane is a hexagram.  Although I didn't know at that point what a 4D Menger sponge was, I felt that it stood to reason that it should contain 
-			quadruplets of mutually orthogonal cube-based hypercylinders.  I found that such quadruplets yielded stellated octahedrons (a type of eight-pointed 3D star) when intersected with the right hyperplane, while intersection with the hypercube 
-			gave an octagon.  I therefore conjectured that the 3D diagonal cross-section of a 4D Menger sponge would be an octagon with a fractal pattern of stellated octahedrons as interior cavities - something like this: 
 			
 			
 			<!--<iframe width="800" height="450" src="https://www.youtube.com/embed/3w3GXbip7kY?si=eWU_YFGaCOxeCdtn" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>!-->
