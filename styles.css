@@ -173,6 +173,10 @@ html, body {
     margin: 0 auto;
 }
 
+.content p {
+    text-align: left;
+}
+
 .outlined-text {
     color: white;
     background-color: rgba(0, 0, 0, 0.6); /* Black with 60% opacity */
