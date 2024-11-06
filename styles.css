@@ -224,3 +224,8 @@ sup, sup a {
     display: inline; /* Keeps superscripts inline with text */
     white-space: nowrap; /* Prevents wrapping */
 }
+
+.no-break {
+    white-space: nowrap; /* Keeps everything within this span on the same line */
+    display: inline; /* Ensures it doesn’t affect line flow */
+}
