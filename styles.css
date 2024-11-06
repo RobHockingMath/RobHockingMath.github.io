@@ -220,3 +220,8 @@ html, body {
     font-size: 2.0em;
     color: #666; /* Adjust color and size as desired */
 }
+
+/* Prevents line breaks in superscript references */
+sup a {
+    white-space: nowrap;
+}
