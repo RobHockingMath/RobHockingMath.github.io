@@ -18,6 +18,20 @@
     background-repeat: no-repeat; /* Prevents repeating */
 }
 
+/* Background for Fractal page */
+.fractal-container {
+    display: flex;
+    height: 100vh; /* Ensures full viewport height */
+    padding: 0;
+    margin: 0;
+	overflow: hidden; /* Prevents scrolling and hides any overflow */
+    background-color: white; /* Fills uncovered areas with white */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.6)), 
+                      url('4DMengerSpongeSliceVer1_1.jpg');
+    background-size: cover; /* Scales the image to cover the container */
+    background-position: top left; /* Aligns image to the top left */
+}
+
 /* Background for Digital Holography page */
 .holography-container {
     display: flex;
