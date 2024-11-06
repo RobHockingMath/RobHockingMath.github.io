@@ -165,6 +165,7 @@ html, body {
     margin: 0 auto; /* Centers content */
 	background-color: transparent;
 	overflow-y: auto
+	text-align: left; /* Ensure left alignment */
 }
 
 .outlined-text {
