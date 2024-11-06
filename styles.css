@@ -230,6 +230,8 @@ html, body {
 
 /* Image styling */
 .gallery-image {
+	display: block;
+    margin: 0 auto;
     max-width: 100%; /* Ensures the image fills the figure container */
 	width: 350px; /* Sets a fixed size for images, adjust as needed */
     height: auto; /* Maintains the image's original aspect ratio */
@@ -237,7 +239,7 @@ html, body {
 
 /* Caption styling */
 .image-gallery figcaption {
-	text-align: left;
+	text-align: left !important;
     margin-top: 8px; /* Adds space between the image and caption */
     font-size: 1.0em;
     color: black; /* Adjust color and size as desired */
