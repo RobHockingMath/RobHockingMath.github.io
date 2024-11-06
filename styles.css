@@ -220,7 +220,7 @@ html, body {
     color: #666; /* Adjust color and size as desired */
 }
 
-/* Prevents line breaks in superscript references */
-sup a {
-    white-space: nowrap;
+sup, sup a {
+    display: inline; /* Keeps superscripts inline with text */
+    white-space: nowrap; /* Prevents wrapping */
 }
