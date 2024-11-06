@@ -164,7 +164,7 @@ html, body {
     padding: 20px; /* Adjust if needed */
     margin: 0 auto; /* Centers content */
 	background-color: transparent;
-	overflow-y: auto
+	overflow-y: auto;
 	text-align: left; /* Ensure left alignment */
 }
 
