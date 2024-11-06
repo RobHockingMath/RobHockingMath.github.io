@@ -221,6 +221,8 @@ html, body {
 }
 
 sup, sup a {
+    margin-left: 2px;
+    margin-right: 2px;
     display: inline; /* Keeps superscripts inline with text */
     white-space: nowrap; /* Prevents wrapping */
 }
