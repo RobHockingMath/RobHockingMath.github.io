@@ -216,6 +216,6 @@ html, body {
 /* Caption styling */
 .image-gallery figcaption {
     margin-top: 8px; /* Adds space between the image and caption */
-    font-size: 0.9em;
+    font-size: 2.0em;
     color: #666; /* Adjust color and size as desired */
 }
