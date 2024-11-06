@@ -220,7 +220,13 @@ html, body {
     color: black; /* Adjust color and size as desired */
 }
 
-sup, sup a {
+/* Adds a small margin to links in text */
+a {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+sup a {
     margin-left: 2px;
     margin-right: 2px;
     display: inline; /* Keeps superscripts inline with text */
