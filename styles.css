@@ -215,6 +215,7 @@ html, body {
 
 /* Container for the image gallery */
 .image-gallery {
+	text-align: left;
     display: flex;
     gap: 20px; /* Adds space between images */
     justify-content: center; /* Centers the images in the container */
@@ -223,7 +224,7 @@ html, body {
 
 /* Individual image containers */
 .image-gallery figure {
-    text-align: center; /* Centers the caption below each image */
+	text-align: left;
     width: 350px; /* Set a fixed width for each image (adjust as needed) */
 }
 
@@ -235,6 +236,7 @@ html, body {
 
 /* Caption styling */
 .image-gallery figcaption {
+	text-align: left;
     margin-top: 8px; /* Adds space between the image and caption */
     font-size: 1.0em;
     color: black; /* Adjust color and size as desired */
