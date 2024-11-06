@@ -180,10 +180,19 @@ html, body {
     border-radius: 8px; /* Optional: rounded corners */
 }
 
-.video-container {
-	display: block;
-	margin: 20px auto; /* Adds space above and below, centers it */
-    justify-content: center; /* Centers the iframe horizontally */
+/* Ensure text and video containers are block-level with space around them */
+.text-container, .video-container {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px; /* Adds space after the text and before the video */
+}
+
+.video-container iframe {
+    display: block;
+    width: 100%; /* Takes the full width of the container */
+    max-width: 800px; /* Restricts iframe width */
+    height: 450px;
+    margin: 0 auto; /* Centers the video */
 }
 
 .centered-image {
