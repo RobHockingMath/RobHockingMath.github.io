@@ -123,25 +123,29 @@
 			<br>
 			I sent the video to Michael Page to see what he thought:
 			<br>
-			"You've got a pretty interesting shape there, but frankly if you turn that into a hologram, you're just going to waste all lot of money producing a dark blob.  Go for something glossy and metallic."  
+			<p>"You've got a pretty interesting shape there, but frankly if you turn that into a hologram, you're just going to waste all lot of money producing a dark blob.  Go for something glossy and metallic."</p>  
 			<br>
 			I followed Michael's advice and modified the texture to that of the glossy gold texture above, and ran the Chimera script on it.  The script was simple enough to use and I didn't really need to understand it to do so.  Nevertheless, there were a couple of "gotchas":
-			
-			1.  Yves trims a 10% buffer around the border of each image (5% on the left and the right, 5% on the top and the bottom), but doesn't mention this anywhere in his "ReadMe" file.  After I left the script running in the background on my laptop for a few days
-			and sent the images to Yves, he said that I should zoom the camera out more so that the image would not be cropped by the buffer.
-			
-			2. I initially rendered my gasket with a highly glossy material that resulted in a few areas of that were very bright.  This is a no-no in digital holography, as it can lead to a phenomema called "burn in", where the laser making
+			<br>
+			<p>1.  Yves trims a 10% buffer around the border of each image (5% on the left and the right, 5% on the top and the bottom), but doesn't mention this anywhere in his "ReadMe" file.  After I left the script running in the background on my laptop for a few days
+			and sent the images to Yves, he said that I should zoom the camera out more so that the image would not be cropped by the buffer.</p>
+			<br>
+			<p>2. I initially rendered my gasket with a highly glossy material that resulted in a few areas of that were very bright.  This is a no-no in digital holography, as it can lead to a phenomema called "burn in", where the laser making
 			the hologram is of such high power that it literally burns the holographic emulsion.  Burn in is particularly problematic for points near the holographic plane.  I hadn't yet taken a course in digital holography, and so I didn't know this.
-			After a few more days of rendering in the background I sent the newly zoomed out images to Yves, and he told me to dial down the lighting in order to avoid burn in.
-			
-			3.  If the script was interupted by, for example, windows installing updates and unilaterally deciding to rebook my computer, the script by default it would start over from the beginning, potentially undoing days of work.  So I had to understand the script enough
-			to modify it to pick up where it left off.
-			
-			Aside from these two wrinkles, however, things were fairly smooth, I hoped to have the hologram ready for the Bridges 2024 Mathematical Art exhibition.  However, I only had a few weeks before the deadline, and Yves was about to go on holidays.  Moreover, I wanted to make a <em> full parallax hologram </em>, but calculated that my two computers
-			working together round the clock would require a month to produce all the images.  Yves suggested I go for a half-parallax hologram first, and said that his brother Phillip in Korea could print it.  He suggested that since I was so 
-			
-			
-			
+			After a few more days of rendering in the background I sent the newly zoomed out images to Yves, and he told me to dial down the lighting in order to avoid burn in.</p>
+			<br>
+			<p>3.  If the script was interupted by, for example, windows installing updates and unilaterally deciding to rebook my computer, the script by default it would start over from the beginning, potentially undoing days of work.  So I had to understand the script enough
+			to modify it to pick up where it left off.</p>
+			<br>
+			Aside from these two wrinkles, however, things were fairly smooth, and I managed to produce a </em half-parallax> version of it in time for the submission deadline of the 2024 Mathematical Art exhibition. 
+			<br>
+			<p>Half parallax digital holograms
+			only respond to horizontal motions of your head, ignoring any vertical motions.  They require only a single horizontal slice of renderings, which can be done on a fast PC in about eight hours to a day, depending on the complexity of the scene.
+			Full parallax digital holograms respond to both horizontal and vertical motions of your head, but they require a whole extra dimension of information.  Instead of a single horizontal slice, you need 90 to 180 vertically translated horizontal slices, at least 
+			within the Chimera pipeline.</p>  
+			<br>
+			My initial half-parallax 3D Apollian gasket required approximately 16 hours of render time on one computer.  I then produced a full parallax version of it out of ninety horizontal slices, computed with both of my computers working round the clock for a month.
+			By the time it was ready the Bridges deadline had long past, but my half parallax one had already been accepted.  I replaced it with the full parallax version on the sly when it was time for the actual exbition.
         </div>
 	</div>
 </body>
