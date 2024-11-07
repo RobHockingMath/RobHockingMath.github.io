@@ -25,15 +25,15 @@
 	
 
         <div class="content" style="flex-grow: 1;">
-            <h1>3D Apollonian gasket Digital Hologram</h1>
+            <h1>3D Apollonian Gasket Digital Hologram</h1>
             <p>
 			<br>
 			<br>
 			Prior to arriving at ISDH 2023, I had signed up for an introductory holography course at the <a href="https://www.internationalschoolofholography.com/" target="_blank" rel="noopener noreferrer">International School of Holography</a>.  My instructor, <a href="https://www.mmelissacrenshaw.com/" target="_blank" rel="noopener noreferrer">Melissa Crenshaw</a>,
-			had given me a list of names of people to try and meet.  On the first day, I found myself seating at lunch time next to a man with long, dark brown hair streaked here and there with grey.  As we talked, I realized he fit the profile of one of the people on my list.
+			had given me a list of names of people to try and meet.  On the first day, I found myself seated at lunch time next to a man with long, dark brown hair streaked here and there with grey.  As we talked, I realized he fit the profile of one of the people on my list.
 			<br>
 			<br>
-			<p>"Are you Michael Page from Ontario College of Art and Design?" I asked.</p>
+			<p>"Are you Michael Page from the Ontario College of Art and Design?" I asked.</p>
 			<p>"I am." the man replied.</p>
 			<br>
 			<p>Unlike Sydney and Mellisa, who focus on analog holography, Michael Page is a <em> digital holographer</em>.  As he explained the basics of the field to me that day over lunch, I came to realize just how much
@@ -41,7 +41,7 @@
 			<br>
 			"So, from what you're saying, I don't even need to have a 3D mesh of an object to turn it into a digital hologram.  All I need is a way of producing images of it from different angles."
 			<br>
-			"Yes, in principle that's correct, but you'll be making life difficult for yourself.  You won't be able to able to use any of the 3D studio max or blender scripts that do things for you." Michael replied.
+			"Yes, in principle that's correct, but you'll be making life difficult for yourself.  You won't be able to able to use any of the 3D Studio Max or blender scripts that do things for you." Michael replied.
 			<br>
 			"I could make a digital hologram of a black hole then."
 			<br>
@@ -57,7 +57,7 @@
 			<br>
 			"Yes."
 			<br>
-			"You have a 3D studio max script that will generate the images automatically."
+			"You have a 3D Studio Max script that will generate the images automatically."
 			<br>
 			"Yes."
 			<br>
@@ -71,9 +71,9 @@
 			<br>
 			<br>
 			<p>I had no way of knowing it at the time, but that brief conversation with Yves Gentet would mark a critical turning point in my life.</p>
-			
-			<p>After the conference, I didn't get started working on a hologram until February 2024.  I decided that rather than going straight for a black hole, I would first make life easy for myself and do something simple.
-			At the time I had been experimented with different mediums for visualizing a 3D Apollonian gasket, first producing a 3D print that was an expensive failure, and then a glass etching that was better, but which I still
+			<br>
+			<p>After the conference, I didn't get started making my first hologram until February 2024.  When I did get to work, I decided that rather than going straight for a black hole, I would first make life easy for myself and do something simple.
+			At the time I had been experimented over the past year with different mediums for visualizing a 3D Apollonian gasket, first producing a 3D print that was an expensive failure, and then a glass etching that was better, but which I still
 			somehow found unsatisfying.  
 			
 			<br>
@@ -96,7 +96,7 @@
 			<br>
 			
 			
-			<p>These early experiments had generated 3D meshes of the gasket with a relatively inefficient algorithm that required one to maintain an explicit list of all the spheres making up the gasket had a runtime proportional to the number of spheres.  In practice, this greatly limited the resolution of the gasket.  However, I'd just coded up a more efficient version of the algorithm that required no such list and had a run time proportional to the <em> logarithm</em> of the number of spheres.  The result was a much higher resolution version of the gasket, and I decided that I would try it out as my first hologram.
+			<p>These early experiments had generated 3D meshes of the gasket using a relatively inefficient algorithm that requires one to maintain an explicit list of all the spheres making up the gasket, and which has a runtime proportional to the number of spheres.  In practice, I found that this greatly limited the resolution of the gasket.  However, I'd just coded up a more efficient version of the algorithm that required no such list and had a run time proportional to the <em> logarithm</em> of the number of spheres.  The result was a much higher resolution version of the gasket, and I decided that I would try it out as my first hologram.
 			<br>
 			<br>
 			<div class="image-gallery">
@@ -112,7 +112,7 @@
 			<br>
 			<br>
 			<p>My goal in this project was simply to succeed in making a digital hologram, not necessarily to make a spectacular one, and I wanted minimize the number of things that could go wrong.  
-			I therefore did everything within 3D studio max, so that the images of the gasket could be generated for me automatically using the 3D studio max script available for download on the <a href="https://www.ultimate-holography.com/chimera" target="_blank" rel="noopener noreferrer">Chimera Holography website</a>.  
+			I therefore did everything within 3D studio max, so that the images of the gasket could be generated for me automatically using the 3D Studio Max script available for download on the <a href="https://www.ultimate-holography.com/chimera" target="_blank" rel="noopener noreferrer">Chimera Holography website</a>.  
 			My first test used a glossy grey moonlike texture, as illustrated in this video:
 			<br>
 			<br>
@@ -123,29 +123,37 @@
 			<br>
 			<p>I sent the video to Michael Page to see what he thought:</p>
 			<br>
-			<p>"You've got a pretty interesting shape there, but frankly if you turn that into a hologram, you're just going to waste all lot of money producing a dark blob.  Go for something glossy and metallic."</p>  
+			<p>"You've got a pretty interesting shape there, but frankly if you turn that into a hologram, you're just going to waste all lot of money producing a dark blob.  Go for something shiny and metallic."</p>  
 			<br>
-			<p>I followed Michael's advice and modified the texture to the glossy gold in the images above, and ran the Chimera script on it.  The script was simple enough to use and I didn't really need to understand it to do so.  Nevertheless, there were a couple of "gotchas":</p>
+			<p>I followed Michael's advice and modified the texture to the shiny gold one in the images above, and ran the Chimera script on it.  The script was simple enough to use and I didn't really need to understand it to do so.  Nevertheless, there were a couple of "gotchas":</p>
 			<br>
-			<p>1.  Yves trims a 10% buffer around the border of each image (5% on the left and the right, 5% on the top and the bottom), but doesn't mention this anywhere in his "ReadMe" file.  After I left the script running in the background on my laptop for a few days
+			<p>1.  Yves trims a 10% buffer around the border of each image (5% on the left and the right, 5% on the top and the bottom), but doesn't mention this anywhere in his ReadMe file.  After I left the script running in the background on my laptop for a few days
 			and sent the images to Yves, he said that I should zoom the camera out more so that the image would not be cropped by the buffer.</p>
 			<br>
-			<p>2. I initially rendered my gasket with a highly glossy material that resulted in a few areas of that were very bright.  This is a no-no in digital holography, as it can lead to a phenomema called "burn in", where the laser making
-			the hologram is of such high power that it literally burns the holographic emulsion.  Burn in is particularly problematic for points near the holographic plane.  I hadn't yet taken a course in digital holography, and so I didn't know this.
+			<p>2. I had rendered my gasket with a texture so shiny that parts of it rendered pure white.  This is a no-no in digital holography, as it can lead to a phenomema called "burn in", where the laser making
+			the hologram is set to such a high power that it literally burns the holographic emulsion; bright points close to or on the holographic plane are a particular problem.  I hadn't yet taken a course in digital holography, and so I didn't know this.
 			After a few more days of rendering in the background I sent the newly zoomed out images to Yves, and he told me to dial down the lighting in order to avoid burn in.</p>
 			<br>
 			<p>3.  If the script was interrupted by, for example, windows installing updates and making a unilateral decision to rebook my computer, the script by default would start over from the beginning, potentially undoing days of work.  So I had to understand the script enough
-			to modify it to pick up where it left off.</p>
+			to modify it to pick up from where it left off.</p>
 			<br>
-			<p>Aside from these few wrinkles, however, things were fairly smooth, and I managed to produce a <em> half-parallax</em> version of it in time for the submission deadline of the 2024 Mathematical Art exhibition.</p>
+			<p>Aside from these few wrinkles things were fairly smooth, and I managed to produce a <em> half-parallax</em> version of it in time for the submission deadline of the 2024 Mathematical Art exhibition.</p>
 			<br>
 			<p>Half parallax digital holograms
 			only respond to horizontal motions of your head, ignoring any vertical motions.  They require only a single horizontal slice of renderings, which can be done on a fast PC in about eight hours to a day, depending on the complexity of the scene.
 			Full parallax digital holograms respond to both horizontal and vertical motions of your head, but they require a whole extra dimension of information.  Instead of a single horizontal slice, you need 90 to 180 vertically translated horizontal slices, at least 
 			within the Chimera pipeline.</p>  
 			<br>
-			My initial half-parallax 3D Apollian gasket required approximately 16 hours of render time on one computer.  I then produced a full parallax version of it out of ninety horizontal slices, computed with both of my computers working round the clock for a month.
-			By the time it was ready the Bridges deadline had long past, but my half parallax one had already been accepted.  I replaced it with the full parallax version on the sly when it was time for the actual exbition.
+			My initial half-parallax 3D Apollian gasket hologram required approximately 16 hours of render time on one computer.  I then produced a full parallax version of it out of ninety horizontal slices, computed with both of my computers working round the clock for a month.
+			You can see a side by side comparison of the two in the following video:
+			<br>
+			<br>
+			<div class="video-container">
+			<iframe width="800" height="450" src="https://www.youtube.com/embed/4uh61od5MnI?si=mXMEnoAPng-t6nMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+			</div>
+			<br>
+			<br>
+			
         </div>
 	</div>
 </body>
