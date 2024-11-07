@@ -111,9 +111,15 @@
 			</div>
 			<br>
 			<br>
+			<p>It's worth mentioning at this point that their are two main types of digital hologram - <em>half-parallax</em> and <em>full-parallax</em>.  The difference in a nutshell is that half-parallax digital holograms
+			only respond to horizontal motions of your head, ignoring any vertical motions, while full parallax digital holograms respond to both types of motion.  Half parallax holograms have the advantage that they require only a single horizontal slice of renderings, which can be done on a fast PC in about eight hours to a day, depending on the complexity of the scene.
+			Full-parallax digital holograms respond to both horizontal and vertical motions of your head, but they require a whole extra dimension of information.  Instead of a single horizontal slice, you need 90 to 180 vertically translated horizontal slices, at least 
+			within the Chimera pipeline.  In my experience, rendering a full-parallax hologram takes about a month, even when the job is split across several computers</p>
+			
+			
 			<p>My goal in this project was simply to <em>succeed</em> in making a digital hologram, not necessarily to make a spectacular one; it was a kind of holographic "hello world".  As such, I wanted minimize the number of things that could go wrong.  
-			I therefore did everything within 3D Studio Max, so that the images of the gasket could be generated for me automatically using the 3D Studio Max script available for download on the Chimera Holography website.  
-			My first test used a glossy grey moonlike texture, as illustrated in this video:
+			I therefore did everything within 3D Studio Max, so that the images of the gasket could be generated for me automatically using the 3D Studio Max script available for download on the Chimera Holography website. I would also be going for half-parallax
+			rather than full-parallax so that if I made a mistake in my renderings, I would only need a day rather than a month to rerun them.  My first test used a glossy grey moonlike texture, as illustrated in this video:
 			<br>
 			<br>
 			<div class="video-container">
@@ -127,24 +133,21 @@
 			<br>
 			<p>I followed Michael's advice and modified the texture to the shiny gold one in the images above, and ran the Chimera script on it.  The script was simple enough to use and I didn't really need to understand it to do so.  Nevertheless, there were a couple of "gotchas":</p>
 			<br>
-			<p>1.  Yves trims a 10% buffer around the border of each image (5% on the left and the right, 5% on the top and the bottom), but doesn't mention this anywhere in his ReadMe file.  After I left the script running in the background on my laptop for a few days
-			and sent the images to Yves, he said that I should zoom the camera out more to take the buffer into account and re-render.</p>
+			<p>1.  Yves trims a 10% buffer around the border of each image (5% on the left and the right, 5% on the top and the bottom), but doesn't mention this anywhere in his ReadMe file.  After I ran the script overnight the first time and
+			sent the images to Yves, he said that I should zoom the camera out more to take the buffer into account and re-render.</p>
 			<br>
 			<p>2. I had rendered my gasket with a texture so shiny that parts of it came out pure white.  This is a no-no in digital holography, as it can lead to a phenomema called "burn in", where the laser making
 			the hologram is set to such a high power that it literally burns a hole in holographic emulsion; bright points close to or on the holographic plane are a particularly problematic.  I hadn't yet taken a course in digital holography, and so I didn't know this.
-			After a few more days of rendering in the background I sent the newly zoomed out images to Yves; he told me to dial down the lighting in order to avoid burn in and re-render.</p>
+			After second round of rendering, I sent the newly zoomed out images to Yves; he told me to dial down the lighting in order to avoid burn in and re-render.</p>
 			<br>
-			<p>3.  If the script was interrupted by, for example, windows installing updates and then making a unilateral decision to reboot my computer, the script by default would start over from the beginning, potentially undoing days of work.  So I had to understand the script enough
-			to modify it to pick up from where it left off.</p>
+			<p>3.  If the script was interrupted by, for example, windows installing updates and then making a unilateral decision to reboot my computer, the script would by default start over from the beginning, potentially undoing days of work.  So I had to understand the script enough
+			to modify it to pick up from where it had left off.</p>
 			<br>
-			<p>Aside from the above things went smoothly, and I managed to produce a <em> half-parallax</em> version of the hologram in time for the submission deadline of the 2024 Mathematical Art exhibition.</p>
+			<p>Aside from the above things went smoothly, and I managed to produce a half-parallax version of the hologram within a few weeks.  In particular, I had it ready in time for the submission deadline of the Bridges 2024 Mathematical Art Exhibition.</p>
 			<br>
-			<p>Half-parallax digital holograms
-			only respond to horizontal motions of your head, ignoring any vertical motions.  They require only a single horizontal slice of renderings, which can be done on a fast PC in about eight hours to a day, depending on the complexity of the scene.
-			Full-parallax digital holograms respond to both horizontal and vertical motions of your head, but they require a whole extra dimension of information.  Instead of a single horizontal slice, you need 90 to 180 vertically translated horizontal slices, at least 
-			within the Chimera pipeline.</p>  
+			  
 			<br>
-			My initial half-parallax 3D Apollian gasket hologram required approximately 16 hours of render time on one computer.  I then produced a full-parallax version of it out of ninety horizontal slices, computed with both of my computers working round the clock for <em> a month</em>.
+			After succeeding in my initial half-parallax version of the hologram, I went on to produce a full-parallax version.  The full-parallax version used ninety vertically stacked horizontal slices, and took both of my computers working round the clock for a month to compute.
 			You can see a side by side comparison of the two in the following video:
 			<br>
 			<br>
