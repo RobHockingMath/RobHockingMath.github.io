@@ -239,6 +239,9 @@ html, body {
 
 /* Larger image style */
 .large-image {
+	display: block;
+    margin: 0 auto;
+    max-width: 100%; /* Ensures the image fills the figure container */
     width: 500px; /* Adjust size as needed */
     height: auto;
 }
