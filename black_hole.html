@@ -53,7 +53,8 @@
 			for black hole visualization, and that it's worth a shot.</p>
 			<br>
 			<p>When I began this project, it wasn't even clear to me that black holes would "work" in stereo 3D.  It was entirely possible that the disortion they produce would simply prove too confusing to our eyes.  In fact,
-			the sheer absence of stereo 3D black holes on the internet (as well as the one paper I mentioned above) suggested that this was likely.  So, the first step was to successfully produce a black hole stereo pair.</p>
+			the sheer absence of stereo 3D black holes on the internet (as well as the one paper I mentioned above) suggested that this was likely.  So, the first step was to successfully produce a black hole stereo pair.  This was an
+			"off-ramp" for the project in the sense that if it failed, a hologram also could not be made and there was no point in continuing.</p>
 			<br>
 			<p> Black holes are visible mainly because they bend light.  To the best of my knowledge, it is not possible to render one within rasterization based rendering engine like 3D Studio Max or Blender.  You need to use a
 			raytracer, and you need to modify it so that the rays move along curved trajectories defined by the geodesic equations of the black hole - this is called <em> nonlinear ray tracing</em> and is illustrated below.  I will not 
@@ -85,6 +86,32 @@
 			</figure>
 			<figure>
 				<img src="stereo_ocean_left2.png" alt="Description of Image 2" class="gallery-image">
+				<figcaption>Left eye view of a preliminary black hole.</figcaption>
+			</figure>
+			</div>
+			<br>
+			<br>
+			<p>This was good news - it meant that a black hole hologram could be built in principle.  However, I knew from Jacques Desbian's course that my current setup wasn't going to work.  For reasons which at the time
+			of writing I still do not understand, digital holograms suffer from <em>holographic depth of field</em>: objects exactly at the hologram plane are perfectly in focus, whereas as you move either in front of or behind
+			it they become out of focus.  For the type of reflection hologram I would be making, the rough rule is if your holographic plane has width w and height h, then objects in your 3D scene should be placed no more than 
+			one third of max(w,h) in front of the holographic plane, and no more than two thirds behind it.</p>
+			<br>
+			This meant that my ocean extending out to stars at infinity were going to be a problem.  I decided to keep the basic idea of a black hole over water, but to enclose the water with walls to form an underground room.
+			Drawing inspiration from the Basilica Cistern in Istanbul, I added pillars coming out of the water with Islamic tiling on the sides as well as on the ceiling.  For the walls, I stuck to a simple checkerboard pattern, 
+			which I felt made the optical distortion induced by the black hole (which I had put between the pillars) stand out more.
+			<br>
+			<br>
+			<div class="image-gallery">
+			<figure>
+				<img src="Chamber_BlackHole_NoShading.png" alt="Description of Image 2" class="gallery-image">
+				<figcaption>Right eye view of preliminary black hole.</figcaption>
+			</figure>
+			<figure>
+				<img src="Chamber_BlackHole_OnlyShading.png" alt="Description of Image 2" class="gallery-image">
+				<figcaption>Left eye view of a preliminary black hole.</figcaption>
+			</figure>
+			<figure>
+				<img src="Chamber_BlackHole_Shading.png" alt="Description of Image 2" class="gallery-image">
 				<figcaption>Left eye view of a preliminary black hole.</figcaption>
 			</figure>
 			</div>
