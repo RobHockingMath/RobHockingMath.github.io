@@ -225,7 +225,8 @@ html, body {
 /* Individual image containers */
 .image-gallery figure {
 	text-align: center !important;
-    width: 350px; /* Set a fixed width for each image (adjust as needed) */
+	max-width: 100%; /* Allow containers to grow with larger images */
+	margin: 0 auto;
 }
 
 /* Container for larger images */
