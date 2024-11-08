@@ -231,7 +231,7 @@ html, body {
 
 /* Container for larger images */
 .large-image-container {
-    width: 600px; /* Allow larger images to expand */
+    width: 500px; /* Allow larger images to expand */
     margin: 0 auto;
 }
 
