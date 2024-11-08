@@ -217,15 +217,17 @@ html, body {
 
 /* Container for the image and caption */
 .centered-image-container {
+	max-width: 600px; /* Limits the image size */
     text-align: center; /* Centers the caption below the image */
     margin: 20px auto;
 }
 
 /* Caption styling */
 .centered-caption {
-    margin-top: 10px;
-    font-size: 0.9em;
-    color: #555; /* Optional: change color to fit your design */
+    text-align: center !important;
+    margin-top: 8px; /* Adds space between the image and caption */
+    font-size: 1.0em;
+    color: black; /* Adjust color and size as desired */
 }
 
 /* Container for the image gallery */
