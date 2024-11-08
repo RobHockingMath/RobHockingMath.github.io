@@ -225,7 +225,7 @@ html, body {
 /* Individual image containers */
 .image-gallery figure {
 	text-align: center !important;
-	max-width: 100%; /* Allow containers to grow with larger images */
+	display: inline-block;
 	margin: 0 auto;
 }
 
@@ -254,11 +254,18 @@ html, body {
 }
 
 /* Caption styling */
-.image-gallery figcaption {
+figcaption {
+	max-width: 350px; /* Default caption width */
 	text-align: center !important;
     margin-top: 8px; /* Adds space between the image and caption */
     font-size: 1.0em;
     color: black; /* Adjust color and size as desired */
+}
+
+/* Override caption style for larger images */
+.large-caption {
+    max-width: 500px; /* Caption width for larger images */
+    margin: 10px auto;
 }
 
 sup, sup a {
