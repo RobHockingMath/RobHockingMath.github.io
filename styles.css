@@ -237,6 +237,12 @@ html, body {
     height: auto; /* Maintains the image's original aspect ratio */
 }
 
+/* Larger image style */
+.large-image {
+    width: 500px; /* Adjust size as needed */
+    height: auto;
+}
+
 /* Caption styling */
 .image-gallery figcaption {
 	text-align: center !important;
