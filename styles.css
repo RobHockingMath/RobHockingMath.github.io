@@ -206,11 +206,26 @@ html, body {
     margin: 0 auto; /* Centers the video */
 }
 
+/* Centered image style with a max width */
 .centered-image {
     display: block;
     margin: 0 auto; /* Centers the image */
-    max-width: 100%; /* Makes the image responsive */
+    max-width: 600px; /* Limits the image size */
+    width: 100%; /* Makes the image responsive */
     height: auto; /* Maintains original aspect ratio */
+}
+
+/* Container for the image and caption */
+.centered-image-container {
+    text-align: center; /* Centers the caption below the image */
+    margin: 20px auto;
+}
+
+/* Caption styling */
+.centered-caption {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #555; /* Optional: change color to fit your design */
 }
 
 /* Container for the image gallery */
