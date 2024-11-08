@@ -228,6 +228,12 @@ html, body {
     width: 350px; /* Set a fixed width for each image (adjust as needed) */
 }
 
+/* Container for larger images */
+.large-image-container {
+    width: 600px; /* Allow larger images to expand */
+    margin: 0 auto;
+}
+
 /* Image styling */
 .gallery-image {
 	display: block;
