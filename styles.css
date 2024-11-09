@@ -46,6 +46,19 @@
     background-position: top left; /* Aligns image to the top left */
 }
 
+.about-container {
+    display: flex;
+    height: 100vh; /* Ensures full viewport height */
+    padding: 0;
+    margin: 0;
+	overflow: hidden; /* Prevents scrolling and hides any overflow */
+    background-color: white; /* Fills uncovered areas with white */
+    background-image: url('background_narrow.png');
+    background-size: cover; /* Scales the image to cover the container */
+    background-position: top left; /* Aligns image to the top left */
+	color: white
+}
+
 html, body {
     height: 100%;
     margin: 0;
