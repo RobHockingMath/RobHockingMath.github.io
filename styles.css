@@ -56,7 +56,7 @@
     background-image: url('background_narrow.png');
     background-size: cover; /* Scales the image to cover the container */
     background-position: top left; /* Aligns image to the top left */
-	color: white
+	color: white !important;
 }
 
 .about-container * {
