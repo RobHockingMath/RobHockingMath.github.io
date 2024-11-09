@@ -18,7 +18,7 @@
         <nav class="sidebar">
             <ul class="nav-links">
                 <li><a href="digital_holography.html">Digital Holography Home</a></li>
-                <li><a href="apollian_gasket.html">3D Apollonian gasket Digital Hologram</a></li>
+                <li><a href="apollian_gasket.html">3D Apollonian Gasket Digital Hologram</a></li>
                 <li><a href="black_hole.html">Black Hole Digital Hologram</a></li>
             </ul>
 		</nav>
@@ -30,22 +30,22 @@
 			<br>
 			<br>
             <p>Black hole visualization is not new, with the earliest work (to my knowledge) done in the late 70s<sup><a href="#ref1">[1]</a></sup>.  In 2014, Interstellar brought black hole visualization to the masses with the spectacular and 
-			mostly scientifically accurate rendering of the black hole Gargantua.  It's therefore a fair question to ask - why bother?</p>
+			mostly scientifically accurate rendering of the black hole Gargantua.  Moreover, the internet is full of black hole visualizations.  It's therefore a fair question to ask - given the sheer quantity of content out there, why bother producing even more?</p>
 			<br>
-			<p>To me, the answer is that while the internet is full of black hole visualizations nothing - not even Interstellar - achieves the level of realism that is possible
+			<p>To me, the answer is that none of the existing visualizations - not even Interstellar - achieves the level of realism that is possible
 			with a hologram.  Even simple stereo 3D would be a major jump in realism, and yet it is nowhere to be found (there is a bit of a rub here, which is that we don't a priori know
 			that black holes don't <em>break</em> stereo 3D - we'll come back to this).  Full-parallax digital holograms, when done well, have the capacity to achieve a level of realism that goes far beyond Stereo 3D, but 
 			the visualizations out there don't even achieve that.</p>
 			<br>
 			<p>Some full color holograms are so realistic that if nobody told you, you wouldn't know that you are looking at a hologram.  To me, nothing demonstrates this more aptly than the piece below<sup><a href="#ref1">[2]</a></sup> by Philippe Gentet, 
 			which he showed to me in his lab in Seoul.  Telling me that one of the figurines was genuine and the other a hologram, he asked me to guess which is which.  Answering (honestly) that I had no idea, he
-			then adjusted a knob causing one of the figurines to dim.  I fell for the trick an stated that the dimmed figurine must be the hologram (it wasn't).</p>			
+			then adjusted a knob, causing one of the figurines to dim.  I fell for the trick an stated that the dimmed figurine must be the hologram (it wasn't).</p>			
 			<br>
 			<br>
 			<div class="image-gallery">
 			<figure>
 				<img src="WhichIsReal.png" alt="Description of Image 2" class="gallery-image">
-				<figcaption>One of the clay figurines inside this box is real, the other is a hologram encoded on the glass surface.  Can you tell which is which?</figcaption>
+				<figcaption>One of the figurines inside this box is real, the other is a hologram encoded on the glass surface.  Can you tell which is which?</figcaption>
 			</figure>
 			</div>
 			<br>
@@ -62,7 +62,7 @@
 			3D Studio Max.  As we will see, you need to write your own custom graphics engine, and that means you have to understand the Chimera script well enough to implement it inside your engine.  The reason for the second point is 
 			more nuanced and we will get to it at the end.</p>
 			<br>
-			<p>When I began this project, it wasn't even clear to me that black holes would "work" in stereo 3D.  As I alluded to above, it was entirely possible that the disortion they produce would simply prove too confusing to our brains to make sense of.  In fact,
+			<p>When I began this project, it wasn't even clear to me that black holes would "work" in stereo 3D.  As I alluded to above, it was entirely possible that the disortion they produce would simply prove too confusing for our brains to make sense of.  In fact,
 			the sheer absence of stereo 3D black holes images on the internet could be viewed as evidence that this is indeed the case, and the one paper on the topic that I managed to find seemed to think so<sup><a href="#ref3">[3]</a></sup>.  So, the first step was to successfully produce a black hole stereo pair.  This was an
 			"off-ramp" for the project in the sense that if it failed, a hologram would fail for the same reason and there was no point in continuing.</p>
 			<br>
@@ -84,7 +84,7 @@
 			<br>
 			<br>
 			<p>I have a raytracer which I have been maintaining since undergrad.  I had previously given it the ability to render black holes under the simplifying assumption of an environment at infinity; however, to
-			generate an interesting stereo pair, I needed to have an environment a finite distance from the black hole.  I made the necessary changes to the code and initially settled on a black hole hovering over and 
+			generate an interesting stereo pair, I needed to have an environment a finite distance from the black hole.  I made the necessary changes to the code and initially settled on a black hole hovering over an 
 			infinite ocean, surrounded by a firey accretion disk and with an aurora in the background (as per the two images below).  To my relief, the 3D worked.  To view the 3D yourself, simply cross your eyes as per the technique <a href="https://www.youtube.com/watch?v=zBa-bCxsZDk" target="_blank" rel="noopener noreferrer">here</a>.  If you succeed, you should notice
 			that the black hole itself looks a bit like a marble, and that the sky behind the black hole seems to bend backwards into the screen.  
 			<br>
@@ -92,36 +92,36 @@
 			<div class="image-gallery">
 			<figure>
 				<img src="stereo_ocean_right2.png" alt="Description of Image 2" class="gallery-image">
-				<figcaption>Right eye view of a preliminary black hole.</figcaption>
+				<figcaption>Right eye view of a preliminary black hole scene.</figcaption>
 			</figure>
 			<figure>
 				<img src="stereo_ocean_left2.png" alt="Description of Image 2" class="gallery-image">
-				<figcaption>Left eye view of a preliminary black hole.</figcaption>
+				<figcaption>Left eye view of a preliminary black hole scene.</figcaption>
 			</figure>
 			</div>
 			<br>
 			<br>
 			<p>This was good news - it meant that a black hole hologram could be built in principle.  However, I knew from Jacques Desbian's course that my current setup wasn't going to work.  For reasons which at the time
 			of writing I still do not understand, digital holograms suffer from <em>holographic depth of field</em>: objects exactly at the hologram plane are perfectly in focus, whereas as you move either in front of it or behind
-			it they go out of focus.  For the type of reflection hologram I would be making, the rough rule is if your holographic plane has width w and height h, then objects in your 3D scene should be placed no more than 
+			it they go out of focus.  Strictly speaking, <em>all</em> holograms suffer from the problem to a greater to lesser extent, but it is particularly severe in the case of reflection digital holograms, which is what I was making (conversily, it is practically non-existent for transmission analog holograms).  In my case, the rough rule is if your holographic plane has width w and height h, then objects in your 3D scene should be placed no more than 
 			one third of max(w,h) in front of the holographic plane, and no more than two thirds behind it.</p>
 			<br>
 			<br>
 			<div class="image-gallery">
 			<figure>
 				<img src="chamber_left.png" alt="Description of Image 2" class="gallery-image">
-				<figcaption>Right eye view of the reworked black hole.</figcaption>
+				<figcaption>Right eye view of the reworked black hole scene.</figcaption>
 			</figure>
 			<figure>
 				<img src="chamber_right.png" alt="Description of Image 2" class="gallery-image">
-				<figcaption>Left eye view of the reworked black hole.</figcaption>
+				<figcaption>Left eye view of the reworked black hole scene.</figcaption>
 			</figure>
 			</div>
 			<br>
 			<br>
 			<p>This meant that my ocean extending out to stars at infinity was going to be a problem.  I decided to keep the basic idea of a black hole hovering over water, but to enclose the water within walls to form an underground chamber.
-			Drawing inspiration from my vague memories of visiting the Basilica Cistern in Istanbul twelve years earlier, I added pillars coming out of the water with Islamic tiling on the sides as well as on the ceiling.  
-			For the walls, I stuck to a simple checkerboard pattern, which I felt made the optical distortion induced by the black hole (which I had put between the pillars) stand out more.  The result is illustrated both
+			Drawing inspiration from my vague memories of visiting the Basilica Cistern in Istanbul twelve years earlier, I added pillars coming out of the water covered with Islamic tiles - I applied a similar Islamic tiling to the ceiling.  
+			For the walls, I stuck to a simple checkerboard pattern, which I felt made the optical distortion induced by the black hole (which I had hoving in the air between the pillars) stand out more.  The result is illustrated both
 			in the stereo pair above and in the three renderings below.  The the case of the latter, I've intentionally separated out the result with with no shading, the result with shading alone, and the overall result.  This is because accurate shading of the environment of a black hole
 			is non-trivial and has some interesting properties that I want to discuss.</p>
 			<br>
@@ -145,8 +145,8 @@
 			<p>When one does shading in a raytracer, the typical approach is to find the straight line joining a point to be shaded with a light, and then to shade based on the distance to the light as well as the angle with which the light ray strikes
 			the surface.  This becomes enormously more complex when one is dealing with a black hole, because:</p>
 			<br>
-			<p>		1.  Finding a light ray connecting two points in a black hole spacetime is a non-trivial boundary value problem.</p>
-			<p>		2.  It turns out that there are typically infinitely many solutions.</p>
+			<p>		1.  Finding a light ray connecting two points in a black hole spacetime is non-trivial.</p>
+			<p>		2.  It turns out that there are typically infinitely many such light rays.</p>
 			<br>
 			<p>To handle this, I decided to use a non-linear variant of the <em>Photon mapping<sup><a href="#ref5">[5]</a></sup></em> algorithm.  In brief, Photon mapping works by casting a large number of light rays from each light in a 3D scene into the scene, and keeping track
 			of where they land.  When shading a point, one then simply counts how many photons have landed "nearby".  This approach neatly sidesteps the thorny issue raised above.</p>
@@ -179,7 +179,7 @@
 			<br>
 			<p>As I mentioned at the beginning, taking the scene above and turning it into a hologram requires opening some black boxes.  Firstly, I needed to implement the Chimera script within my raytracer; however, this did not prove to 
 			be a large challenge.  More interesting was the need to look at how the images of my black hole generated by the script are turned into a hologram.  I won't discuss this in detail here because I discuss it at length in the video
-			at the bottom of this page.  Suffice it to say that when I dug into these algorithms, I discovered that all of them implicitly assumed that light ray trajectories are linear - at least between the camera and hologram plane.  As I am dealing with 
+			at the bottom of this page.  Suffice it to say that when I dug into these algorithms, I discovered that all of them implicitly assume that light ray trajectories are linear - at least between the camera and hologram plane.  As I am dealing with 
 			curved light ray trajectories, in order to prevent these algorithms from breaking it was necessary for me to place the black hole behind the hologram plane and to "turn it off" in front of it, so that light rays move along linear
 			trajectories until reaching the hologram plane, only bending once they have passed it.  This compromise prevents the algorithms from breaking while also enabling one to visualize the optical distortion of the black hole.
 			This is illustrated below.</p>
