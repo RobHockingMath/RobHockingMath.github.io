@@ -53,7 +53,8 @@
     margin: 0;
 	overflow: hidden; /* Prevents scrolling and hides any overflow */
     background-color: white; /* Fills uncovered areas with white */
-    background-image: none !important;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                      url('4D_Menger_Slice_Ver2_1a.jpg');
     background-size: cover; /* Scales the image to cover the container */
     background-position: top left; /* Aligns image to the top left */
 }
