@@ -54,14 +54,14 @@
 	overflow: hidden; /* Prevents scrolling and hides any overflow */
     background-color: white; /* Fills uncovered areas with white */
     background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.6)), 
-                      url('4D_Menger_Slice_Ver2_1.jpg') !important;
+                      url('4D_Menger_Slice_Ver2_1a.jpg') !important;
     background-size: cover; /* Scales the image to cover the container */
     background-position: top left; /* Aligns image to the top left */
 	color: black !important;
 }
 
 .about-container * {
-    color: white !important; /* Ensures all child elements have white text */
+    color: black !important; /* Ensures all child elements have white text */
 }
 
 .about-container p,
