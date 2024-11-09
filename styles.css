@@ -57,7 +57,7 @@
                       url('4D_Menger_Slice_Ver2_1.jpg') !important;
     background-size: cover; /* Scales the image to cover the container */
     background-position: top left; /* Aligns image to the top left */
-	color: white !important;
+	color: black !important;
 }
 
 .about-container * {
