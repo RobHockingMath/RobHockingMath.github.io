@@ -18,7 +18,7 @@
         <nav class="sidebar">
             <ul class="nav-links">
                 <li><a href="digital_holography.html">Digital Holography Home</a></li>
-                <li><a href="apollian_gasket.html">3D Apollonian gasket Digital Hologram</a></li>
+                <li><a href="apollian_gasket.html">3D Apollonian Gasket Digital Hologram</a></li>
                 <li><a href="black_hole.html">Black Hole Digital Hologram</a></li>
             </ul>
 		</nav>
@@ -30,7 +30,7 @@
 			<br>
 			<br>
 			Prior to arriving at ISDH 2023, I had signed up for an introductory holography course at the <a href="https://www.internationalschoolofholography.com/" target="_blank" rel="noopener noreferrer">International School of Holography</a>.  My instructor, <a href="https://www.mmelissacrenshaw.com/" target="_blank" rel="noopener noreferrer">Melissa Crenshaw</a>,
-			had given me a list of names of people to try and meet.  On the first day, I found myself seated at lunch time next to a man with long, dark brown hair streaked with grey.  As we talked, I realized he fit the profile of one of the people on my list.
+			had given me a list of names of people to try and meet.  On the first day, I found myself seated at lunch time next to a man with long dark brown hair streaked with grey.  As we talked, I realized he fit the profile of one of the people on my list.
 			<br>
 			<br>
 			<p>"Are you Michael Page from the Ontario College of Art and Design?" I asked.</p>
@@ -61,7 +61,7 @@
 			<br>
 			"Yes."
 			<br>
-			"The 3D scene can change as you move the camera, so that the object in hologram will deform as you view it from different angles."
+			"The 3D scene can change as you move the camera, so that the object in hologram deforms as you view it from different angles."
 			<br>
 			"Yes."
 			<br>
@@ -74,7 +74,7 @@
 			<br>
 			<p>After the conference, I didn't get started making my first hologram until February 2024.  When I did get to work, I decided that rather than going straight for a black hole, I would first make life easy for myself and do something simple.
 			I had been experimenting over the past year with different mediums for visualizing a 3D Apollonian gasket, first producing a 3D print that was an expensive failure, and then a glass etching that was better, but which I still
-			somehow found unsatisfying.  
+			found unsatisfying.  
 			
 			<br>
 			<br>
@@ -96,7 +96,15 @@
 			<br>
 			
 			
-			<p>In these early experiments I had generated 3D meshes of the gasket using a relatively inefficient algorithm that requires one to maintain an explicit list of all the spheres making up the gasket, and which has a runtime proportional to the number of spheres.  In practice, I found that this greatly limited the resolution of the gasket.  However, I'd just coded up a more efficient version of the algorithm that requires no such list and has a run time proportional to the <em> logarithm</em> of the number of spheres.  The result was a much higher resolution version of the gasket, and I decided that I would try it out as my first hologram.
+			<p>I should mention that a 3D Apollonian gasket is a type of Kleinian limit set fractal made up entirely of spheres 
+			of different sizes, arranged such that any two spheres intersect at at most one point 
+			(and any sphere intersects at least one other sphere, also at a one point).  
+			In these early experiments I had generated 3D meshes of the gasket using a relatively inefficient algorithm that 
+			requires one to maintain an explicit list of all the spheres making up the gasket, and 
+			which has a runtime proportional to the number of spheres.  In practice, I found that this greatly limited the resolution of the gasket.  
+			However, I'd just coded up a more efficient version of the algorithm that requires no 
+			such list and has a run time proportional to the <em> logarithm</em> of the number of spheres.  
+			The result was a much higher resolution version of the gasket, and I decided that I would try it out as my first hologram.
 			<br>
 			<br>
 			<div class="image-gallery">
@@ -111,9 +119,9 @@
 			</div>
 			<br>
 			<br>
-			<p>It's worth mentioning at this point that their are two main types of digital hologram - <em>half-parallax</em> and <em>full-parallax</em>.  The difference in a nutshell is that half-parallax digital holograms
-			only respond to horizontal motions of your head, ignoring any vertical motions, while full-parallax digital holograms respond to both types of motion.  Half parallax holograms have the advantage that they require only a single horizontal slice of renderings, which can be done on a fast PC in about eight hours to a day, depending on the complexity of the scene.
-			Full-parallax digital holograms, while arguably more realistic, require a whole extra dimension of information.  Instead of a single horizontal slice, you need 90 to 180 vertically translated horizontal slices, at least 
+			<p>It's worth mentioning at this point that there are two main types of digital hologram - <em>half-parallax</em> and <em>full-parallax</em>.  The difference in a nutshell is that half-parallax digital holograms
+			only respond to horizontal motion of your head, ignoring any vertical motion, while full-parallax digital holograms respond to both types of motion.  Half-parallax holograms have the advantage that they require only a single horizontal slice of renderings, which can be done on a fast PC in about eight hours to a day, depending on the complexity of the scene.
+			Full-parallax digital holograms, while arguably more realistic, require a whole extra dimension of information.  Instead of a single horizontal slice of images, you need 90 to 180 vertically translated horizontal slices, at least 
 			within the Chimera pipeline.  In my experience, rendering a full-parallax hologram takes about a month, even when the job is split across several computers.</p>
 			<br>			
 			<p>My goal in this project was simply to <em>succeed</em> in making a digital hologram, not necessarily to make a spectacular one; it was a kind of holographic "hello world".  As such, I wanted minimize the number of things that could go wrong.  
@@ -130,19 +138,19 @@
 			<br>
 			<p>"You've got a pretty interesting shape there, but frankly if you turn that into a hologram, you're just going to waste all lot of money producing a dark blob.  Go for something shiny and metallic."</p>  
 			<br>
-			<p>I followed Michael's advice and modified the texture to the shiny gold one in the images above, and ran the Chimera script on it.  The script was simple enough to use and I didn't really need to understand it to do so.  Nevertheless, there were a couple of "gotchas":</p>
+			<p>I followed Michael's advice and modified the texture to the shiny gold one in the images above, and then ran the Chimera script on it.  The script was simple enough to use and I didn't really need to understand it to do so.  Nevertheless, there were a couple of "gotchas":</p>
 			<br>
 			<p>1.  Yves trims a 10% buffer around the border of each image (5% on the left and the right, 5% on the top and the bottom), but doesn't mention this anywhere in his ReadMe file.  After I ran the script overnight the first time and
 			sent the images to Yves, he said that I should zoom the camera out more to take the buffer into account and re-render.</p>
 			<br>
 			<p>2. I had rendered my gasket with a texture so shiny that parts of it came out pure white.  This is a no-no in digital holography, as it can lead to a phenomema called "burn in", where the laser making
-			the hologram is set to such a high power that it literally burns a hole in holographic emulsion; bright points close to or on the holographic plane are a particularly problematic.  I hadn't yet taken a course in digital holography, and so I didn't know this.
+			the hologram is set to such a high power that it literally burns a hole in holographic emulsion; bright points close to or on the holographic plane are particularly problematic.  I hadn't yet taken a course in digital holography, and so I didn't know this.
 			After second round of rendering, I sent the newly zoomed out images to Yves; he told me to dial down the lighting in order to avoid burn in and re-render.</p>
 			<br>
 			<p>3.  If the script was interrupted by, for example, Windows installing updates and then making a unilateral decision to reboot my computer, the script would by default start over from the beginning, potentially undoing days of work.  So I had to understand the script enough
-			to modify it to pick up from where it had left off (obviously this more relevant to full-parallax than half-parallax).</p>
+			to modify it to pick up from where it had left off (obviously this more relevant for full-parallax than it is for half-parallax).</p>
 			<br>
-			<p>Aside from the above things went smoothly, and I managed to produce a half-parallax version of the hologram within a few weeks.  In particular, I had it ready in time for the submission deadline of the Bridges 2024 Mathematical Art Exhibition.</p>
+			<p>Aside from the above things went smoothly, and I managed to produce a half-parallax version of the hologram within a few weeks.  In particular, I had it ready in time for the submission deadline of the <a href="https://www.bridgesmathart.org/" target="_blank" rel="noopener noreferrer">Bridges</a> 2024 Mathematical Art Exhibition.</p>
 			<br>
 			  
 			<br>
@@ -157,8 +165,8 @@
 			<br>
 			During the month that the full parallax version was calculating, I was taking a class in digital holography at the International School of Holography with <a href="http://i-jacques.com//graphisen.html" target="_blank" rel="noopener noreferrer">Jacques Desbiens</a>, where I learnt many things that would prove 
 			very helpful in my future work after this "practice hologram".  Jacques, like many holographers, was frustrated by the apparent lack of interest in his field - despite the course being open to the entire world, I was one of only a handful of students enrolled.  I was talking about this to one of my friends
-			from Bridges, a mathematical art conference that I go to every summer, and she suggested a make a film about the 3D Apollonian gasket hologram that is half how it came to be and half tutorial, and to submit it to the Bridges 2024 short film festival.
-			The idea was to expose other mathematical artists to the possibilities of digital holography while at the same time giving them a brief overview of how to get started.  I agreed with her that mathematical artists would surely be all over this technology if only they knew that it exists (after all, I had only been aware of it for around six months).  The result was this video:
+			from Bridges and she suggested a make a film about the 3D Apollonian gasket hologram that is half how it came to be and half tutorial, and to submit it to the Bridges 2024 short film festival.
+			The idea was to expose other mathematical artists to the possibilities of digital holography while at the same time giving them a brief overview of how to get started.  I agreed with her that mathematical artists would surely be all over this technology if only they knew that it exists.  The result was this video:
 			<br>
 			<br>
 			<div class="video-container">
