@@ -59,6 +59,16 @@
 	color: white
 }
 
+.about-container * {
+    color: white !important; /* Ensures all child elements have white text */
+}
+
+.about-container p,
+.about-container h1,
+.about-container h2 {
+    color: white;
+}
+
 html, body {
     height: 100%;
     margin: 0;
