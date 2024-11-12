@@ -12,7 +12,7 @@
 	padding: 0;
 	margin: 0;
 	background-color: white !important; /* Fills uncovered areas with black */
-    background-image: url('background_narrow.png');
+    background-image: url('images/background_narrow.png');
     background-size: cover; /* Keep the image’s original dimensions */
     background-position: top left; /* Align image to the top left */
     background-repeat: no-repeat; /* Prevents repeating */
@@ -27,7 +27,7 @@
 	overflow: hidden; /* Prevents scrolling and hides any overflow */
     background-color: white; /* Fills uncovered areas with white */
     background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.6)), 
-                      url('4DMengerSpongeSliceVer1_1.jpg');
+                      url('images/4DMengerSpongeSliceVer1_1.jpg');
     background-size: cover; /* Scales the image to cover the container */
     background-position: top left; /* Aligns image to the top left */
 }
@@ -41,7 +41,7 @@
 	overflow: hidden; /* Prevents scrolling and hides any overflow */
     background-color: white; /* Fills uncovered areas with white */
     background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.6)), 
-                      url('Sydney_crop.png');
+                      url('images/Sydney_crop.png');
     background-size: cover; /* Scales the image to cover the container */
     background-position: top left; /* Aligns image to the top left */
 }
@@ -54,7 +54,7 @@
 	overflow: hidden; /* Prevents scrolling and hides any overflow */
     background-color: white; /* Fills uncovered areas with white */
     background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), 
-                      url('4D_Menger_Slice_Ver2_1a.jpg');
+                      url('images/4D_Menger_Slice_Ver2_1a.jpg');
     background-size: cover; /* Scales the image to cover the container */
     background-position: top left; /* Aligns image to the top left */
 }
