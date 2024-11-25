@@ -281,3 +281,21 @@ sup, sup a {
     white-space: nowrap; /* Keeps everything within this span on the same line */
     display: inline; /* Ensures it doesn’t affect line flow */
 }
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px; /* Space between items */
+}
+
+.image-preview {
+    text-align: center; /* Centers the text under the image */
+    border: 1px solid #ccc; /* Optional: Adds a border for visual clarity */
+    border-radius: 5px; /* Optional: Rounds corners */
+    padding: 10px; /* Optional: Adds padding inside the box */
+}
+
+.image-preview img {
+    max-width: 100%; /* Ensures the image fits the grid cell */
+    height: auto; /* Maintains the aspect ratio */
+}
