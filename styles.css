@@ -282,39 +282,45 @@ sup, sup a {
     display: inline; /* Ensures it doesn’t affect line flow */
 }
 
+/* The container for the gallery grid */
 .gallery {
-    display: grid; /* Creates a responsive grid */
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible columns */
-    gap: 20px; /* Space between grid items */
+    display: grid; /* Enables grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Creates responsive columns */
+    gap: 20px; /* Space between items */
+    padding: 10px; /* Optional: Adds padding around the gallery */
 }
 
+/* Each grid item (thumbnail with captions and links) */
 .image-preview {
-    display: flex; /* Creates a flexible layout */
-    flex-direction: column; /* Stacks children vertically */
+    display: flex; /* Stacks content vertically */
+    flex-direction: column;
     align-items: center; /* Centers content horizontally */
-    text-align: center; /* Centers text content */
+    text-align: center; /* Centers text inside */
     padding: 10px;
-    border: 1px solid #ccc; /* Optional: Adds a border */
+    border: 1px solid #ccc; /* Optional: Border for each grid item */
     border-radius: 5px; /* Optional: Rounds corners */
 }
 
+/* Thumbnail images */
 .image-preview img {
-    width: 100%; /* Ensures images fit within the container */
-    max-width: 150px; /* Restricts thumbnail width */
+    width: 100%; /* Ensures images fit their container */
+    max-width: 150px; /* Restricts maximum thumbnail size */
     height: auto; /* Maintains aspect ratio */
-    object-fit: cover; /* Ensures images are neatly cropped if needed */
+    object-fit: cover; /* Neatly crops oversized images */
     margin-bottom: 10px; /* Adds space below the image */
 }
 
+/* Captions (above the images) */
 .image-preview p {
     margin: 0 0 10px 0; /* Adds space below the caption */
-    font-size: 14px; /* Adjusts caption font size */
-    color: #333; /* Caption text color */
+    font-size: 14px;
+    color: #333;
 }
 
+/* Links (below the images) */
 .image-preview a {
-    display: block; /* Ensures links stack vertically */
-    margin: 5px 0; /* Adds space between links */
+    display: block; /* Makes links stack vertically */
+    margin: 5px 0; /* Adds spacing between links */
     text-decoration: none;
     color: #0066cc;
     background-color: #f0f0f0;
@@ -325,6 +331,6 @@ sup, sup a {
 }
 
 .image-preview a:hover {
-    background-color: #e0e0e0; /* Changes background on hover */
+    background-color: #e0e0e0;
     text-decoration: underline;
 }
