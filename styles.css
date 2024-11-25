@@ -283,40 +283,34 @@ sup, sup a {
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
+    display: grid; /* Enables grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
+    gap: 10px; /* Space between items */
 }
 
 .image-preview {
-    text-align: center; /* Center-aligns content */
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column; /* Arranges content vertically */
-    align-items: center; /* Centers content */
+    text-align: center;
+    border: 1px solid #ccc; /* Optional: Add border around items */
+    border-radius: 5px; /* Optional: Round corners */
+    padding: 10px; /* Adds spacing inside each item */
 }
 
 .image-preview p {
     margin: 0 0 10px 0; /* Adds space below the caption */
-    font-size: 14px; /* Optional: Adjust caption font size */
-    color: #333; /* Optional: Adjust caption text color */
+    font-size: 14px; /* Adjust font size */
+    color: #333; /* Optional: Caption text color */
 }
 
 .image-preview img {
-    width: 100%;
-    max-width: 150px;
-    height: auto;
-    object-fit: cover;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px; /* Adds spacing below the image */
+    width: 100%; /* Ensures image fits within its container */
+    max-width: 150px; /* Constrain image width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures image fits nicely */
 }
 
 .image-preview a {
-    display: inline-block;
-    margin: 5px 0;
+    display: inline-block; /* Makes links behave like buttons */
+    margin: 5px 0; /* Adds space between links */
     text-decoration: none;
     color: #0066cc;
     background-color: #f0f0f0;
