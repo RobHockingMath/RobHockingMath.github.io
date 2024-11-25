@@ -325,3 +325,12 @@ sup, sup a {
     border: 1px solid #ccc;
     font-size: 14px;
 }
+
+.gallery-intro p {
+    text-indent: 30px; /* Indents the first line of text */
+    margin-bottom: 20px; /* Adds spacing below the paragraph */
+}
+
+.gallery-intro {
+    padding-left: 20px; /* Optional: Indents all text in the container */
+}
