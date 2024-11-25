@@ -336,6 +336,11 @@ sup, sup a {
     margin: 0 auto;
 }
 
+.gallery-intro a {
+    display: inline; /* Keeps superscripts inline with text */
+    white-space: nowrap; /* Prevents wrapping */
+}
+
 .gallery-intro {
     padding-left: 20px; /* Optional: Indents all text in the container */
 }
