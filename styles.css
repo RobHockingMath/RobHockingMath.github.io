@@ -331,6 +331,11 @@ sup, sup a {
     margin-bottom: 20px; /* Adds spacing below the paragraph */
 }
 
+.gallery-intro h1 {
+    text-align: center;
+    margin: 0 auto;
+}
+
 .gallery-intro {
     padding-left: 20px; /* Optional: Indents all text in the container */
 }
