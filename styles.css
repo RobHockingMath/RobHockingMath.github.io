@@ -296,6 +296,9 @@ sup, sup a {
 }
 
 .image-preview img {
-    max-width: 100%; /* Ensures the image fits the grid cell */
-    height: auto; /* Maintains the aspect ratio */
+    width: 150px; /* Set the desired thumbnail width */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: cover; /* Ensures the image fills the set dimensions without stretching */
+    border: 1px solid #ccc; /* Optional: Add a border around the thumbnails */
+    border-radius: 5px; /* Optional: Rounds the corners */
 }
