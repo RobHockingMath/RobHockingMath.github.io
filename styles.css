@@ -283,17 +283,43 @@ sup, sup a {
 }
 
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: flex; /* Enable Flexbox layout */
+    flex-wrap: wrap; /* Allow items to wrap onto new rows */
+    gap: 20px; /* Space between grid items */
     padding: 10px;
 }
 
 .image-preview {
-    flex: 1 1 calc(25% - 20px); /* Adjust the width */
+    flex: 1 1 150px; /* Minimum size of 150px; adjusts dynamically */
     text-align: center;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    max-width: 200px; /* Optional: Prevent oversized items */
+    max-width: 200px; /* Prevent grid items from growing too large */
+}
+
+.image-preview img {
+    width: 100%; /* Scale image to fit container */
+    max-width: 150px; /* Ensure thumbnails are constrained */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure consistent cropping if necessary */
+    margin-bottom: 10px; /* Adds space between image and caption */
+}
+
+.image-preview p {
+    margin: 0 0 10px 0; /* Add space below caption */
+    font-size: 14px;
+    color: #333;
+}
+
+.image-preview a {
+    display: block; /* Ensure links stack vertically */
+    margin: 5px 0; /* Add spacing between links */
+    text-decoration: none;
+    color: #0066cc;
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
 }
