@@ -283,33 +283,37 @@ sup, sup a {
 }
 
 .gallery {
-    display: grid; /* Enables grid layout */
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
-    gap: 10px; /* Space between items */
+    display: grid; /* Creates a responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible columns */
+    gap: 20px; /* Space between grid items */
 }
 
 .image-preview {
-    text-align: center;
-    border: 1px solid #ccc; /* Optional: Add border around items */
-    border-radius: 5px; /* Optional: Round corners */
-    padding: 10px; /* Adds spacing inside each item */
+    display: flex; /* Creates a flexible layout */
+    flex-direction: column; /* Stacks children vertically */
+    align-items: center; /* Centers content horizontally */
+    text-align: center; /* Centers text content */
+    padding: 10px;
+    border: 1px solid #ccc; /* Optional: Adds a border */
+    border-radius: 5px; /* Optional: Rounds corners */
+}
+
+.image-preview img {
+    width: 100%; /* Ensures images fit within the container */
+    max-width: 150px; /* Restricts thumbnail width */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Ensures images are neatly cropped if needed */
+    margin-bottom: 10px; /* Adds space below the image */
 }
 
 .image-preview p {
     margin: 0 0 10px 0; /* Adds space below the caption */
-    font-size: 14px; /* Adjust font size */
-    color: #333; /* Optional: Caption text color */
-}
-
-.image-preview img {
-    width: 100%; /* Ensures image fits within its container */
-    max-width: 150px; /* Constrain image width */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensures image fits nicely */
+    font-size: 14px; /* Adjusts caption font size */
+    color: #333; /* Caption text color */
 }
 
 .image-preview a {
-    display: inline-block; /* Makes links behave like buttons */
+    display: block; /* Ensures links stack vertically */
     margin: 5px 0; /* Adds space between links */
     text-decoration: none;
     color: #0066cc;
@@ -321,6 +325,6 @@ sup, sup a {
 }
 
 .image-preview a:hover {
-    background-color: #e0e0e0;
+    background-color: #e0e0e0; /* Changes background on hover */
     text-decoration: underline;
 }
