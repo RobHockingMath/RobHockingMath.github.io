@@ -282,55 +282,18 @@ sup, sup a {
     display: inline; /* Ensures it doesn’t affect line flow */
 }
 
-/* The container for the gallery grid */
 .gallery {
-    display: grid; /* Enables grid layout */
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Creates responsive columns */
-    gap: 20px; /* Space between items */
-    padding: 10px; /* Optional: Adds padding around the gallery */
-}
-
-/* Each grid item (thumbnail with captions and links) */
-.image-preview {
-    display: flex; /* Stacks content vertically */
-    flex-direction: column;
-    align-items: center; /* Centers content horizontally */
-    text-align: center; /* Centers text inside */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 10px;
-    border: 1px solid #ccc; /* Optional: Border for each grid item */
-    border-radius: 5px; /* Optional: Rounds corners */
 }
 
-/* Thumbnail images */
-.image-preview img {
-    width: 100%; /* Ensures images fit their container */
-    max-width: 150px; /* Restricts maximum thumbnail size */
-    height: auto; /* Maintains aspect ratio */
-    object-fit: cover; /* Neatly crops oversized images */
-    margin-bottom: 10px; /* Adds space below the image */
-}
-
-/* Captions (above the images) */
-.image-preview p {
-    margin: 0 0 10px 0; /* Adds space below the caption */
-    font-size: 14px;
-    color: #333;
-}
-
-/* Links (below the images) */
-.image-preview a {
-    display: block; /* Makes links stack vertically */
-    margin: 5px 0; /* Adds spacing between links */
-    text-decoration: none;
-    color: #0066cc;
-    background-color: #f0f0f0;
-    padding: 5px 10px;
-    border-radius: 5px;
+.image-preview {
+    flex: 1 1 calc(25% - 20px); /* Adjust the width */
+    text-align: center;
+    padding: 10px;
     border: 1px solid #ccc;
-    font-size: 14px;
-}
-
-.image-preview a:hover {
-    background-color: #e0e0e0;
-    text-decoration: underline;
+    border-radius: 5px;
+    max-width: 200px; /* Optional: Prevent oversized items */
 }
