@@ -1,128 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	<meta property="og:title" content="3D diagonal cross-sections of 4D Menger sponges">
-	<meta property="og:image" content="https://robhockingmath.github.io/images/4D_Slice2_HD.png">
-	<meta property="og:url" content="https://robhockingmath.github.io/menger.html">
-	<meta property="og:type" content="website">
-	<meta property="og:image:width" content="1920">
-	<meta property="og:image:height" content="1080">
-	
-    <title>3D diagonal cross-sections of 4D Menger sponges</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<!--<body style="background-color: white; background-image: none; color: black;">!-->
-<body>
-    <!-- Apply black background and set height to container to ensure content alignment -->
-    <!--<div class="container" style="background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.6)), url('images/Sydney_crop.png'); background-size: cover; background-position: top left; color: black; height: 100vh; display: flex;">!-->
-	<div class="container fractal-container">
-        <!-- Sidebar with Navigation at the Top and Name at the Bottom -->
-        <nav class="sidebar">
-            <ul class="nav-links">
-                <li><a href="fractal.html">Fractal Home</a></li>
-                <li><a href="menger.html">3D diagonal cross-sections of 4D Menger sponges</a></li>
-            </ul>
-		</nav>
-	
 
-        <div class="content" style="flex-grow: 1;">
-            <h1>3D diagonal cross-sections of 4D Menger sponges</h1>
-			<br>
-			<br>
-			I've been aware of Menger sponges and their relatives since university.  However, I never gave them much thought until I stumbled upon <a href="https://www.simonsfoundation.org/2012/12/10/mathematical-impressions-the-surprising-menger-sponge-slice/" target="_blank" rel="noopener noreferrer">the following video</a> by George Hart and the Simon's foundation about their diagonal cross-sections in the spring of 2022.  
-			My first thought was to 3D print the sponge in two halves in such such a way that there is a mechanism for locking them together and then pulling them apart.  I iterated
-			on a few designs before eventually settling on this one - a steel 3D print with inlaid rare earth magnets:
-			<br>
-			<br>
-			<div class="image-gallery">
-			<figure>
-				<img src="images/together.JPG" alt="Description of Image 1" class="gallery-image">
-				<figcaption>The two halves locked together.</figcaption>
-			</figure>
-			<figure>
-				<img src="images/apart.JPG" alt="Description of Image 2" class="gallery-image">
-				<figcaption>One half with inlaid magnets visible.</figcaption>
-			</figure>
-			</div>
-			<br>
-			<br>
-			<p>At the same time as I was iterating on this, a more interesting thought occurred to me - if the 3D Menger sponge has surprising and interesting 2D diagonal cross-sections, then might same be true of the 3D diagonal cross-sections of a 4D Menger sponge?</p>
-			<br>
-			<p>Intuitively, it seemed that since the central diagonal 3D Menger slice is a six-sided regular polygon with six-pointed star holes, then the central diagonal 4D Menger slice should be an eight-sided platonic solid with eight-pointed 3D star interior cavities (I was guessing that the number of sides of the slice as well as the number of points of its star shaped holes are twice the dimension of the associated sponge).  The only eight-sided
-			Platonic solid is the octagon, and its stellation (the stellated octahedron) is an eight-pointed 3D star, so I conjectured that the 3D central diagonal cross-section of a 4D Menger sponge is a 
-			octagon with a fractal pattern of stellated octahedrons as interior cavities - something like this:</p>
-			<br>
-			<br>
-			<div class="image-gallery">
-			<figure>
-				<img src="images/front2.jpg" alt="Description of Image 1" class="gallery-image">
-				<figcaption>3D cross-section of a 4D Menger-sponge of type 2, viewed head on.</figcaption>
-			</figure>
-			<figure>
-				<img src="images/perspective2.jpg" alt="Description of Image 2" class="gallery-image">
-				<figcaption>Viewed obliquely.</figcaption>
-			</figure>
-			</div>
-			<br>
-			<br>
-			<p>I didn't yet know what a 4D Menger sponge is, but I had code for the 3D case and I guessed how to generalize it to 4D.  The following shape popped out.</p>
-			<br>
-			<br>
-			<div class="image-gallery">
-			<figure>
-				<img src="images/4D_Slice.JPG" alt="Description of Image 1" class="gallery-image">
-				<figcaption>3D cross-section of a 4D Menger sponge of type 1.</figcaption>
-			</figure>
-			</div>
-			<br>
-			<br>
-			<p>The video below makes it easier to make sense of the 3D structure of this object.  It is a truncated tetrahedron, each hexagonal face of which is the central diagonal cross-section of the 3D Menger sponge.</p>
-			<br>
-			<br>
-			<div class="video-container">
-			<iframe width="800" height="450" src="https://www.youtube.com/embed/V6IbbllOxVk?si=9VsBLoHzvIZihsjV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-			</div>
-			<br>
-			<p>This was unexpected, but very interesting - and I got work figuring out what was going on.  The first thing to do was to clarify what a 4D Menger sponge really is.  I won't go into the details here, but it turns out that
-			there are n possible Menger sponges in n-dimensional space.  Karl Menger himself had pointed this out in his original work <sup><a href="#ref1">[1]</a></sup>, but this fact seems to have been largely lost to time.  After I clarified this, I discovered that a 4D Menger sponge with 3D cross-sections conforming
-			to my intuition does exist, it is just different from the one I had coded up (also a valid 4D sponge, but of a different type).  After I modified my code to produce any of the four possible 4D Menger sponges and ran it on the correct variant, precisely the result I had originally conjectured popped out.</p>
-			<br>
-			<p>The real joy of this project, however, was the unexpected truncated tetrahedron fractal above that I stumbled upon by accident and which I found in no way intuitive.  It took a few months, but I eventually made sense of it by deriving a relationship between the cross-sections of n-dimensional Menger sponges and those of (n-1)-dimensional sponges.
-			Details can be found in my Bridges 2023 paper <a href="https://archive.bridgesmathart.org/2023/bridges2023-291.pdf" target="_blank">here</a>.</p>
-			<br>
-			<div class="text-container">
-				<p>Alternatively, details can be found in the following two videos, which I submitted to the Bridges 2023 short film festival:</p>
-			</div>
-			
-			<div class="video-container">
-			<iframe width="800" height="450" src="https://www.youtube.com/embed/swKhEba6QLc?si=bFEEB-8mgTngVgFr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-			</div>
-			<br>
-			<br>
-			<div class="video-container">
-			<iframe width="800" height="450" src="https://www.youtube.com/embed/y_Dp08C-6K0?si=XvV6RAt8nY7pfxKk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-			</div>
-			
-			
-			<!--<iframe width="800" height="450" src="https://www.youtube.com/embed/3w3GXbip7kY?si=eWU_YFGaCOxeCdtn" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>!-->
-            <!-- Add more content as needed -->
-        <h2>References</h2>
-		<br>
-		<ol id="references">
-			<li id="ref1">K. Menger. “Allgemeine Räume und Cartesische Räume. I.” <em>Proc. Akad. Wet. Amsterdam</em>, vol. 29, 1926, pp. 476–482.</li>
-		</ol>
-		</div>
-		
-		
-		
-	</div>
-	
-	
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta property="og:title" content="3D diagonal cross-sections of 4D Menger sponges">
+  <meta property="og:image" content="https://robhockingmath.github.io/images/4D_Slice2_HD.png">
+  <meta property="og:url" content="https://robhockingmath.github.io/menger.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image:width" content="1920">
+  <meta property="og:image:height" content="1080">
+
+  <title>3D diagonal cross-sections of 4D Menger sponges</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles-new.css">
+</head>
+
+<body>
+  <div class="home-container">
+    <nav class="navbar">
+      <a href="index.html">
+        <div class="name-section">
+          <h1>Rob Hocking</h1>
+          <p>Mathematician and Holographer</p>
+        </div>
+      </a>
+      <div class="nav-menu">
+        <div><a href="about.html">About</a></div>
+        <div><a href="digital_holography.html">Digital Holography</a></div>
+        <div><a href="fractal.html">Fractal Geometry</a></div>
+        <div><a href="quilts.html">Downloads</a></div>
+        <div><a href="https://www.youtube.com/@RobHockingMathArt/videos" target="_blank"
+            rel="noopener noreferrer">YouTube Channel</a></div>
+      </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="home-content">
+
+      <h1>3D diagonal cross-sections of 4D Menger sponges</h1>
+      <br>
+      <br>
+      I've been aware of Menger sponges and their relatives since university. However, I never gave them much thought
+      until I stumbled upon <a
+        href="https://www.simonsfoundation.org/2012/12/10/mathematical-impressions-the-surprising-menger-sponge-slice/"
+        target="_blank" rel="noopener noreferrer">the following video</a> by George Hart and the Simon's foundation
+      about their diagonal cross-sections in the spring of 2022.
+      My first thought was to 3D print the sponge in two halves in such such a way that there is a mechanism for locking
+      them together and then pulling them apart. I iterated
+      on a few designs before eventually settling on this one - a steel 3D print with inlaid rare earth magnets:
+      <br>
+      <br>
+      <div class="image-gallery">
+        <figure>
+          <img src="images/together.JPG" alt="Description of Image 1" class="gallery-image">
+          <figcaption>The two halves locked together.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/apart.JPG" alt="Description of Image 2" class="gallery-image">
+          <figcaption>One half with inlaid magnets visible.</figcaption>
+        </figure>
+      </div>
+      <br>
+      <br>
+      <p>At the same time as I was iterating on this, a more interesting thought occurred to me - if the 3D Menger
+        sponge has surprising and interesting 2D diagonal cross-sections, then might same be true of the 3D diagonal
+        cross-sections of a 4D Menger sponge?</p>
+      <br>
+      <p>Intuitively, it seemed that since the central diagonal 3D Menger slice is a six-sided regular polygon with
+        six-pointed star holes, then the central diagonal 4D Menger slice should be an eight-sided platonic solid with
+        eight-pointed 3D star interior cavities (I was guessing that the number of sides of the slice as well as the
+        number of points of its star shaped holes are twice the dimension of the associated sponge). The only
+        eight-sided
+        Platonic solid is the octagon, and its stellation (the stellated octahedron) is an eight-pointed 3D star, so I
+        conjectured that the 3D central diagonal cross-section of a 4D Menger sponge is a
+        octagon with a fractal pattern of stellated octahedrons as interior cavities - something like this:</p>
+      <br>
+      <br>
+      <div class="image-gallery">
+        <figure>
+          <img src="images/front2.jpg" alt="Description of Image 1" class="gallery-image">
+          <figcaption>3D cross-section of a 4D Menger-sponge of type 2, viewed head on.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/perspective2.jpg" alt="Description of Image 2" class="gallery-image">
+          <figcaption>Viewed obliquely.</figcaption>
+        </figure>
+      </div>
+      <br>
+      <br>
+      <p>I didn't yet know what a 4D Menger sponge is, but I had code for the 3D case and I guessed how to generalize it
+        to 4D. The following shape popped out.</p>
+      <br>
+      <br>
+      <div class="image-gallery">
+        <figure>
+          <img src="images/4D_Slice.JPG" alt="Description of Image 1" class="gallery-image">
+          <figcaption>3D cross-section of a 4D Menger sponge of type 1.</figcaption>
+        </figure>
+      </div>
+      <br>
+      <br>
+      <p>The video below makes it easier to make sense of the 3D structure of this object. It is a truncated
+        tetrahedron, each hexagonal face of which is the central diagonal cross-section of the 3D Menger sponge.</p>
+      <br>
+      <br>
+      <div class="video-container">
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/V6IbbllOxVk?si=9VsBLoHzvIZihsjV"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <br>
+      <p>This was unexpected, but very interesting - and I got work figuring out what was going on. The first thing to
+        do was to clarify what a 4D Menger sponge really is. I won't go into the details here, but it turns out that
+        there are n possible Menger sponges in n-dimensional space. Karl Menger himself had pointed this out in his
+        original work <sup><a href="#ref1">[1]</a></sup>, but this fact seems to have been largely lost to time. After I
+        clarified this, I discovered that a 4D Menger sponge with 3D cross-sections conforming
+        to my intuition does exist, it is just different from the one I had coded up (also a valid 4D sponge, but of a
+        different type). After I modified my code to produce any of the four possible 4D Menger sponges and ran it on
+        the correct variant, precisely the result I had originally conjectured popped out.</p>
+      <br>
+      <p>The real joy of this project, however, was the unexpected truncated tetrahedron fractal above that I stumbled
+        upon by accident and which I found in no way intuitive. It took a few months, but I eventually made sense of it
+        by deriving a relationship between the cross-sections of n-dimensional Menger sponges and those of
+        (n-1)-dimensional sponges.
+        Details can be found in my Bridges 2023 paper <a
+          href="https://archive.bridgesmathart.org/2023/bridges2023-291.pdf" target="_blank">here</a>.</p>
+      <br>
+      <div class="text-container">
+        <p>Alternatively, details can be found in the following two videos, which I submitted to the Bridges 2023 short
+          film festival:</p>
+      </div>
+
+      <div class="video-container">
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/swKhEba6QLc?si=bFEEB-8mgTngVgFr"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <br>
+      <br>
+      <div class="video-container">
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/y_Dp08C-6K0?si=XvV6RAt8nY7pfxKk"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
+
+      <!--<iframe width="800" height="450" src="https://www.youtube.com/embed/3w3GXbip7kY?si=eWU_YFGaCOxeCdtn" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>!-->
+      <!-- Add more content as needed -->
+      <h2>References</h2>
+      <br>
+      <ol id="references">
+        <li id="ref1">K. Menger. “Allgemeine Räume und Cartesische Räume. I.” <em>Proc. Akad. Wet. Amsterdam</em>, vol.
+          29, 1926, pp. 476–482.</li>
+      </ol>
+    </div>
+
+
+
+  </div>
+
+
 </body>
+
 </html>
