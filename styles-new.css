@@ -1,0 +1,173 @@
+/* Basic reset */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* site-specific styles */
+
+
+body {
+  background-color: #0b1422;
+  color: rgb(215, 244, 253);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  background-color: #132540;
+}
+.nav-menu {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.home-splash {
+  width: 100dvw;
+}
+
+.home-container {
+  display: grid;
+  grid-template-rows: min-content 1fr;
+}
+
+.home-content {
+  max-width: 750px;
+  margin: auto;
+  padding-block: 2rem;
+}
+
+
+nav a {
+  /* override the default link styling */
+  color: rgb(215, 244, 253);
+  text-decoration: none;
+}
+
+.name-section h1 {
+  display: inline;
+  font-size: xx-large;
+  padding: 10px;
+  /* margin-block: 10px; */
+}
+.name-section p {
+  font-size: larger;
+  padding: 10px;
+  /* margin-block: 10px; */
+}
+
+
+/* ********************************** for downloads gallery ************************* */
+
+
+.gallery {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible columns */
+  gap: 20px; /* Space between items */
+  padding: 10px; /* Optional: Padding around the gallery */
+}
+
+.image-preview {
+  display: flex; /* Stack content vertically */
+  flex-direction: column;
+  align-items: center; /* Center-align content */
+  text-align: center;
+  padding: 10px; /* Space inside each item */
+  border: 1px solid #ccc; /* Optional: Border for each item */
+  border-radius: 5px; /* Optional: Rounded corners */
+  background-color: #fff; /* Optional: Background for each item */
+}
+
+.image-preview img {
+  width: 100%; /* Scale image to fit container */
+  max-width: 150px; /* Ensure thumbnails are constrained */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure consistent cropping if necessary */
+  margin-bottom: 10px; /* Adds space between image and caption */
+}
+
+.image-preview p {
+  margin: 0 0 10px 0; /* Add space below caption */
+  font-size: 14px;
+  color: #333;
+}
+
+.image-preview a {
+  display: block; /* Ensure links stack vertically */
+  margin: 5px 0; /* Add spacing between links */
+  text-decoration: none;
+  color: #0066cc;
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.gallery-intro p {
+  text-indent: 30px; /* Indents the first line of text */
+  margin-bottom: 20px; /* Adds spacing below the paragraph */
+}
+
+.gallery-intro h1 {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.gallery-intro a {
+  display: inline; /* Keeps superscripts inline with text */
+  white-space: nowrap; /* Prevents wrapping */
+}
+
+.gallery-intro {
+  padding-left: 20px; /* Optional: Indents all text in the container */
+}

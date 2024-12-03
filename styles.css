@@ -3,10 +3,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Main container with background image */
-.container {
+.home-container {
     display: flex;
     height: 100vh;
 	padding: 0;
@@ -18,6 +19,17 @@
     background-repeat: no-repeat; /* Prevents repeating */
 }
 
+.container {
+  display: flex;
+  height: 100vh;
+padding: 0;
+margin: 0;
+background-color: white !important; /* Fills uncovered areas with black */
+  background-size: cover; /* Keep the image’s original dimensions */
+  background-position: top left; /* Align image to the top left */
+  background-repeat: no-repeat; /* Prevents repeating */
+}
+
 /* Background for Fractal page */
 .fractal-container {
     display: flex;
@@ -26,8 +38,6 @@
     margin: 0;
 	overflow: hidden; /* Prevents scrolling and hides any overflow */
     background-color: white; /* Fills uncovered areas with white */
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.6)), 
-                      url('images/4DMengerSpongeSliceVer1_1.jpg');
     background-size: cover; /* Scales the image to cover the container */
     background-position: top left; /* Aligns image to the top left */
 }
@@ -40,8 +50,6 @@
     margin: 0;
 	overflow: hidden; /* Prevents scrolling and hides any overflow */
     background-color: white; /* Fills uncovered areas with white */
-    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.6)), 
-                      url('images/Sydney_crop.png');
     background-size: cover; /* Scales the image to cover the container */
     background-position: top left; /* Aligns image to the top left */
 }
@@ -53,8 +61,6 @@
     margin: 0;
 	overflow: hidden; /* Prevents scrolling and hides any overflow */
     background-color: white; /* Fills uncovered areas with white */
-    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), 
-                      url('images/4D_Menger_Slice_Ver2_1a.jpg');
     background-size: cover; /* Scales the image to cover the container */
     background-position: top left; /* Aligns image to the top left */
 }
@@ -76,7 +82,6 @@ html, body {
     color: #fff;
     justify-content: space-between;
     padding: 20px;
-    font-family: 'Itim', cursive;
     text-align: left;
 	font-size: 1.5em; /* 50% larger font size for sidebar links */
     z-index: 10;
