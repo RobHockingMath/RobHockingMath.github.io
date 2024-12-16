@@ -52,7 +52,43 @@
         </nav>
 
         <!-- Main Content Area -->
-        <div class="content"></div>
+        <div class="content" style="flex-grow: 1;">
+			<div class="carousel-wrapper">
+
+				<!-- A hidden start state radio -->
+				<input type="radio" name="slider" id="start" checked style="display:none;">
+				<!-- Slide radios -->
+				<input type="radio" name="slider" id="slide1">
+				<input type="radio" name="slider" id="slide2">
+				<input type="radio" name="slider" id="slide3">
+
+				<!-- Slides -->
+				<div class="slider-container">
+					<div class="slides">
+						<div class="slide"><img src="images/4D_Slice_1000.jpg" alt="Slide 1"></div>
+						<div class="slide"><img src="images/front2_1000.jpg" alt="Slide 2"></div>
+						<div class="slide"><img src="images/together_1000.jpg" alt="Slide 3"></div>
+					</div>
+				</div>
+				
+				<!-- Caption container below the images and above the dots -->
+				<div class="caption-container">
+					<div class="caption caption1">3D Cross Section of a 4D Menger Sponge</div>
+					<div class="caption caption2">3D Cross Section of a differnt 4D Menger Sponge</div>
+					<div class="caption caption3">3D Menger Sponge</div>
+				</div>
+				
+				<!-- Manual Navigation Dots -->
+				<div class="navigation">
+					<label for="slide1" class="bar"></label>
+					<label for="slide2" class="bar"></label>
+					<label for="slide3" class="bar"></label>
+				</div>
+				
+			</div>
+		</div>
     </div>
+	
+<script src="script.js"></script>	
 </body>
 </html>
