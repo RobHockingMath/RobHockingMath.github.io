@@ -212,7 +212,7 @@ input[type=radio] {
 /* Slides container: 3 slides total */
 .slides {
   display: flex;
-  width: 300%;
+  width: 500%;
   transition: transform 1s ease;
   flex-wrap: nowrap; /* No wrapping, slides remain in a row */
 }
