@@ -1,46 +1,85 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quilts</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quilts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles-new.css">
 </head>
+
 <body>
-	<div class="gallery-intro">
-    <h1>Looking Glass Quilts</h1>
-	<br>
-    <p>This page features Quilt images and videos of some of my work, designed for viewing on a <a href="https://lookingglassfactory.com/" target="_blank" rel="noopener noreferrer">Looking Glass Device</a>:</p>
-	</div>
-	<br>
-	<div class="gallery">
-		<div class="image-preview">
-			<p><strong>Apollonian Gasket</strong></p>
-			<img src="quilts/GasketQuilt60degrees_qs8x6a0.75_1000.jpg" alt="Apollonian Gasket">
-			<a href="quilts/GasketQuilt60degrees_qs8x6a0.75.png" download>Download Quilt</a>
-			<a href="quilts/compressed_gasket_movie_qs8x6a0.75.mp4" download>Download Quilt Video</a>
-		</div>
-		<div class="image-preview">
-			<p><strong>Black Hole in an Underground Cistern</strong></p>
-			<img src="quilts/BlackHoleRoomDark_dn3_im_qs8x6a0.75_1000.jpg" alt="Black hole in an underground cistern">
-			<a href="quilts/BlackHoleRoomDark_dn3_im_qs8x6a0.75.png" download>Download Quilt</a>
-			<a href="quilts/compressed_blackhole_movie_qs8x6a0.75.mp4" download>Download Quilt Video</a>
-		</div>
-		<div class="image-preview">
-			<p><strong>Black Hole with a Ring of Fire</strong></p>
-			<img src="quilts/BlackHoleFire_96_dn2_im_qs8x6a0.75_1000.jpg" alt="Black Hole with a ring of fire">
-			<a href="quilts/BlackHoleFire_96_dn2_im_qs8x6a0.75.png" download>Download Quilt</a>
-		</div>
-		<div class="image-preview">
-			<p><strong>4D Menger Sponge Sections</strong></p>
-			<img src="quilts/Menger_302_dn3_im_qs8x6a0.75_1000.jpg" alt="4D Menger Sponge Sections">
-			<a href="quilts/Menger_302_dn3_im_qs8x6a0.75.png" download>Download Quilt</a>
-			<a href="quilts/compressed_Menger_movie_qs8x6a0.75.mp4" download>Download Quilt Video</a>
-		</div>
-		<!-- Add more images as needed -->
-	</div>	
+  <div class="home-container">
+    <nav class="navbar">
+      <a href="./index.html">
+        <div class="name-section">
+          <h1>Rob Hocking</h1>
+          <p>Mathematician and Holographer</p>
+        </div>  
+      </a>
+      <div class="nav-menu">
+        <div><a href="about.html">About</a></div>
+        <div id="toggle-holography">Digital Holography
+          <div id="submenu-holography" style="display:none;">
+            <div><a href="digital_holography.html">Introduction</a></div>
+            <div><a href="apollian_gasket.html">Apollonian Gasket</a></div>
+            <div><a href="black_hole.html">Black Hole</a></div>
+          </div>      
+        </div>
+        <div id="toggle-fractals">Fractal Geometry
+          <div id="submenu-fractals" style="display:none;">
+            <div><a href="fractal.html">Introduction</a></div>
+            <div><a href="menger.html">Menger Sponge</a></div>
+          </div>      
+        </div>
+        <div><a href="quilts.html">Downloads</a></div>
+        <div><a href="https://www.youtube.com/@RobHockingMathArt/videos" target="_blank"
+            rel="noopener noreferrer">YouTube Channel</a></div>
+      </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="home-content">
+      <div class="gallery-intro">
+        <h1>Looking Glass Quilts</h1>
+        <br>
+        <p>This page features Quilt images and videos of some of my work, designed for viewing on a <a
+            href="https://lookingglassfactory.com/" target="_blank" rel="noopener noreferrer">Looking Glass Device</a>:
+        </p>
+      </div>
+      <br>
+      <div class="gallery">
+        <div class="image-preview">
+          <p><strong>Apollonian Gasket</strong></p>
+          <img src="quilts/GasketQuilt60degrees_qs8x6a0.75_1000.jpg" alt="Apollonian Gasket">
+          <a href="quilts/GasketQuilt60degrees_qs8x6a0.75.png" download>Download Quilt</a>
+          <a href="quilts/compressed_gasket_movie_qs8x6a0.75.mp4" download>Download Quilt Video</a>
+        </div>
+        <div class="image-preview">
+          <p><strong>Black Hole in an Underground Cistern</strong></p>
+          <img src="quilts/BlackHoleRoomDark_dn3_im_qs8x6a0.75_1000.jpg" alt="Black hole in an underground cistern">
+          <a href="quilts/BlackHoleRoomDark_dn3_im_qs8x6a0.75.png" download>Download Quilt</a>
+          <a href="quilts/compressed_blackhole_movie_qs8x6a0.75.mp4" download>Download Quilt Video</a>
+        </div>
+        <div class="image-preview">
+          <p><strong>Black Hole with a Ring of Fire</strong></p>
+          <img src="quilts/BlackHoleFire_96_dn2_im_qs8x6a0.75_1000.jpg" alt="Black Hole with a ring of fire">
+          <a href="quilts/BlackHoleFire_96_dn2_im_qs8x6a0.75.png" download>Download Quilt</a>
+        </div>
+        <div class="image-preview">
+          <p><strong>4D Menger Sponge Sections</strong></p>
+          <img src="quilts/Menger_302_dn3_im_qs8x6a0.75_1000.jpg" alt="4D Menger Sponge Sections">
+          <a href="quilts/Menger_302_dn3_im_qs8x6a0.75.png" download>Download Quilt</a>
+          <a href="quilts/compressed_Menger_movie_qs8x6a0.75.mp4" download>Download Quilt Video</a>
+        </div>
+        <!-- Add more images as needed -->
+      </div>
+    </div>
+  </div>
+  <script type="module" src="./dropdowns.js"></script>
 </body>
+
 </html>

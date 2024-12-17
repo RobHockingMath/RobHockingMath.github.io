@@ -1,47 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	<meta property="og:title" content="Fractal Geometry">
-	<meta property="og:image" content="https://robhockingmath.github.io/images/4DMengerSpongeSliceVer1_1.jpg">
-	<meta property="og:url" content="https://robhockingmath.github.io/fractal.html">
-	<meta property="og:type" content="website">
-	<meta property="og:image:width" content="1027">
-	<meta property="og:image:height" content="1196">
-	
-	
-    <title>Fractal Geometry</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta property="og:title" content="Fractal Geometry">
+  <meta property="og:image" content="https://robhockingmath.github.io/images/4DMengerSpongeSliceVer1_1.jpg">
+  <meta property="og:url" content="https://robhockingmath.github.io/fractal.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image:width" content="1027">
+  <meta property="og:image:height" content="1196">
+
+
+  <title>Fractal Geometry</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles-new.css">
 </head>
 <!--<body style="background-color: white; background-image: none; color: black;">!-->
-<body>
-    <!-- Apply black background and set height to container to ensure content alignment -->
-    <!--<div class="container" style="background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.6)), url('images/Sydney_crop.png'); background-size: cover; background-position: top left; color: black; height: 100vh; display: flex;">!-->
-	<div class="container fractal-container">
-        <!-- Sidebar with Navigation at the Top and Name at the Bottom -->
-        <nav class="sidebar">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="menger.html">3D diagonal cross-sections of 4D Menger sponges</a></li>
-            </ul>
-		</nav>
-	
 
-        <div class="content" style="flex-grow: 1;">
-            <h1>Fractal Geometry</h1>
-			<br>
-            <p>
-			My interest in fractals dates back to high school, when I was introduced by a friend to the Mandelbrot set.  Today, I am mainly interested in two broad types of fractals:</p>
-			<br>
-				<p>1.  Fractals that are in some way related to Platonic solids, Archimedean solids, or their higher dimensional generalizations.  These fractals are typically well suited to 3D printing in metal, and that is my medium of choice in this case.</p>
-				<br>
-				<p>2.  Klienian limit set fractals in three or more dimensions.  The 2D case of this class of fractals is famously explored in the book "Indra's Pearls" - for three or more dimensions, one must dig into the literature.  Although I have succeeded once or twice in 3D printing a member of this family, this is typically not viable and glass etchings or holograms are a better medium in this case.</p>  
+<body>
+  <!-- Apply black background and set height to container to ensure content alignment -->
+  <!--<div class="container" style="background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.6)), url('images/Sydney_crop.png'); background-size: cover; background-position: top left; color: black; height: 100vh; display: flex;">!-->
+  <div class="home-container">
+    <nav class="navbar">
+      <a href="./index.html">
+        <div class="name-section">
+          <h1>Rob Hocking</h1>
+          <p>Mathematician and Holographer</p>
+        </div>  
+      </a>
+      <div class="nav-menu">
+        <div><a href="about.html">About</a></div>
+        <div id="toggle-holography">Digital Holography
+          <div id="submenu-holography" style="display:none;">
+            <div><a href="digital_holography.html">Introduction</a></div>
+            <div><a href="apollian_gasket.html">Apollonian Gasket</a></div>
+            <div><a href="black_hole.html">Black Hole</a></div>
+          </div>      
         </div>
-	</div>
+        <div id="toggle-fractals">Fractal Geometry
+          <div id="submenu-fractals" style="display:none;">
+            <div><a href="fractal.html">Introduction</a></div>
+            <div><a href="menger.html">Menger Sponge</a></div>
+          </div>      
+        </div>
+        <div><a href="quilts.html">Downloads</a></div>
+        <div><a href="https://www.youtube.com/@RobHockingMathArt/videos" target="_blank"
+            rel="noopener noreferrer">YouTube Channel</a></div>
+      </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="home-content">
+      <h1>Fractal Geometry</h1>
+      <br>
+      <p>
+        My interest in fractals dates back to high school, when I was introduced by a friend to the Mandelbrot set.
+        Today, I am mainly interested in two broad types of fractals:</p>
+      <br>
+      <p>1. Fractals that are in some way related to Platonic solids, Archimedean solids, or their higher dimensional
+        generalizations. These fractals are typically well suited to 3D printing in metal, and that is my medium of
+        choice in this case.</p>
+      <br>
+      <p>2. Klienian limit set fractals in three or more dimensions. The 2D case of this class of fractals is famously
+        explored in the book "Indra's Pearls" - for three or more dimensions, one must dig into the literature. Although
+        I have succeeded once or twice in 3D printing a member of this family, this is typically not viable and glass
+        etchings or holograms are a better medium in this case.</p>
+    </div>
+  </div>
+  <script type="module" src="./dropdowns.js"></script>
 </body>
+
 </html>
