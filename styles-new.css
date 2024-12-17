@@ -171,3 +171,104 @@ nav a {
 .gallery-intro {
   padding-left: 20px; /* Optional: Indents all text in the container */
 }
+
+
+/* Carousel Wrapper */
+.carousel-wrapper {
+  max-width: 600px;
+  width: 600px;      /* Set the desired carousel width */
+  margin: 50px auto; /* Center horizontally */
+  position: relative;
+  overflow: hidden;  /* Hide overflow so only one slide is visible at a time */
+  /* No border here if you don't want it visible */
+}
+
+/* Hide the radio buttons */
+input[type=radio] {
+  display: none;
+}
+
+.slider-container {
+  width: 100%;
+  position: relative;
+}
+
+/* Slides container: 3 slides total */
+.slides {
+  display: flex;
+  width: 300%;
+  transition: transform 1s ease;
+  flex-wrap: nowrap; /* No wrapping, slides remain in a row */
+}
+
+.slide {
+  width: 100%; /* Each slide is the same width as the carousel */
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* No object-fit here to avoid cropping issues */
+}
+
+/* No CSS keyframe animations here. JavaScript will control transform. */
+
+/* When a particular radio is checked, show that slide */
+/* This ensures manual clicks still work and highlight the correct dot */
+#slide1:checked ~ .slider-container .slides {
+  transform: translateX(0);
+}
+#slide2:checked ~ .slider-container .slides {
+  transform: translateX(-33.333%);
+}
+#slide3:checked ~ .slider-container .slides {
+  transform: translateX(-66.666%);
+}
+
+/* Navigation dots */
+.navigation {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.navigation label {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+/* Highlight active dot based on which slide is checked */
+#slide1:checked ~ .navigation label:nth-child(1),
+#slide2:checked ~ .navigation label:nth-child(2),
+#slide3:checked ~ .navigation label:nth-child(3) {
+  background: #333;
+}
+
+.caption-container {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1em; /* Adjust as needed */
+  color: white;    /* Adjust text color if desired */
+  min-height: 1.5em; /* Ensure there's space even if short captions */
+}
+
+.caption {
+  display: none;   /* Hide all captions by default */
+  padding: 5px 10px;
+}
+
+/* Show the right caption based on which radio is checked */
+#slide1:checked ~ .caption-container .caption1 {
+  display: block;
+}
+#slide2:checked ~ .caption-container .caption2 {
+  display: block;
+}
+#slide3:checked ~ .caption-container .caption3 {
+  display: block;
+}
