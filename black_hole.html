@@ -22,16 +22,27 @@
 <body>
   <div class="home-container">
     <nav class="navbar">
-      <a href="index.html">
+      <a href="./index.html">
         <div class="name-section">
           <h1>Rob Hocking</h1>
           <p>Mathematician and Holographer</p>
-        </div>
+        </div>  
       </a>
       <div class="nav-menu">
         <div><a href="about.html">About</a></div>
-        <div><a href="digital_holography.html">Digital Holography</a></div>
-        <div><a href="fractal.html">Fractal Geometry</a></div>
+        <div id="toggle-holography">Digital Holography
+          <div id="submenu-holography" style="display:none;">
+            <div><a href="digital_holography.html">Introduction</a></div>
+            <div><a href="apollian_gasket.html">Apollonian Gasket</a></div>
+            <div><a href="black_hole.html">Black Hole</a></div>
+          </div>      
+        </div>
+        <div id="toggle-fractals">Fractal Geometry
+          <div id="submenu-fractals" style="display:none;">
+            <div><a href="fractal.html">Introduction</a></div>
+            <div><a href="menger.html">Menger Sponge</a></div>
+          </div>      
+        </div>
         <div><a href="quilts.html">Downloads</a></div>
         <div><a href="https://www.youtube.com/@RobHockingMathArt/videos" target="_blank"
             rel="noopener noreferrer">YouTube Channel</a></div>
@@ -312,6 +323,7 @@
 
     </div>
   </div>
+  <script type="module" src="./dropdowns.js"></script>
 </body>
 
 </html>

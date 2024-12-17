@@ -109,6 +109,18 @@ a {
   /* margin-block: 10px; */
 }
 
+#toggle-holography,
+#toggle-fractals,
+.name-section {
+  cursor: pointer;
+}
+
+#submenu-fractals,
+#submenu-holography {
+  position: absolute;
+  background-color: #4d6181;
+  padding: 6px 10px;
+}
 
 /* ********************************** for downloads gallery ************************* */
 

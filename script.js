@@ -52,5 +52,5 @@ document.addEventListener('DOMContentLoaded', () => {
         startAutoRotate();
       }, pauseAfterClick);
     });
-  });
+  });  
 });
