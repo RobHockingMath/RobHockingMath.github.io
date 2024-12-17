@@ -288,3 +288,21 @@ input[type=radio] {
 #slide3:checked ~ .caption-container .caption3 {
   display: block;
 }
+
+.image-gallery {
+  display: flex;
+  gap: 20px; /* space between figures */
+  justify-content: center; /* center them horizontally */
+  align-items: flex-start; /* align them at the top */
+}
+
+.image-gallery figure {
+  max-width: 300px; /* optional: limit figure width if you want */
+  text-align: center; /* center text under images if desired */
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
