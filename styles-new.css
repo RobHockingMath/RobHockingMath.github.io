@@ -120,6 +120,17 @@ a {
   position: absolute;
   background-color: #4d6181;
   padding: 6px 10px;
+  z-index: 1000;
+  border-radius: 4px;
+}
+
+.dropdown-entry:hover {
+  background-color: #2d4467;
+}
+
+.dropdown-entry {
+  padding: 4px 8px;
+  border-radius: 3px;
 }
 
 /* Container for the image gallery */
