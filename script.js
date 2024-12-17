@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const slides = ['slide1', 'slide2', 'slide3'];
+  const slides = ['slide1', 'slide2', 'slide3', 'slide4', 'slide5'];
   let currentIndex = 0; // 0 means slide1, 1 means slide2, 2 means slide3
   let autoRotateInterval = null;
   let revertTimeout = null;
