@@ -236,10 +236,16 @@ input[type=radio] {
   transform: translateX(0);
 }
 #slide2:checked ~ .slider-container .slides {
-  transform: translateX(-33.333%);
+  transform: translateX(-20%);
 }
 #slide3:checked ~ .slider-container .slides {
-  transform: translateX(-66.666%);
+  transform: translateX(-40%);
+}
+#slide4:checked ~ .slider-container .slides {
+  transform: translateX(-60%);
+}
+#slide5:checked ~ .slider-container .slides {
+  transform: translateX(-80%);
 }
 
 /* Navigation dots */
@@ -261,7 +267,9 @@ input[type=radio] {
 /* Highlight active dot based on which slide is checked */
 #slide1:checked ~ .navigation label:nth-child(1),
 #slide2:checked ~ .navigation label:nth-child(2),
-#slide3:checked ~ .navigation label:nth-child(3) {
+#slide3:checked ~ .navigation label:nth-child(3),
+#slide4:checked ~ .navigation label:nth-child(4),
+#slide5:checked ~ .navigation label:nth-child(5) {
   background: #333;
 }
 
@@ -287,6 +295,12 @@ input[type=radio] {
   display: block;
 }
 #slide3:checked ~ .caption-container .caption3 {
+  display: block;
+}
+#slide4:checked ~ .caption-container .caption3 {
+  display: block;
+}
+#slide5:checked ~ .caption-container .caption3 {
   display: block;
 }
 
