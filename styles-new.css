@@ -297,10 +297,10 @@ input[type=radio] {
 #slide3:checked ~ .caption-container .caption3 {
   display: block;
 }
-#slide4:checked ~ .caption-container .caption3 {
+#slide4:checked ~ .caption-container .caption4 {
   display: block;
 }
-#slide5:checked ~ .caption-container .caption3 {
+#slide5:checked ~ .caption-container .caption5 {
   display: block;
 }
 
