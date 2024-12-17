@@ -269,7 +269,8 @@ input[type=radio] {
   text-align: center;
   margin-top: 10px;
   font-size: 1em; /* Adjust as needed */
-  color: white;    /* Adjust text color if desired */
+  color: rgb(215, 244, 253);
+  font-family: Arial, Helvetica, sans-serif;
   min-height: 1.5em; /* Ensure there's space even if short captions */
 }
 
@@ -297,7 +298,7 @@ input[type=radio] {
 }
 
 .image-gallery figure {
-  max-width: 300px; /* optional: limit figure width if you want */
+  width: 300px; /* optional: limit figure width if you want */
   text-align: center; /* center text under images if desired */
 }
 
