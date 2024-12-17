@@ -93,6 +93,10 @@ nav a {
   text-decoration: none;
 }
 
+a {
+  color: rgb(237, 255, 195);
+}
+
 .name-section h1 {
   display: inline;
   font-size: xx-large;
