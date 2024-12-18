@@ -120,7 +120,34 @@ a {
   position: absolute;
   background-color: #4d6181;
   padding: 6px 10px;
+  z-index: 1000;
+  border-radius: 4px;
 }
+
+.dropdown-entry:hover {
+  background-color: #2d4467;
+}
+
+.dropdown-entry {
+  padding: 4px 8px;
+  border-radius: 3px;
+}
+
+/* Container for the image gallery */
+.image-gallery {
+	text-align: center !important;
+    display: flex;
+    gap: 20px; /* Adds space between images */
+    justify-content: center; /* Centers the images in the container */
+    flex-wrap: wrap; /* Allows images to wrap to the next line on smaller screens */
+}
+
+/* Individual image containers */
+.image-gallery figure {
+	text-align: center !important;
+    width: 350px; /* Set a fixed width for each image (adjust as needed) */
+}
+
 
 /* ********************************** for downloads gallery ************************* */
 
