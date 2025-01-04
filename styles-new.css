@@ -348,3 +348,30 @@ input[type=radio] {
   height: auto;
   display: block;
 }
+
+/* Make icons side by side with spacing */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 45px; /* spacing between icons */
+}
+
+.nav-menu .fab.fa-youtube {
+  /*font-size: 24px; /* Adjust icon size */
+  font-size: 40px; /* Adjust icon size */
+  /*color: #FF0000;  /* YouTube's red color, optionally */
+}
+
+.nav-menu .fab.fa-youtube:hover {
+  color: #cc0000;  /* Darker red on hover */
+}
+
+/* Instagram icon in gradient or custom color - for example, purple-ish */
+.nav-menu .fab.fa-instagram {
+  /*color: #C13584;*/
+  font-size: 40px; /* Adjust icon size */
+}
+
+.nav-menu .fab.fa-instagram:hover {
+  color: #a52b6e; /* slightly darker on hover */
+}

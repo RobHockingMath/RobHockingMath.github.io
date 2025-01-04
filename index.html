@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,92 +12,129 @@
   <meta property="og:image:height" content="1800">
 
   <title>Rob Hocking Mathematical Art</title>
+
+  <!-- Google Fonts & Local CSS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles-new.css">
+
+  <!-- Font Awesome for social icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-..."
+    crossorigin="anonymous"
+  />
 </head>
 
 <body>
-
   <div class="home-container">
     <nav class="navbar">
       <a href="./index.html">
         <div class="name-section">
           <h1>Rob Hocking</h1>
           <p>Mathematician and Holographer</p>
-        </div>  
+        </div>
       </a>
       <div class="nav-menu">
+        <!-- Standard nav links -->
         <div><a href="about.html">About</a></div>
         <div id="toggle-holography">Digital Holography
           <div id="submenu-holography" style="display:none;">
             <div class="dropdown-entry"><a href="digital_holography.html">Introduction</a></div>
             <div class="dropdown-entry"><a href="apollian_gasket.html">Apollonian Gasket</a></div>
             <div class="dropdown-entry"><a href="black_hole.html">Black Hole</a></div>
-          </div>      
+          </div>
         </div>
         <div id="toggle-fractals">Fractal Geometry
           <div id="submenu-fractals" style="display:none;">
             <div class="dropdown-entry"><a href="fractal.html">Introduction</a></div>
             <div class="dropdown-entry"><a href="menger.html">Menger Sponge</a></div>
-          </div>      
+          </div>
         </div>
         <div><a href="quilts.html">Downloads</a></div>
-        <div><a href="https://www.youtube.com/@RobHockingMathArt/videos" target="_blank"
-            rel="noopener noreferrer">YouTube Channel</a></div>
+
+        <!-- Social Icons container with both YouTube and Instagram side by side -->
+        <div class="social-icons">
+          <a href="https://www.youtube.com/@RobHockingMathArt/videos" 
+             target="_blank"
+             rel="noopener noreferrer">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.instagram.com/robhockingmathart/" 
+             target="_blank" 
+             rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
       </div>
     </nav>
 
     <!-- Main Content Area -->
     <div class="content" style="flex-grow: 1;">
-			<div class="carousel-wrapper">
+      <div class="carousel-wrapper">
+        <!-- A hidden start state radio -->
+        <input type="radio" name="slider" id="start" checked style="display:none;">
+        <!-- Slide radios -->
+        <input type="radio" name="slider" id="slide1">
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <input type="radio" name="slider" id="slide4">
+        <input type="radio" name="slider" id="slide5">
 
-				<!-- A hidden start state radio -->
-				<input type="radio" name="slider" id="start" checked style="display:none;">
-				<!-- Slide radios -->
-				<input type="radio" name="slider" id="slide1">
-				<input type="radio" name="slider" id="slide2">
-				<input type="radio" name="slider" id="slide3">
-				<input type="radio" name="slider" id="slide4">
-				<input type="radio" name="slider" id="slide5">
+        <!-- Slides -->
+        <div class="slider-container">
+          <div class="slides">
+            <div class="slide"><img src="images/BlackHoleSide_crop_1000.jpg" alt="Slide 1"></div>
+            <div class="slide"><img src="images/BlackHoleFront_crop_1000.jpg" alt="Slide 2"></div>
+            <div class="slide"><img src="images/4D_Slice_1000.jpg" alt="Slide 3"></div>
+            <div class="slide"><img src="images/front2_1000.jpg" alt="Slide 4"></div>
+            <div class="slide"><img src="images/together_1000.jpg" alt="Slide 5"></div>
+          </div>
+        </div>
 
-				<!-- Slides -->
-				<div class="slider-container">
-					<div class="slides">
-						<div class="slide"><img src="images/BlackHoleSide_crop_1000.jpg" alt="Slide 1"></div>
-						<div class="slide"><img src="images/BlackHoleFront_crop_1000.jpg" alt="Slide 2"></div>
-						<div class="slide"><img src="images/4D_Slice_1000.jpg" alt="Slide 3"></div>
-						<div class="slide"><img src="images/front2_1000.jpg" alt="Slide 4"></div>
-						<div class="slide"><img src="images/together_1000.jpg" alt="Slide 5"></div>
-					</div>
-				</div>
-				
-				<!-- Caption container below the images and above the dots -->
-				<div class="caption-container">
-					<div class="caption caption1"><a href="black_hole.html" target="_blank" rel="noopener noreferrer">Black Hole Hologram</a>, Side View</div>
-					<div class="caption caption2"><a href="black_hole.html" target="_blank" rel="noopener noreferrer">Black Hole Hologram</a>, Front View</div>
-					<div class="caption caption3">3D Cross Section of a <a href="menger.html" target="_blank" rel="noopener noreferrer">4D Menger Sponge</a></div>
-					<div class="caption caption4">3D Cross Section of a Different <a href="menger.html" target="_blank" rel="noopener noreferrer">4D Menger Sponge</a></div>
-					<div class="caption caption5">3D Menger Sponge</div>
-				</div>
-				
-				<!-- Manual Navigation Dots -->
-				<div class="navigation">
-					<label for="slide1" class="bar"></label>
-					<label for="slide2" class="bar"></label>
-					<label for="slide3" class="bar"></label>
-					<label for="slide4" class="bar"></label>
-					<label for="slide5" class="bar"></label>
-				</div>
-				
-			</div>
-		</div>
+        <!-- Caption container below the images and above the dots -->
+        <div class="caption-container">
+          <div class="caption caption1">
+            <a href="black_hole.html" target="_blank" rel="noopener noreferrer">
+              Black Hole Hologram
+            </a>, Side View
+          </div>
+          <div class="caption caption2">
+            <a href="black_hole.html" target="_blank" rel="noopener noreferrer">
+              Black Hole Hologram
+            </a>, Front View
+          </div>
+          <div class="caption caption3">
+            3D Cross Section of a
+            <a href="menger.html" target="_blank" rel="noopener noreferrer">
+              4D Menger Sponge
+            </a>
+          </div>
+          <div class="caption caption4">
+            3D Cross Section of a Different
+            <a href="menger.html" target="_blank" rel="noopener noreferrer">
+              4D Menger Sponge
+            </a>
+          </div>
+          <div class="caption caption5">3D Menger Sponge</div>
+        </div>
+
+        <!-- Manual Navigation Dots -->
+        <div class="navigation">
+          <label for="slide1" class="bar"></label>
+          <label for="slide2" class="bar"></label>
+          <label for="slide3" class="bar"></label>
+          <label for="slide4" class="bar"></label>
+          <label for="slide5" class="bar"></label>
+        </div>
+
+      </div>
+    </div>
   </div>
-	
-  <script src="script.js"></script>	
 
+  <script src="script.js"></script>
   <script type="module" src="./dropdowns.js"></script>
 </body>
-
 </html>
