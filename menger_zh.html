@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta property="og:title" content="4D 孟格海綿的 3D 對角切面">
+  <meta property="og:image" content="https://robhockingmath.github.io/images/4D_Slice2_HD.png">
+  <meta property="og:url" content="https://robhockingmath.github.io/menger_zh.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image:width" content="1920">
+  <meta property="og:image:height" content="1080">
+
+  <title>4D 孟格海綿的 3D 對角切面</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles-new.css">
+  
+  <!-- Font Awesome for social icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-..."
+    crossorigin="anonymous"
+  />
+</head>
+
+<body>
+  <div class="home-container">
+    <nav class="navbar">
+      <a href="./index_zh.html">
+        <div class="name-section">
+          <h1>Rob Hocking</h1>
+          <p>數學家與全息藝術家</p>
+        </div>  
+      </a>
+      <div class="nav-menu">
+        <div><a href="about_zh.html">關於</a></div>
+        <div id="toggle-holography">數位全息
+          <div id="submenu-holography" style="display:none;">
+            <div class="dropdown-entry"><a href="digital_holography_zh.html">簡介</a></div>
+            <div class="dropdown-entry"><a href="apollian_gasket_zh.html">阿波羅尼安墜道</a></div>
+            <div class="dropdown-entry"><a href="black_hole_zh.html">黑洞</a></div>
+          </div>
+        </div>
+        <div id="toggle-fractals">分形幾何
+          <div id="submenu-fractals" style="display:none;">
+            <div class="dropdown-entry"><a href="fractal_zh.html">簡介</a></div>
+            <div class="dropdown-entry"><a href="menger_zh.html">孟格海綿</a></div>
+          </div>
+        </div>
+        <div><a href="quilts_zh.html">下載</a></div>
+      </div>
+
+      <!-- Social Icons + Language Toggle -->
+      <div class="social-icons">
+        <a href="https://www.youtube.com/@RobHockingMathArt/videos" 
+           target="_blank"
+           rel="noopener noreferrer">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.instagram.com/robhockingmathart/" 
+           target="_blank" 
+           rel="noopener noreferrer">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <!-- Language toggle: link back to the English version -->
+        <a href="menger.html" class="lang-toggle">
+          English
+        </a>
+      </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="home-content">
+
+      <h1>4D 孟格海綿的 3D 對角切面</h1>
+      <br><br>
+      <p>
+        從大學開始我就知道「孟格海綿（Menger sponge）」及其相關分形，但一直沒有深入研究。直到 2022 年春天，我偶然看到 George Hart 與 Simon’s Foundation 製作的
+        <a
+          href="https://www.simonsfoundation.org/2012/12/10/mathematical-impressions-the-surprising-menger-sponge-slice/"
+          target="_blank" rel="noopener noreferrer">這段影片</a>，演示了 3D 孟格海綿的對角切面，才真正讓我對它產生興趣。
+      </p>
+      <p>
+        我的第一個想法是把 3D 孟格海綿切成兩半，並設計一個能互相鎖合、拆分的機制，然後進行 3D 列印。我嘗試了幾個版本，最後定案於這個鋼材列印、內嵌稀土磁鐵的設計：
+      </p>
+      <br>
+      <div class="image-gallery">
+        <figure>
+          <img src="images/together_1000.jpg" alt="合體後的 3D 孟格海綿" class="gallery-image">
+          <figcaption>兩個半體結合後的外觀。</figcaption>
+        </figure>
+        <figure>
+          <img src="images/apart_1000.jpg" alt="分開的 3D 孟格海綿與磁鐵" class="gallery-image">
+          <figcaption>其中一半，能看到裡面嵌入的磁鐵。</figcaption>
+        </figure>
+      </div>
+      <br><br>
+      <p>
+        在做這些設計的同時，我也想到一個更有趣的問題：既然 3D 孟格海綿有奇妙的 2D 對角切面，那麼「4D 孟格海綿」的 3D 對角切面，是否也會同樣令人驚喜呢？
+      </p>
+      <br>
+      <p>
+        直覺來看，3D 孟格海綿的「正中央對角切面」是個六邊形，並包含六角星狀的孔洞；那麼 4D 孟格海綿的「正中央 3D 對角切面」應該是一個「八面體」，或者至少是一個八邊多面體，內部帶有八角星形狀的空腔（我當時猜想切面邊數和星形頂點數大約會是兩倍於維度）。畢竟，最常見的「八面」多面體就是正八面體及其星化（stellation）版本，也就是八角星。我推測 4D 孟格海綿的 3D 切面會像正八面體那樣的多面體，上面再佈滿一些星形分形，譬如：
+      </p>
+      <br><br>
+      <div class="image-gallery">
+        <figure>
+          <img src="images/front2_1000.jpg" alt="4D 孟格海綿 (type 2) 之 3D 切面" class="gallery-image">
+          <figcaption>4D 孟格海綿（type 2）的 3D 切面，正面視圖。</figcaption>
+        </figure>
+        <figure>
+          <img src="images/perspective2_1000.jpg" alt="4D 孟格海綿 (type 2) 斜視圖" class="gallery-image">
+          <figcaption>斜視角觀察。</figcaption>
+        </figure>
+      </div>
+      <br><br>
+      <p>
+        當時我還沒仔細定義「4D 孟格海綿」，但因為我有 3D 程式碼，就試著把它推廣到 4D。結果就生成了下圖這個形狀：
+      </p>
+      <br>
+      <div class="image-gallery">
+        <figure>
+          <img src="images/4D_Slice_1000.jpg" alt="4D 孟格海綿 (type 1) 切面" class="gallery-image">
+          <figcaption>4D 孟格海綿（type 1）的 3D 對角切面。</figcaption>
+        </figure>
+      </div>
+      <br><br>
+      <p>
+        下方影片有助於理解這個 3D 結構：它看起來是一個「截角四面體（truncated tetrahedron）」，而每個六邊形面實際上對應 3D 孟格海綿的正中央切面。
+      </p>
+      <br><br>
+      <div class="video-container">
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/V6IbbllOxVk?si=9VsBLoHzvIZihsjV"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <br>
+      <p>
+        這結果雖然出乎我意料，卻非常有趣。於是我開始探究背後的理論。首先要搞清楚什麼是 4D 孟格海綿：其實在 n 維空間中有 n 種不同的孟格海綿。Karl Menger 本人在他早期的論文裡
+        <sup><a href="#ref1">[1]</a></sup>提過這點，但後來並不常被人提及。當我理解這點之後才發現，確實存在一種 4D 孟格海綿能產生跟我原先直覺相符的 3D 切面，只是我當初寫的程式碼實際上算出了另一種（同樣合法，但不同型態）的 4D 海綿。改寫程式以產生全部四種 4D 孟格海綿，再選對那個對應變體之後，我最初所猜想的形狀果然就出來了。
+      </p>
+      <br>
+      <p>
+        倒是那個「截角四面體分形」才真正令我感到驚艷，因為它完全超乎我預期。花了好幾個月，我才透過推導「n 維孟格海綿與 (n-1) 維海綿之間的切面關係」弄清它的由來。更詳細的內容可參考我在 Bridges 2023 的論文，
+        <a
+          href="https://archive.bridgesmathart.org/2023/bridges2023-291.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          連結在此
+        </a>。
+      </p>
+      <br>
+      <div class="text-container">
+        <p>
+          或者，可參考我投到 Bridges 2023 短片展的下列兩段影片，裡面更直觀地介紹了 4D 孟格海綿及其 3D 對角切面的奇妙之處：
+        </p>
+      </div>
+
+      <div class="video-container">
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/swKhEba6QLc?si=bFEEB-8mgTngVgFr"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <br><br>
+      <div class="video-container">
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/y_Dp08C-6K0?si=XvV6RAt8nY7pfxKk"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <br><br>
+
+      <h2>參考文獻</h2>
+      <br>
+      <ol id="references">
+        <li id="ref1">
+          K. Menger. 「Allgemeine Räume und Cartesische Räume. I.」
+          <em>Proc. Akad. Wet. Amsterdam</em>, vol. 29, 1926, pp. 476–482.
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <script type="module" src="./dropdowns.js"></script>
+</body>
+</html>
