@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta property="og:title" content="數位全息（Digital Holography）">
+  <meta property="og:image" content="https://robhockingmath.github.io/images/Sydney_crop.png">
+  <meta property="og:url" content="https://robhockingmath.github.io/digital_holography_zh.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image:width" content="3024">
+  <meta property="og:image:height" content="2613">
+
+  <title>數位全息（Digital Holography）</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles-new.css">
+  
+  <!-- Font Awesome for social icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-..."
+    crossorigin="anonymous"
+  />
+</head>
+
+<body>
+  <div class="home-container">
+    <nav class="navbar">
+      <a href="./index_zh.html">
+        <div class="name-section">
+          <h1>Rob Hocking</h1>
+          <p>數學家與全息藝術家</p>
+        </div>  
+      </a>
+      <div class="nav-menu">
+        <div><a href="about_zh.html">關於</a></div>
+        <div id="toggle-holography">數位全息
+          <div id="submenu-holography" style="display:none;">
+            <div class="dropdown-entry"><a href="digital_holography_zh.html">簡介</a></div>
+            <div class="dropdown-entry"><a href="apollian_gasket_zh.html">阿波羅尼安墜道</a></div>
+            <div class="dropdown-entry"><a href="black_hole_zh.html">黑洞</a></div>
+          </div>      
+        </div>
+        <div id="toggle-fractals">分形幾何
+          <div id="submenu-fractals" style="display:none;">
+            <div class="dropdown-entry"><a href="fractal_zh.html">簡介</a></div>
+            <div class="dropdown-entry"><a href="menger_zh.html">孟格海綿</a></div>
+          </div>      
+        </div>
+        <div><a href="quilts_zh.html">下載</a></div>
+
+      <!-- Social Icons + Language Toggle -->
+      <div class="social-icons">
+        <a href="https://www.youtube.com/@RobHockingMathArt/videos"
+           target="_blank"
+           rel="noopener noreferrer">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.instagram.com/robhockingmathart/"
+           target="_blank"
+           rel="noopener noreferrer">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <!-- Language toggle: link back to the English version -->
+        <a href="digital_holography.html" class="lang-toggle">
+          English
+        </a>
+      </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="home-content">
+      <h1>起點</h1>
+      <p>
+        <br><br>
+        在 2023 年夏天之前，我和大多數人一樣，幾乎沒有關注過「全息（holography）」這個領域。
+        印象中，兒時所見的幾些「全息圖」品質都不怎麼樣（搞不好其實是廉價的「透鏡板（lenticular）」），
+        所以一直沒有多想。
+        <br><br>
+        一切在 2023 年 6 月改變了。那時，我的朋友
+        <a href="https://www.sydneykoke.com/" target="_blank" rel="noopener noreferrer">Sydney Koke</a>
+        正好拜訪台灣，途中她要去韓國參加一場全息會議。由於那時台灣的天氣熱到要命，
+        我實在不知帶她去哪裡玩才好。幸運的是，她自上次見面以來迷上了全息，這次來台灣就順帶準備在我公寓裡做類比全息（analog holography）。
+        <br><br>
+        Sydney 給了我一張採購清單，包括低功率的綠光雷射、感光乳劑底片、黑絲絨布、一堆小相框等等。
+        我家裡並沒有暗房，於是我們就乾脆在夜裡做。最成功的一張，是利用我先前 3D 列印的一個模型來製作的全息，如下影片所示：
+        <br><br>
+      </p>
+
+      <div class="video-container">
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/h4KDSwZsJ3A?si=GcFkhtZgUFUskVXm"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
+      <br><br>
+      <p>
+        Sydney 的熱情極具感染力，以至於我也一同跑去那場全息研討會（ISDH 2023）。會中我看到的各種全息作品都令我大開眼界，而且更令我震撼的是，
+        原來還有「數位全息（digital holography）」可以把存在於電腦裡的虛擬物體做成全息。  
+        我立刻想到，這對那些不易進行 3D 列印的數學造型，或許是極佳的藝術載體——於是我就徹底入坑了。
+      </p>
+    </div>
+  </div>
+  <script type="module" src="./dropdowns.js"></script>
+</body>
+</html>
