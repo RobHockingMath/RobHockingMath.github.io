@@ -60,7 +60,8 @@ body {
 
 .navbar {
   display: grid;
-  grid-template-columns: 1fr min-content;
+  /**grid-template-columns: 1fr min-content;**/
+  grid-template-columns: 1fr auto; /* or 1fr max-content */
   padding-inline: 2rem;
   padding-block: 1rem;
   background-color: #132540;
@@ -374,4 +375,53 @@ input[type=radio] {
 
 .nav-menu .fab.fa-instagram:hover {
   color: #a52b6e; /* slightly darker on hover */
+}
+
+.social-icons a.lang-toggle {
+  margin-left: 45px; /* or whatever spacing you like */
+  text-decoration: none;
+  color: inherit;  /* match icon color */
+  /* any other styling you want */
+}
+
+.language-switch {
+  margin: 1em 0;         /* some spacing around the toggle */
+  text-align: right;     /* or left, center, etc. depending on your layout */
+}
+
+.lang-toggle {
+  display: inline-flex;         /* icon and text side by side */
+  align-items: center;          /* vertically center them */
+  gap: 8px;                     /* space between icon and text */
+  padding: 8px 12px;
+  background-color: #007fff;    /* a button-like background */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.lang-toggle:hover {
+  background-color: #005fa0;    /* darker hover color */
+  text-decoration: none;        /* keep text no-underline on hover */
+}
+
+.lang-toggle i {
+  font-size: 20px;              /* size of the globe icon */
+}
+
+.nav-menu, .nav-menu * {
+  writing-mode: horizontal-tb !important; /* Force back to horizontal text */
+  text-orientation: mixed !important;
+}
+
+.dropdown-entry a {
+  display: inline-block; /* or just inline */
+  white-space: nowrap;   /* prevents wrapping each character separately */
+}
+
+.dropdown-entry {
+  width: auto; /* or something wide enough to fit your text horizontally */
+  /* or remove any max-width that is too small */
 }
