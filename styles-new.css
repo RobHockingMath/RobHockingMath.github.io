@@ -426,7 +426,7 @@ input[type=radio] {
   /* or remove any max-width that is too small */
 }
 
-/* Container for the entire product grid */
+/* Container for products */
 .shop-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -434,56 +434,64 @@ input[type=radio] {
   padding: 20px;
 }
 
-/* Each shop item — remove border and ensure transparent background */
 .shop-item {
-  border: none;               /* Remove any border */
-  background: transparent;    /* Transparent so body shows through */
+  border: none; /* no border */
+  background: transparent; /* match page background */
   transition: transform 0.2s ease;
   max-width: 300px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
-
 .shop-item:hover {
-  transform: scale(1.05);
-  filter: brightness(1.1);
+  transform: scale(1.02);
 }
 
-/* The link that wraps only the image */
-.item-link {
-  display: block;
-}
-
-/* Image container ensures the image is separate from the text block */
+/* Image and Video Container */
 .img-container {
+  position: relative;
   width: 100%;
+  overflow: hidden;
 }
-
-/* Image takes full width of the container */
-.img-container img {
+.img-container img,
+.img-container video {
   width: 100%;
   height: auto;
   display: block;
+  transition: opacity 0.3s ease; 
+  /* Ensures a smooth fade effect */
 }
 
-/* Text block appears below the image */
+/* By default, the video is hidden; the image is visible */
+.img-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 0; /* behind the image initially */
+}
+.img-container img {
+  position: relative;
+  z-index: 1; /* in front by default */
+  opacity: 1;
+}
+
+/* On hover: fade out the image, fade in the video */
+.img-container:hover img {
+  opacity: 0;
+}
+.img-container:hover video {
+  z-index: 2;
+  opacity: 1;
+}
+
 .shop-item-info {
-  background: transparent;  /* Make it transparent to show body background */
-  color: rgb(215, 244, 253);
-  font-family: Arial, Helvetica, sans-serif;
+  background: transparent;
+  color: #fff;
   padding: 10px;
   text-align: center;
 }
-
-/* Adjust text styling as needed */
 .shop-item-info h2 {
   margin: 0;
   font-size: 1.2em;
-}
-
-.shop-item-info p {
-  margin: 5px 0 0;
-  font-size: 1em;
-  color: #fff;
 }
