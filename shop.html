@@ -27,31 +27,49 @@
     crossorigin="anonymous"
   />
 
-  <!-- Optionally include any extra CSS for the shop grid -->
+  <!-- Extra CSS for the shop grid -->
   <style>
+    /* Shop grid layout */
     .shop-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
       padding: 20px;
     }
+    /* Each shop item container */
     .shop-item {
       border: 1px solid #ddd;
-      padding: 10px;
       background: #fff;
       transition: transform 0.2s ease;
+      max-width: 300px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
     }
     .shop-item:hover {
       transform: scale(1.02);
     }
-    .shop-item img {
+    /* Image container: ensures the image is contained separately */
+    .img-container {
+      width: 100%;
+    }
+    .img-container img {
       width: 100%;
       height: auto;
       display: block;
     }
+    /* The link wraps only the image */
+    .item-link {
+      display: block;
+    }
+    /* Text block: appears below the image, on the page background */
     .shop-item-info {
+      display: block;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      padding: 10px;
       text-align: center;
-      margin-top: 10px;
+      /* No negative margins or absolute positioning */
     }
     .shop-item-info h2 {
       margin: 0;
@@ -60,7 +78,7 @@
     .shop-item-info p {
       margin: 5px 0 0;
       font-size: 1em;
-      color: #333;
+      color: #fff;
     }
   </style>
 </head>
@@ -117,33 +135,38 @@
       <div class="shop-grid">
         <!-- Example Shop Item 1 -->
         <div class="shop-item">
-          <a href="product1.html">
-            <img src="images/ball_cropped_frame_1.jpg" alt="Product 1">
-            <div class="shop-item-info">
-              <h2>Product 1</h2>
-              <p>$2000</p>
+          <a href="product1.html" class="item-link">
+            <div class="img-container">
+              <img src="images/ball_cropped_frame_1.jpg" alt="Crab Fractal Orb">
             </div>
           </a>
+          <div class="shop-item-info">
+            <h2>Crab Fractal Orb</h2>
+          </div>
         </div>
         <!-- Example Shop Item 2 -->
         <div class="shop-item">
-          <a href="product2.html">
-            <img src="images/product2.jpg" alt="Product 2">
-            <div class="shop-item-info">
-              <h2>Product 2</h2>
-              <p>$2500</p>
+          <a href="product2.html" class="item-link">
+            <div class="img-container">
+              <img src="images/product2.jpg" alt="Product 2">
             </div>
           </a>
+          <div class="shop-item-info">
+            <h2>Product 2</h2>
+            <p>$2500</p>
+          </div>
         </div>
         <!-- Example Shop Item 3 -->
         <div class="shop-item">
-          <a href="product3.html">
-            <img src="images/product3.jpg" alt="Product 3">
-            <div class="shop-item-info">
-              <h2>Product 3</h2>
-              <p>$1500</p>
+          <a href="product3.html" class="item-link">
+            <div class="img-container">
+              <img src="images/product3.jpg" alt="Product 3">
             </div>
           </a>
+          <div class="shop-item-info">
+            <h2>Product 3</h2>
+            <p>$1500</p>
+          </div>
         </div>
         <!-- Add more shop items as needed -->
       </div>
