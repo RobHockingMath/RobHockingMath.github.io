@@ -426,7 +426,7 @@ input[type=radio] {
   /* or remove any max-width that is too small */
 }
 
-/* Shop grid layout remains unchanged */
+/* Container for the entire product grid */
 .shop-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -434,10 +434,10 @@ input[type=radio] {
   padding: 20px;
 }
 
-/* Remove the white border and background from the shop item container */
+/* Each shop item — remove border and ensure transparent background */
 .shop-item {
-  border: none;              /* Remove border */
-  background: transparent;   /* Make background transparent */
+  border: none;               /* Remove any border */
+  background: transparent;    /* Transparent so body shows through */
   transition: transform 0.2s ease;
   max-width: 300px;
   margin: 0 auto;
@@ -449,31 +449,32 @@ input[type=radio] {
   transform: scale(1.02);
 }
 
-/* Image container stays the same */
+/* The link that wraps only the image */
+.item-link {
+  display: block;
+}
+
+/* Image container ensures the image is separate from the text block */
 .img-container {
   width: 100%;
 }
 
+/* Image takes full width of the container */
 .img-container img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* The link wraps only the image */
-.item-link {
-  display: block;
-}
-
-/* Text block appears below the image and uses the page's background color */
+/* Text block appears below the image */
 .shop-item-info {
-  display: block;
-  background-color: #0b1422; /* Same as your body background */
-  color: #fff;
+  background: transparent;  /* Make it transparent to show body background */
+  color: #fff;              /* White text to contrast with dark background */
   padding: 10px;
   text-align: center;
 }
 
+/* Adjust text styling as needed */
 .shop-item-info h2 {
   margin: 0;
   font-size: 1.2em;
