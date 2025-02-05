@@ -446,7 +446,8 @@ input[type=radio] {
 }
 
 .shop-item:hover {
-  transform: scale(1.02);
+  transform: scale(1.05);
+  filter: brightness(1.1);
 }
 
 /* The link that wraps only the image */
@@ -469,7 +470,8 @@ input[type=radio] {
 /* Text block appears below the image */
 .shop-item-info {
   background: transparent;  /* Make it transparent to show body background */
-  color: #fff;              /* White text to contrast with dark background */
+  color: rgb(215, 244, 253);
+  font-family: Arial, Helvetica, sans-serif;
   padding: 10px;
   text-align: center;
 }
