@@ -487,11 +487,67 @@ input[type=radio] {
 
 .shop-item-info {
   background: transparent;
-  color: #fff;
+  color: rgb(215, 244, 253);
+  font-family: Arial, Helvetica, sans-serif;
   padding: 10px;
   text-align: center;
 }
 .shop-item-info h2 {
   margin: 0;
   font-size: 1.2em;
+}
+
+
+
+/* Main container for the single product and its description */
+.single-item-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 20px;
+  max-width: 1000px;
+  margin: 40px auto; /* Center horizontally with some top/bottom space */
+  padding: 20px;
+}
+
+/* Left column: can hold your .shop-item (image + video on hover) */
+.left-column {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Right column: a descriptive box or any content you wish */
+.right-column {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* The descriptive box on the right */
+.description-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: rgb(215, 244, 253);
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #999;
+  border-radius: 6px;
+}
+
+.description-box h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.6em;
+}
+
+.description-box p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.price-tag {
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
 }
