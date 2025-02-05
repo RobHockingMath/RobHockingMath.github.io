@@ -425,3 +425,62 @@ input[type=radio] {
   width: auto; /* or something wide enough to fit your text horizontally */
   /* or remove any max-width that is too small */
 }
+
+/* Shop grid layout remains unchanged */
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Remove the white border and background from the shop item container */
+.shop-item {
+  border: none;              /* Remove border */
+  background: transparent;   /* Make background transparent */
+  transition: transform 0.2s ease;
+  max-width: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.shop-item:hover {
+  transform: scale(1.02);
+}
+
+/* Image container stays the same */
+.img-container {
+  width: 100%;
+}
+
+.img-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* The link wraps only the image */
+.item-link {
+  display: block;
+}
+
+/* Text block appears below the image and uses the page's background color */
+.shop-item-info {
+  display: block;
+  background-color: #0b1422; /* Same as your body background */
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.shop-item-info h2 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.shop-item-info p {
+  margin: 5px 0 0;
+  font-size: 1em;
+  color: #fff;
+}
