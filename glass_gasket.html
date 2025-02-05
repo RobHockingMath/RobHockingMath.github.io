@@ -108,6 +108,29 @@
             <h2>Description</h2>
             <p>Rotating glass etching of a 3D Apollonian gasket, built out of millions of spheres.</p>
             <p class="price-tag">$2,500</p>
+
+              <!-- Quantity Input -->
+          <label for="gasket-qty">Quantity:</label>
+          <input
+            id="gasket-qty"
+            class="snipcart-item-quantity"
+            name="quantity"
+            type="number"
+            value="1"
+            min="1"
+          />
+
+          <!-- Snipcart Add to Cart Button -->
+          <button
+            class="snipcart-add-item"
+            data-item-id="gasket-fractal-etching"
+            data-item-name="gasket Fractal Etching"
+            data-item-price="2500.00"
+            data-item-url="/glass_gasket.html"
+            data-item-description="An Apollonian gasket fractal etched in glass.">
+            Add to Cart
+          </button>
+
           </div>
         </div>
       </div>
@@ -116,5 +139,9 @@
 
   <script src="script.js"></script>
   <script type="module" src="./dropdowns.js"></script>
+
+  <!-- The Snipcart container goes here -->
+  <div hidden id="snipcart" data-api-key="YOUR_PUBLIC_API_KEY"></div>
+
 </body>
 </html>
