@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Shop Item</title>
+  <style>
+    /* Container for a single shop item */
+    .shop-item {
+      max-width: 300px;
+      border: 1px solid #ddd;
+      background: #fff;
+      margin: 20px auto;
+    }
+
+    /* Image link styling */
+    .item-link {
+      display: block;
+    }
+    .item-link img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* Text block styling, outside of the image link */
+    .shop-item-info {
+      display: block;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="shop-item">
+    <!-- Make only the image clickable -->
+    <a href="product1.html" class="item-link">
+      <img src="https://via.placeholder.com/300x200" alt="Crab Fractal Orb">
+    </a>
+    <!-- Text block appears below the image -->
+    <div class="shop-item-info">
+      <h2>Crab Fractal Orb</h2>
+    </div>
+  </div>
+</body>
+</html>
