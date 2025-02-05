@@ -54,3 +54,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });  
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Select all hover videos
+  const hoverVideos = document.querySelectorAll('.hover-video');
+
+  hoverVideos.forEach(video => {
+    // When mouse enters the parent container, play the video
+    video.closest('.img-container').addEventListener('mouseenter', () => {
+      video.currentTime = 0; // Restart at the beginning
+      video.play();
+    });
+
+    // When mouse leaves the parent container, pause and reset the video
+    video.closest('.img-container').addEventListener('mouseleave', () => {
+      video.pause();
+      video.currentTime = 0; // Ensure it starts from the beginning next hover
+    });
+  });
+});

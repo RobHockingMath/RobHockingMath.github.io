@@ -27,12 +27,6 @@
     crossorigin="anonymous"
   />
 
-  <!-- Remove or comment out any extra inline styles to avoid conflict -->
-  <!--
-  <style>
-    // (comment out or remove conflicting shop-item CSS)
-  </style>
-  -->
 </head>
 
 <body>
@@ -85,33 +79,52 @@
     <div class="content" style="flex-grow: 1;">
       <h2 style="text-align: center; margin-top: 20px;">Shop</h2>
       <div class="shop-grid">
-        <!-- Example Shop Item 1 -->
+        <!-- Example Shop Item 1: Replace with your actual video -->
         <div class="shop-item">
           <a href="product1.html" class="item-link">
             <div class="img-container">
+              <!-- Static image (first frame) -->
               <img src="images/ball_cropped_frame_1.jpg" alt="Crab Fractal Orb">
+              <!-- Video that appears on hover -->
+              <video 
+                src="videos/ball_cropped_comp.mp4" 
+                class="hover-video" 
+                muted loop autoplay playsinline>
+              </video>
             </div>
           </a>
           <div class="shop-item-info">
             <h2>Crab Fractal Orb</h2>
           </div>
         </div>
-        <!-- Example Shop Item 2 -->
+
+        <!-- Example Shop Item 2: Replace with your actual video -->
         <div class="shop-item">
           <a href="product2.html" class="item-link">
             <div class="img-container">
-              <img src="images/seahorse_clipped2_frame_1.jpg" alt="Product 2">
+              <img src="images/seahorse_clipped2_frame_1.jpg" alt="Seahorse Fractal">
+              <video 
+                src="videos/Seahorse_clipped2_comp.mp4" 
+                class="hover-video" 
+                muted loop playsinline>
+              </video>
             </div>
           </a>
           <div class="shop-item-info">
             <h2>Seahorse Fractal</h2>
           </div>
         </div>
-        <!-- Example Shop Item 3 -->
+
+        <!-- Example Shop Item 3: Replace with your actual video -->
         <div class="shop-item">
           <a href="product3.html" class="item-link">
             <div class="img-container">
-              <img src="images/Gasket_frame_1.jpg" alt="Product 3">
+              <img src="images/Gasket_frame_1.jpg" alt="Apollonian Gasket">
+              <video 
+                src="videos/Gasket_editted_comp.mp4" 
+                class="hover-video" 
+                muted loop autoplay playsinline>
+              </video>
             </div>
           </a>
           <div class="shop-item-info">
