@@ -46,54 +46,54 @@
 </head>
 
 <body>
-  <div class="home-container">
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-      <a href="./index.html">
-        <div class="name-section">
-          <h1>Rob Hocking</h1>
-          <p>Mathematician and Holographer</p>
-        </div>
-      </a>
-      <div class="nav-menu">
-        <!-- Standard nav links -->
-        <div><a href="about.html">About</a></div>
-        <div id="toggle-holography">Digital Holography
-          <div id="submenu-holography" style="display:none;">
-            <div class="dropdown-entry"><a href="digital_holography.html">Introduction</a></div>
-            <div class="dropdown-entry"><a href="apollian_gasket.html">Apollonian Gasket</a></div>
-            <div class="dropdown-entry"><a href="black_hole.html">Black Hole</a></div>
+    <div class="home-container">
+      <nav class="navbar">
+        <a href="./index_zh.html">
+          <div class="name-section">
+            <h1>Rob Hocking</h1>
+            <p>數學家與全息藝術家</p>
+          </div>
+        </a>
+        <div class="nav-menu">
+          <!-- Standard nav links in Chinese -->
+          <div><a href="about_zh.html">關於</a></div>
+          <div id="toggle-holography">數位全息
+            <div id="submenu-holography" style="display:none;">
+              <div class="dropdown-entry"><a href="digital_holography_zh.html">簡介</a></div>
+              <div class="dropdown-entry"><a href="apollian_gasket_zh.html">阿波羅尼安墜道</a></div>
+              <div class="dropdown-entry"><a href="black_hole_zh.html">黑洞</a></div>
+            </div>
+          </div>
+          <div id="toggle-fractals">分形幾何
+            <div id="submenu-fractals" style="display:none;">
+              <div class="dropdown-entry"><a href="fractal_zh.html">簡介</a></div>
+              <div class="dropdown-entry"><a href="menger_zh.html">孟格海綿</a></div>
+            </div>
+          </div>
+          <div><a href="quilts_zh.html">下載</a></div>
+  
+          <!-- Social Icons container with both YouTube and Instagram side by side -->
+          <div class="social-icons">
+            <a href="https://www.youtube.com/@RobHockingMathArt/videos" 
+               target="_blank"
+               rel="noopener noreferrer">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/robhockingmathart/" 
+               target="_blank" 
+               rel="noopener noreferrer">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="seahorse.html" class="lang-toggle">
+              <i class="fa-solid fa-globe"></i> English
+            </a>
           </div>
         </div>
-        <div id="toggle-fractals">Fractal Geometry
-          <div id="submenu-fractals" style="display:none;">
-            <div class="dropdown-entry"><a href="fractal.html">Introduction</a></div>
-            <div class="dropdown-entry"><a href="menger.html">Menger Sponge</a></div>
-          </div>
-        </div>
-        <div><a href="quilts.html">Downloads</a></div>
-
-        <!-- Social Icons -->
-        <div class="social-icons">
-          <a href="https://www.youtube.com/@RobHockingMathArt/videos" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-youtube"></i>
-          </a>
-          <a href="https://www.instagram.com/robhockingmathart/" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-instagram"></i>
-          </a>
-        </div>
-        <div class="language-switch">
-          <a href="seahorse_zh.html" class="lang-toggle">
-            <i class="fa-solid fa-globe"></i>
-            中文
-          </a>
-        </div>
-      </div>
-    </nav>
+      </nav>
 
     <!-- Main Content Area -->
     <div class="content" style="flex-grow: 1;">
-      <h2 style="text-align: center; margin-top: 20px;">Seahorse Fractal</h2>
+      <h2 style="text-align: center; margin-top: 20px;">海馬碎形</h2>
 
       <!-- Two-column layout for the single product -->
       <div class="single-item-container">
@@ -102,7 +102,7 @@
           <div class="shop-item">
             <div class="img-container">
               <!-- Static image: first frame -->
-              <img src="images/seahorse_clipped2_frame_1.jpg" alt="Seahorse Fractal">
+              <img src="images/seahorse_clipped2_frame_1.jpg" alt="海馬碎形">
               <!-- Video on hover -->
               <video
                 src="videos/Seahorse_clipped2_comp.mp4"
@@ -114,7 +114,7 @@
             </div>
             <!-- Optional item info or title below image -->
             <div class="shop-item-info">
-              <h2>Seahorse Glass Etching</h2>
+              <h2>海馬玻璃蝕刻</h2>
             </div>
           </div>
         </div>
@@ -122,14 +122,13 @@
         <!-- Right Column (Description) -->
         <div class="right-column">
           <div class="description-box">
-            <h2>Description</h2>
-            <p>This seahorse glass etching is actually a Kleinian limit set fractal composed of infinitely many spheres. 
-               It is just one member of an infinite family of such fractals, 
-               all of which may be continuously deformed into one another.</p>
+            <h2>關於</h2>
+            <p>這幅海馬玻璃蝕刻實際上是一個由無限多個球體構成的克萊尼極限集合分形。
+                它僅僅是這類無限分形族中的一個成員，所有這些分形都可以連續地相互變形。</p>
             <p class="price-tag">$2,500</p>
 
             <!-- Quantity Input -->
-          <label for="seahorse-qty">Quantity:</label>
+          <label for="seahorse-qty">數量:</label>
             <input
               id="seahorse-qty"
               class="snipcart-item-quantity"
@@ -146,8 +145,8 @@
               data-item-name="Seahorse Fractal Etching"
               data-item-price="2500.00"
               data-item-url="/seahorse.html"
-              data-item-description="A Kleinian limit set fractal etched in glass.">
-              Add to Cart
+              data-item-description="一個玻璃蝕刻的克萊尼極限集合分形">
+              放入購物車
             </button>
 
           </div>
