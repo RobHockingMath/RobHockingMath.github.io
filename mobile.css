@@ -1,0 +1,176 @@
+/* mobile.css - Mobile friendly overrides */
+
+/* -------------------------------------------------
+   GENERAL LAYOUT ADJUSTMENTS
+------------------------------------------------- */
+
+/* Adjust body font size if needed for easier reading on small screens */
+body {
+  font-size: 16px;
+  /* You can adjust the base font size for readability on mobile */
+}
+
+/* Reduce overall padding/margins for the main content area */
+.content {
+  padding: 10px;
+}
+
+/* -------------------------------------------------
+   NAVIGATION & HEADER
+------------------------------------------------- */
+
+/* Make the navbar stack vertically and center content */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+}
+
+/* Stack the navigation menu items vertically instead of side-by-side */
+.nav-menu {
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Make each navigation link easier to tap */
+.nav-menu a {
+  padding: 10px;
+  font-size: 1em;
+}
+
+/* For dropdowns, remove the absolute positioning so submenus flow naturally */
+#submenu-holography,
+#submenu-fractals {
+  position: static;
+  margin-top: 5px;
+}
+
+/* Optionally, style the dropdown entries to span full width and center text */
+.dropdown-entry {
+  display: block;
+  text-align: center;
+  padding: 8px 0;
+}
+
+/* Adjust name-section fonts to be more proportionate on a small screen */
+.name-section h1 {
+  font-size: 1.8em;  /* reduced from xx-large */
+  padding: 5px;
+}
+.name-section p {
+  font-size: 1.2em;
+  padding: 5px;
+}
+
+/* Center the language-switch element */
+.language-switch {
+  text-align: center;
+  margin: 1em 0;
+}
+
+/* Reduce spacing between social icons */
+.social-icons {
+  gap: 20px;
+}
+
+/* -------------------------------------------------
+   SHOP & PRODUCT GRID
+------------------------------------------------- */
+
+/* Adjust shop-grid to a single-column layout on mobile */
+.shop-grid {
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 10px;
+}
+
+/* Ensure shop items use the full available width */
+.shop-item {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Adjust the image/video container to be fully responsive */
+.img-container img,
+.img-container video {
+  width: 100%;
+  height: auto;
+}
+
+/* Optionally disable hover effects on mobile (since touch devices don’t support hover) */
+/* You can leave these rules commented out or adjust them as desired */
+/*
+.img-container:hover img {
+  opacity: 1;
+}
+.img-container:hover video {
+  opacity: 1;
+  z-index: 2;
+}
+*/
+
+/* -------------------------------------------------
+   SINGLE PRODUCT PAGE
+------------------------------------------------- */
+
+/* Change the two-column single-item container to a single-column layout */
+.single-item-container {
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 10px;
+}
+
+/* Adjust left and right columns to take full width */
+.left-column,
+.right-column {
+  width: 100%;
+}
+
+/* Ensure the description box isn’t constrained on mobile */
+.description-box {
+  max-width: 100%;
+}
+
+/* -------------------------------------------------
+   CAROUSEL (if used)
+------------------------------------------------- */
+
+/* Make carousel wrapper fluid on mobile */
+.carousel-wrapper {
+  width: 100%;
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+/* -------------------------------------------------
+   IMAGE GALLERY & DOWNLOADS
+------------------------------------------------- */
+
+/* For the image gallery, allow wrapping and adjust gaps */
+.image-gallery {
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Adjust figures to use a percentage of available width */
+.image-gallery figure {
+  width: 90%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* -------------------------------------------------
+   FINAL TOUCHES
+------------------------------------------------- */
+
+/* Ensure overall layout spacing is optimized for narrow screens */
+.home-container {
+  grid-template-rows: auto 1fr;
+}
+
+/* Optionally, adjust any other spacing or font sizes as needed */
