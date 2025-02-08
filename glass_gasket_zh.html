@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta property="og:title" content="Rob Hocking Mathematical Art - Seahorse Fractal">
+  <meta property="og:image" content="https://robhockingmath.github.io/images/background.jpg">
+  <meta property="og:url" content="https://robhockingmath.github.io/seahorse.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image:width" content="2400">
+  <meta property="og:image:height" content="1800">
+
+  <title>Seahorse Fractal - Rob Hocking Mathematical Art</title>
+
+  <!-- Google Fonts & Local CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles-new.css">
+
+  <!-- Snipcart CSS & JS -->
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.css" />
+  <script async src="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js"></script>
+
+  <!-- Font Awesome for social icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-..."
+    crossorigin="anonymous"
+  />
+  
+    <!-- Mobile detection and stylesheet loading -->
+  <script>
+    // Simple mobile detection based on user agent.
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+      // Create a link element for the mobile CSS.
+      var mobileLink = document.createElement('link');
+      mobileLink.rel = 'stylesheet';
+      mobileLink.href = 'mobile.css'; // Create and customize this file with mobile-friendly styles.
+      document.head.appendChild(mobileLink);
+    }
+  </script>
+  
+</head>
+
+<body>
+    <div class="home-container">
+      <nav class="navbar">
+        <a href="./index_zh.html">
+          <div class="name-section">
+            <h1>Rob Hocking</h1>
+            <p>數學家與全息藝術家</p>
+          </div>
+        </a>
+        <div class="nav-menu">
+          <!-- Standard nav links in Chinese -->
+          <div><a href="about_zh.html">關於</a></div>
+          <div id="toggle-holography">數位全息
+            <div id="submenu-holography" style="display:none;">
+              <div class="dropdown-entry"><a href="digital_holography_zh.html">簡介</a></div>
+              <div class="dropdown-entry"><a href="apollian_gasket_zh.html">阿波羅尼安墜道</a></div>
+              <div class="dropdown-entry"><a href="black_hole_zh.html">黑洞</a></div>
+            </div>
+          </div>
+          <div id="toggle-fractals">分形幾何
+            <div id="submenu-fractals" style="display:none;">
+              <div class="dropdown-entry"><a href="fractal_zh.html">簡介</a></div>
+              <div class="dropdown-entry"><a href="menger_zh.html">孟格海綿</a></div>
+            </div>
+          </div>
+          <div><a href="quilts_zh.html">下載</a></div>
+  
+          <!-- Social Icons container with both YouTube and Instagram side by side -->
+          <div class="social-icons">
+            <a href="https://www.youtube.com/@RobHockingMathArt/videos" 
+               target="_blank"
+               rel="noopener noreferrer">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/robhockingmathart/" 
+               target="_blank" 
+               rel="noopener noreferrer">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="glass_gasket.html" class="lang-toggle">
+              <i class="fa-solid fa-globe"></i> English
+            </a>
+          </div>
+        </div>
+      </nav>
+
+    <!-- Main Content Area -->
+    <div class="content" style="flex-grow: 1;">
+      <h2 style="text-align: center; margin-top: 20px;">海馬碎形</h2>
+
+      <!-- Two-column layout for the single product -->
+      <div class="single-item-container">
+        <!-- Left Column (Image/Video) -->
+        <div class="left-column">
+          <div class="shop-item">
+            <div class="img-container">
+              <!-- Static image: first frame -->
+              <img src="images/seahorse_clipped2_frame_1.jpg" alt="海馬碎形">
+              <!-- Video on hover -->
+              <video
+                src="videos/Seahorse_clipped2_comp.mp4"
+                class="hover-video"
+                muted
+                loop
+                playsinline>
+              </video>
+            </div>
+            <!-- Optional item info or title below image -->
+            <div class="shop-item-info">
+              <h2>阿波羅尼亞墊玻璃蝕刻</h2>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column (Description) -->
+        <div class="right-column">
+          <div class="description-box">
+            <h2>關於</h2>
+            <p>旋轉的玻璃蝕刻，呈現一個由數百萬個球體構成的三維阿波羅尼亞墊。</p>
+            <p class="price-tag">$2,500</p>
+
+              <!-- Quantity Input -->
+          <label for="gasket-qty">數量:</label>
+          <input
+            id="gasket-qty"
+            class="snipcart-item-quantity"
+            name="quantity"
+            type="number"
+            value="1"
+            min="1"
+          />
+
+          <!-- Snipcart Add to Cart Button -->
+          <button
+            class="snipcart-add-item"
+            data-item-id="gasket-fractal-etching"
+            data-item-name="gasket Fractal Etching"
+            data-item-price="2500.00"
+            data-item-url="/glass_gasket.html"
+            data-item-description="阿波羅尼亞墊玻璃蝕刻.">
+            放入購物車
+          </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script type="module" src="./dropdowns.js"></script>
+
+  <!-- The Snipcart container goes here -->
+  <div hidden id="snipcart" data-api-key="YOUR_PUBLIC_API_KEY"></div>
+
+</body>
+</html>
