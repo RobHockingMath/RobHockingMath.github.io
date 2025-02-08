@@ -174,3 +174,12 @@ body {
 }
 
 /* Optionally, adjust any other spacing or font sizes as needed */
+
+/* prevent selection */
+.shop-item img {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }

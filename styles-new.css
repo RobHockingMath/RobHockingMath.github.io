@@ -574,3 +574,12 @@ input[type=radio] {
   margin-right: 10px;
   font-size: 1em;
 }
+
+/* prevent selection */
+.shop-item img {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
