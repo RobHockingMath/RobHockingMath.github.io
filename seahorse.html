@@ -30,6 +30,19 @@
     integrity="sha512-..."
     crossorigin="anonymous"
   />
+  
+    <!-- Mobile detection and stylesheet loading -->
+  <script>
+    // Simple mobile detection based on user agent.
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+      // Create a link element for the mobile CSS.
+      var mobileLink = document.createElement('link');
+      mobileLink.rel = 'stylesheet';
+      mobileLink.href = 'mobile.css'; // Create and customize this file with mobile-friendly styles.
+      document.head.appendChild(mobileLink);
+    }
+  </script>
+  
 </head>
 
 <body>
