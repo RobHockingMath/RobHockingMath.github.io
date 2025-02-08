@@ -13,7 +13,7 @@
 
   <title>Rob Hocking Mathematical Art - Shop</title>
 
-  <!-- Google Fonts & Local CSS -->
+  <!-- Google Fonts & Desktop CSS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
@@ -27,6 +27,17 @@
     crossorigin="anonymous"
   />
 
+  <!-- Mobile detection and stylesheet loading -->
+  <script>
+    // Simple mobile detection based on user agent.
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+      // Create a link element for the mobile CSS.
+      var mobileLink = document.createElement('link');
+      mobileLink.rel = 'stylesheet';
+      mobileLink.href = 'mobile.css'; // Create and customize this file with mobile-friendly styles.
+      document.head.appendChild(mobileLink);
+    }
+  </script>
 </head>
 
 <body>
@@ -79,7 +90,7 @@
     <div class="content" style="flex-grow: 1;">
       <h2 style="text-align: center; margin-top: 20px;">Shop</h2>
       <div class="shop-grid">
-        <!-- Example Shop Item 1: Replace with your actual video -->
+        <!-- Example Shop Item 1 -->
         <div class="shop-item">
           <a href="crab.html" class="item-link">
             <div class="img-container">
@@ -98,7 +109,7 @@
           </div>
         </div>
 
-        <!-- Example Shop Item 2: Replace with your actual video -->
+        <!-- Example Shop Item 2 -->
         <div class="shop-item">
           <a href="seahorse.html" class="item-link">
             <div class="img-container">
@@ -115,7 +126,7 @@
           </div>
         </div>
 
-        <!-- Example Shop Item 3: Replace with your actual video -->
+        <!-- Example Shop Item 3 -->
         <div class="shop-item">
           <a href="glass_gasket.html" class="item-link">
             <div class="img-container">
