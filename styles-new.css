@@ -650,3 +650,46 @@ input[type=radio] {
   top: -5px;
   right: -5px;
 }
+
+.img-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px; /* adjust as needed */
+  margin: 0 auto;
+}
+
+/* Arrow controls */
+.img-container .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 2em;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.2em 0.5em;
+  border-radius: 3px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.img-container .left-arrow {
+  left: 10px;
+}
+
+.img-container .right-arrow {
+  right: 10px;
+}
+
+/* Default hover behavior: hide the image and show the video */
+.img-container:hover img {
+  opacity: 0;
+}
+.img-container:hover video {
+  opacity: 1;
+}
+
+/* When no video is available, keep the image visible on hover */
+.img-container.no-video:hover img {
+  opacity: 1 !important;
+}
