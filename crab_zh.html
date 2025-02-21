@@ -1,175 +1,205 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  
   <meta property="og:title" content="Rob Hocking Mathematical Art - Seahorse Fractal">
   <meta property="og:image" content="https://robhockingmath.github.io/images/background.jpg">
   <meta property="og:url" content="https://robhockingmath.github.io/seahorse.html">
   <meta property="og:type" content="website">
   <meta property="og:image:width" content="2400">
   <meta property="og:image:height" content="1800">
-
+  
   <title>Seahorse Fractal - Rob Hocking Mathematical Art</title>
-
+  
   <!-- Google Fonts & Local CSS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles-new.css">
-
-  <!-- Snipcart CSS & JS -->
-  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.css" />
-  <script async src="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js"></script>
-
-  <!-- Font Awesome for social icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    integrity="sha512-..."
-    crossorigin="anonymous"
-  />
   
-    <!-- Mobile detection and stylesheet loading -->
+  <!-- Snipcart CSS & JS -->
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.css">
+  <script async src="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js"></script>
+  
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-..."
+        crossorigin="anonymous">
+  
+  <!-- Mobile detection and stylesheet loading -->
   <script>
-    // Simple mobile detection based on user agent.
     if (/Mobi|Android/i.test(navigator.userAgent)) {
-      // Create a link element for the mobile CSS.
       var mobileLink = document.createElement('link');
       mobileLink.rel = 'stylesheet';
-      mobileLink.href = 'mobile.css'; // Create and customize this file with mobile-friendly styles.
+      mobileLink.href = 'mobile.css';
       document.head.appendChild(mobileLink);
     }
   </script>
-  
 </head>
-
 <body>
-    <div class="home-container">
-      <nav class="navbar">
-        <a href="./index_zh.html">
-          <div class="name-section">
-            <h1>Rob Hocking</h1>
-            <p>數學家與全息藝術家</p>
-          </div>
-        </a>
-        <div class="nav-menu">
-          <!-- Standard nav links in Chinese -->
-          <div><a href="about_zh.html">關於</a></div>
-          <div id="toggle-holography">數位全息
-            <div id="submenu-holography" style="display:none;">
-              <div class="dropdown-entry"><a href="digital_holography_zh.html">簡介</a></div>
-              <div class="dropdown-entry"><a href="apollian_gasket_zh.html">阿波羅尼安墜道</a></div>
-              <div class="dropdown-entry"><a href="black_hole_zh.html">黑洞</a></div>
-            </div>
-          </div>
-          <div id="toggle-fractals">分形幾何
-            <div id="submenu-fractals" style="display:none;">
-              <div class="dropdown-entry"><a href="fractal_zh.html">簡介</a></div>
-              <div class="dropdown-entry"><a href="menger_zh.html">孟格海綿</a></div>
-            </div>
-          </div>
-          <div><a href="quilts_zh.html">下載</a></div>
-  
-          <!-- Social Icons container with both YouTube and Instagram side by side -->
-          <div class="social-icons">
-            <a href="https://www.youtube.com/@RobHockingMathArt/videos" 
-               target="_blank"
-               rel="noopener noreferrer">
-              <i class="fab fa-youtube"></i>
-            </a>
-            <a href="https://www.instagram.com/robhockingmathart/" 
-               target="_blank" 
-               rel="noopener noreferrer">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="crab.html" class="lang-toggle">
-              <i class="fa-solid fa-globe"></i> English
-            </a>
-          </div>
-        </div>
-      </nav>
+  <!-- Navigation Bar (unchanged) -->
 
-    <!-- Main Content Area -->
+  <script>
+    window.SnipcartSettings = {
+        publicApiKey: 'MzE3MzY0OGEtZGRkOS00ZmFiLTgxZGEtZDYyYzNhOTIxMWJmNjM4NzU1NjQ3Mzk3NDQ3NzU2',
+        loadStrategy: 'on-user-interaction',
+        language: 'zh' // Forces Snipcart to stay in Chinese
+    };
+
+    (()=>{var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var f=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,m=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(m.forEach(t=>document.addEventListener(t,o)),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],e=document.querySelector("#snipcart"),i=document.querySelector(`src[src^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][src$="snipcart.js"]`),n=document.querySelector(`link[href^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][href$="snipcart.css"]`);e||(e=document.createElement("div"),e.id="snipcart",e.setAttribute("hidden","true"),document.body.appendChild(e)),v(e),i||(i=document.createElement("script"),i.src=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.js`,i.async=!0,t.appendChild(i)),n||(n=document.createElement("link"),n.rel="stylesheet",n.type="text/css",n.href=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.css`,t.prepend(n)),m.forEach(g=>document.removeEventListener(g,o))}function v(t){!f||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
+  </script>  
+
+  <nav class="navbar">
+    <a href="./index_zh.html">
+      <div class="name-section">
+        <h1>Rob Hocking</h1>
+        <p>數學家與全息藝術家</p>
+      </div>
+    </a>
+    <div class="nav-menu">
+      <div><a href="about_zh.html">關於</a></div>
+      <div id="toggle-holography">數位全息
+        <div id="submenu-holography" style="display:none;">
+          <div class="dropdown-entry"><a href="digital_holography_zh.html">簡介</a></div>
+          <div class="dropdown-entry"><a href="apollian_gasket_zh.html">阿波羅尼安墜道</a></div>
+          <div class="dropdown-entry"><a href="black_hole_zh.html">黑洞</a></div>
+        </div>
+      </div>
+      <div id="toggle-fractals">分形幾何
+        <div id="submenu-fractals" style="display:none;">
+          <div class="dropdown-entry"><a href="fractal_zh.html">簡介</a></div>
+          <div class="dropdown-entry"><a href="menger_zh.html">孟格海綿</a></div>
+        </div>
+      </div>
+      <div><a href="quilts_zh.html">下載</a></div>
+      <div class="social-icons">
+        <a href="https://www.youtube.com/@RobHockingMathArt/videos" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.instagram.com/robhockingmathart/" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="crab.html" class="lang-toggle">
+          <i class="fa-solid fa-globe"></i> English
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="home-container">
     <div class="content" style="flex-grow: 1;">
       <h2 style="text-align: center; margin-top: 20px;">螃蟹分形球</h2>
-
-      <!-- Two-column layout for the single product -->
       <div class="single-item-container">
-        <!-- Left Column (Image/Video) -->
+        <!-- Left Column: Carousel -->
         <div class="left-column">
           <div class="shop-item">
-            <div class="img-container">
-              <!-- Static image: first frame -->
-              <img src="images/ball_cropped_frame_1.jpg" alt="螃蟹分形球">
-              <!-- Video on hover -->
-              <video
-                src="videos/ball_cropped_comp.mp4"
-                class="hover-video"
-                muted
-                loop
-                playsinline>
-              </video>
+            <!-- Carousel container with arrow controls -->
+            <div class="img-container" id="carousel-container">
+              <a href="javascript:void(0);" class="arrow left-arrow" onclick="prevImage()">&#10094;</a>
+              <img id="product-image" src="" alt="螃蟹分形球">
+              <video id="product-video" class="hover-video" muted loop autoplay playsinline></video>
+              <a href="javascript:void(0);" class="arrow right-arrow" onclick="nextImage()">&#10095;</a>
             </div>
-            <!-- Optional item info or title below image -->
             <div class="shop-item-info">
               <h2>螃蟹玻璃蝕刻</h2>
             </div>
           </div>
         </div>
-
-        <!-- Right Column (Description) -->
+  
+        <!-- Right Column: Description -->
         <div class="right-column">
           <div class="description-box">
             <h2>Description</h2>
-            <p>這個略呈螃蟹狀的分形，是《因陀羅之珠》第363頁中克萊尼極限集合的三維推廣。
-                就像書中許多其他分形一樣，它可以通過從某個初始圓 
-                𝐶
-                C 開始，並利用一對莫比烏斯變換 
-                𝑎
-                a 和 
-                𝑏
-                b 以及它們的反變換 
-                𝐴
-                A 和 
-                𝐵
-                B，計算出所有可能的組合（至某個固定長度）來生成。
-                例如，如果組合的長度正好為三，則可能的組合有：aaa、aab、aba、baa、aaB、aBa、Baa、baB、Bab……等。
+            <p>
+              這個略呈螃蟹狀的分形，是《因陀羅之珠》第363頁中克萊尼極限集合的三維推廣。它可通過使用一對莫比烏斯變換及其反變換來生成，產生各種組合。
             </p>
             <p class="price-tag">$2,500</p>
-
-              <!-- Quantity Input -->
-          <label for="crab-qty">數量:</label>
-          <input
-            id="crab-qty"
-            class="snipcart-item-quantity"
-            name="quantity"
-            type="number"
-            value="1"
-            min="1"
-          />
-
-          <!-- Snipcart Add to Cart Button -->
-          <button
-            class="snipcart-add-item"
-            data-item-id="crab-fractal-etching"
-            data-item-name="Crab Glass Etching"
-            data-item-price="2500.00"
-            data-item-url="/crab.html"
-            data-item-description="螃蟹玻璃蝕刻.">
-            放入購物車
-          </button>
-
+            <label for="crab-qty">數量:</label>
+            <input id="crab-qty" class="snipcart-item-quantity" name="quantity" type="number" value="1" min="1">
+            <button class="snipcart-add-item"
+                    data-item-id="crab-fractal-etching"
+                    data-item-name="Crab Glass Etching"
+                    data-item-price="2500.00"
+                    data-item-url="/crab_zh.html"
+                    data-item-image="images/ball_thumbnail.jpg"
+                    data-item-description="螃蟹玻璃蝕刻.">
+              放入購物車
+            </button>
           </div>
         </div>
       </div>
     </div>
   </div>
-
+  
+  
+  <!-- Inline script for carousel data -->
+  <script>
+    window.carouselItems = [
+      { image: "images/ball_cropped_frame_1.jpg", video: "videos/ball_cropped_comp.mp4" },
+      { image: "images/base_1080.jpg", video: null }
+    ];
+    window.currentIndex = 0;
+  </script>
+  
+  <!-- Inline carousel script -->
+  <script>
+    function updateMedia() {
+      var items = window.carouselItems || [];
+      var imgEl = document.getElementById("product-image");
+      var vidEl = document.getElementById("product-video");
+      var container = document.getElementById("carousel-container");
+      
+      if (!items.length) return;
+      
+      imgEl.src = items[window.currentIndex].image;
+      
+      if (items[window.currentIndex].video) {
+        container.classList.remove("no-video");
+        vidEl.src = items[window.currentIndex].video;
+        vidEl.load();
+        vidEl.style.display = "block";
+      } else {
+        container.classList.add("no-video");
+        vidEl.pause();
+        vidEl.removeAttribute("src");
+        vidEl.load();
+        vidEl.style.display = "none";
+      }
+    }
+    
+    function prevImage() {
+      var items = window.carouselItems || [];
+      window.currentIndex = (window.currentIndex - 1 + items.length) % items.length;
+      updateMedia();
+    }
+    
+    function nextImage() {
+      var items = window.carouselItems || [];
+      window.currentIndex = (window.currentIndex + 1) % items.length;
+      updateMedia();
+    }
+    
+    document.addEventListener("DOMContentLoaded", updateMedia);
+  </script>
+  
+  <!-- Snipcart and additional scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (!document.querySelector('.snipcart-checkout')) {
+        let cartButton = document.createElement('button');
+        cartButton.classList.add('snipcart-checkout');
+        cartButton.innerHTML = '🛒 <span class="snipcart-items-count"></span>';
+        document.body.appendChild(cartButton);
+      }
+    });
+  </script>
+  
+  <script src="snipcart-lang-switch.js"></script>
   <script src="script.js"></script>
   <script type="module" src="./dropdowns.js"></script>
-
+  
   <div hidden id="snipcart" data-api-key="YOUR_PUBLIC_API_KEY"></div>
 </body>
 </html>
