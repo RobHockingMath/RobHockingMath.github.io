@@ -19,9 +19,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles-new.css">
 
-    <!-- Snipcart CSS & JS -->
-    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.css" />
-    <script async src="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js"></script>
+  <!-- Snipcart CSS & JS -->
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.css" />
+  <script async src="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js"></script>
 
   <!-- Font Awesome for social icons -->
   <link
@@ -31,7 +31,7 @@
     crossorigin="anonymous"
   />
   
-    <!-- Mobile detection and stylesheet loading -->
+  <!-- Mobile detection and stylesheet loading -->
   <script>
     // Simple mobile detection based on user agent.
     if (/Mobi|Android/i.test(navigator.userAgent)) {
@@ -108,24 +108,26 @@
 
       <!-- Two-column layout for the single product -->
       <div class="single-item-container">
-        <!-- Left Column (Image/Video) -->
+        <!-- Left Column (Carousel) -->
         <div class="left-column">
           <div class="shop-item">
-            <div class="img-container">
-              <!-- Static image: first frame -->
-              <img src="images/Gasket_frame_1.jpg" alt="Apollonian gasket">
-              <!-- Video on hover -->
-              <video
-                src="videos/Gasket_loop_comp.mp4"
-                class="hover-video"
-                muted
-                loop
-                playsinline>
-              </video>
+            <!-- Carousel container with arrow controls -->
+            <div class="img-container" id="carousel-container">
+              <!-- Left arrow control -->
+              <a href="javascript:void(0);" class="arrow left-arrow" onclick="prevImage()">&#10094;</a>
+              
+              <!-- Image and video elements (populated by JS) -->
+              <img id="product-image" src="" alt="Apollonian gasket">
+              <video id="product-video" class="hover-video" muted loop playsinline></video>
+              
+              <!-- Right arrow control -->
+              <a href="javascript:void(0);" class="arrow right-arrow" onclick="nextImage()">&#10095;</a>
             </div>
-            <!-- Optional item info or title below image -->
+            <!-- Caption element for carousel item description -->
+            <div id="carousel-caption" class="carousel-caption"></div>
+            
+            <!-- Optional item info or title below carousel -->
             <div class="shop-item-info">
-              <h2>Apollonian gasket Glass Etching</h2>
             </div>
           </div>
         </div>
@@ -137,33 +139,87 @@
             <p>Rotating glass etching of a 3D Apollonian gasket, built out of millions of spheres.</p>
             <p class="price-tag">$2,500</p>
 
-              <!-- Quantity Input -->
-          <label for="gasket-qty">Quantity:</label>
-          <input
-            id="gasket-qty"
-            class="snipcart-item-quantity"
-            name="quantity"
-            type="number"
-            value="1"
-            min="1"
-          />
+            <!-- Quantity Input -->
+            <label for="gasket-qty">Quantity:</label>
+            <input id="gasket-qty" class="snipcart-item-quantity" name="quantity" type="number" value="1" min="1">
 
-          <!-- Snipcart Add to Cart Button -->
-          <button
-            class="snipcart-add-item"
-            data-item-id="gasket-fractal-etching"
-            data-item-name="gasket Fractal Etching"
-            data-item-price="2500.00"
-            data-item-url="/glass_gasket.html"
-            data-item-description="An Apollonian gasket fractal etched in glass.">
-            Add to Cart
-          </button>
+            <!-- Snipcart Add to Cart Button -->
+            <button class="snipcart-add-item"
+              data-item-id="gasket-fractal-etching"
+              data-item-name="gasket Fractal Etching"
+              data-item-price="2500.00"
+              data-item-url="/glass_gasket.html"
+              data-item-description="An Apollonian gasket fractal etched in glass.">
+              Add to Cart
+            </button>
 
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- Inline script for carousel data -->
+  <script>
+    window.carouselItems = [
+      { 
+        image: "images/Gasket_frame_1.jpg", 
+        video: "videos/Gasket_loop_comp.mp4",
+        description: "Rotating view of the Apollonian gasket."
+      },
+      { 
+        image: "images/gasket_base_1000.jpg", 
+        video: null,
+        description: "7x7cm LED base with USB power cord."
+      }
+    ];
+    window.currentIndex = 0;
+  </script>
+  
+  <!-- Inline carousel script -->
+  <script>
+    function updateMedia() {
+      var items = window.carouselItems || [];
+      var imgEl = document.getElementById("product-image");
+      var vidEl = document.getElementById("product-video");
+      var container = document.getElementById("carousel-container");
+      var captionEl = document.getElementById("carousel-caption");
+      
+      if (!items.length) return;
+      
+      // Update image source and caption text.
+      imgEl.src = items[window.currentIndex].image;
+      captionEl.textContent = items[window.currentIndex].description || "";
+      
+      // If a video is provided, show it; otherwise, hide the video.
+      if (items[window.currentIndex].video) {
+        container.classList.remove("no-video");
+        vidEl.src = items[window.currentIndex].video;
+        vidEl.load();
+        vidEl.style.display = "block";
+      } else {
+        container.classList.add("no-video");
+        vidEl.pause();
+        vidEl.removeAttribute("src");
+        vidEl.load();
+        vidEl.style.display = "none";
+      }
+    }
+    
+    function prevImage() {
+      var items = window.carouselItems || [];
+      window.currentIndex = (window.currentIndex - 1 + items.length) % items.length;
+      updateMedia();
+    }
+    
+    function nextImage() {
+      var items = window.carouselItems || [];
+      window.currentIndex = (window.currentIndex + 1) % items.length;
+      updateMedia();
+    }
+    
+    document.addEventListener("DOMContentLoaded", updateMedia);
+  </script>
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
