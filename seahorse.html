@@ -31,7 +31,7 @@
     crossorigin="anonymous"
   />
   
-    <!-- Mobile detection and stylesheet loading -->
+  <!-- Mobile detection and stylesheet loading -->
   <script>
     // Simple mobile detection based on user agent.
     if (/Mobi|Android/i.test(navigator.userAgent)) {
@@ -108,24 +108,26 @@
 
       <!-- Two-column layout for the single product -->
       <div class="single-item-container">
-        <!-- Left Column (Image/Video) -->
+        <!-- Left Column (Carousel) -->
         <div class="left-column">
           <div class="shop-item">
-            <div class="img-container">
-              <!-- Static image: first frame -->
-              <img src="images/seahorse_clipped2_frame_1.jpg" alt="Seahorse Fractal">
-              <!-- Video on hover -->
-              <video
-                src="videos/Seahorse_loop_comp.mp4"
-                class="hover-video"
-                muted
-                loop
-                playsinline>
-              </video>
+            <!-- Carousel container with arrow controls -->
+            <div class="img-container" id="carousel-container">
+              <!-- Left arrow control -->
+              <a href="javascript:void(0);" class="arrow left-arrow" onclick="prevImage()">&#10094;</a>
+              
+              <!-- Image and video elements (will be updated by JS) -->
+              <img id="product-image" src="" alt="Seahorse Fractal">
+              <video id="product-video" class="hover-video" muted loop playsinline></video>
+              
+              <!-- Right arrow control -->
+              <a href="javascript:void(0);" class="arrow right-arrow" onclick="nextImage()">&#10095;</a>
             </div>
-            <!-- Optional item info or title below image -->
+            <!-- Caption element for carousel item description -->
+            <div id="carousel-caption" class="carousel-caption"></div>
+            
+            <!-- Optional item info or title below carousel -->
             <div class="shop-item-info">
-              <h2>Seahorse Glass Etching</h2>
             </div>
           </div>
         </div>
@@ -140,19 +142,11 @@
             <p class="price-tag">$2,500</p>
 
             <!-- Quantity Input -->
-          <label for="seahorse-qty">Quantity:</label>
-            <input
-              id="seahorse-qty"
-              class="snipcart-item-quantity"
-              name="quantity"
-              type="number"
-              value="1"
-              min="1"
-            />
+            <label for="seahorse-qty">Quantity:</label>
+            <input id="seahorse-qty" class="snipcart-item-quantity" name="quantity" type="number" value="1" min="1">
 
             <!-- Snipcart Add to Cart Button -->
-            <button
-              class="snipcart-add-item"
+            <button class="snipcart-add-item"
               data-item-id="seahorse-fractal-etching"
               data-item-name="Seahorse Fractal Etching"
               data-item-price="2500.00"
@@ -160,12 +154,73 @@
               data-item-description="A Kleinian limit set fractal etched in glass.">
               Add to Cart
             </button>
-
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- Inline script for carousel data -->
+  <script>
+    window.carouselItems = [
+      { 
+        image: "images/seahorse_clipped2_frame_1.jpg", 
+        video: "videos/Seahorse_loop_comp.mp4",
+        description: "Dynamic view of the seahorse with animated details."
+      },
+      { 
+        image: "images/seahorse_base_1000.jpg", 
+        video: null,
+        description: "The 10x20cm LED base with USB power cord."
+      }
+    ];
+    window.currentIndex = 0;
+  </script>
+  
+  <!-- Inline carousel script -->
+  <script>
+    function updateMedia() {
+      var items = window.carouselItems || [];
+      var imgEl = document.getElementById("product-image");
+      var vidEl = document.getElementById("product-video");
+      var container = document.getElementById("carousel-container");
+      var captionEl = document.getElementById("carousel-caption");
+      
+      if (!items.length) return;
+      
+      // Update image source and caption text.
+      imgEl.src = items[window.currentIndex].image;
+      captionEl.textContent = items[window.currentIndex].description || "";
+      
+      // If a video is provided, show it; otherwise hide the video.
+      if (items[window.currentIndex].video) {
+        container.classList.remove("no-video");
+        vidEl.src = items[window.currentIndex].video;
+        vidEl.load();
+        vidEl.style.display = "block";
+      } else {
+        container.classList.add("no-video");
+        vidEl.pause();
+        vidEl.removeAttribute("src");
+        vidEl.load();
+        vidEl.style.display = "none";
+      }
+    }
+    
+    function prevImage() {
+      var items = window.carouselItems || [];
+      window.currentIndex = (window.currentIndex - 1 + items.length) % items.length;
+      updateMedia();
+    }
+    
+    function nextImage() {
+      var items = window.carouselItems || [];
+      window.currentIndex = (window.currentIndex + 1) % items.length;
+      updateMedia();
+    }
+    
+    document.addEventListener("DOMContentLoaded", updateMedia);
+  </script>
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -179,7 +234,6 @@
   </script>
 
   <script src="snipcart-lang-switch.js"></script>
-
   <script src="script.js"></script>
   <script type="module" src="./dropdowns.js"></script>
 

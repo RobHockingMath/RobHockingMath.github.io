@@ -31,7 +31,7 @@
     crossorigin="anonymous"
   />
   
-    <!-- Mobile detection and stylesheet loading -->
+  <!-- Mobile detection and stylesheet loading -->
   <script>
     // Simple mobile detection based on user agent.
     if (/Mobi|Android/i.test(navigator.userAgent)) {
@@ -57,50 +57,50 @@
     (()=>{var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var f=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,m=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(m.forEach(t=>document.addEventListener(t,o)),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],e=document.querySelector("#snipcart"),i=document.querySelector(`src[src^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][src$="snipcart.js"]`),n=document.querySelector(`link[href^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][href$="snipcart.css"]`);e||(e=document.createElement("div"),e.id="snipcart",e.setAttribute("hidden","true"),document.body.appendChild(e)),v(e),i||(i=document.createElement("script"),i.src=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.js`,i.async=!0,t.appendChild(i)),n||(n=document.createElement("link"),n.rel="stylesheet",n.type="text/css",n.href=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.css`,t.prepend(n)),m.forEach(g=>document.removeEventListener(g,o))}function v(t){!f||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
   </script>
 
-    <div class="home-container">
-      <nav class="navbar">
-        <a href="./index_zh.html">
-          <div class="name-section">
-            <h1>Rob Hocking</h1>
-            <p>數學家與全息藝術家</p>
-          </div>
-        </a>
-        <div class="nav-menu">
-          <!-- Standard nav links in Chinese -->
-          <div><a href="about_zh.html">關於</a></div>
-          <div id="toggle-holography">數位全息
-            <div id="submenu-holography" style="display:none;">
-              <div class="dropdown-entry"><a href="digital_holography_zh.html">簡介</a></div>
-              <div class="dropdown-entry"><a href="apollian_gasket_zh.html">阿波羅尼安墜道</a></div>
-              <div class="dropdown-entry"><a href="black_hole_zh.html">黑洞</a></div>
-            </div>
-          </div>
-          <div id="toggle-fractals">分形幾何
-            <div id="submenu-fractals" style="display:none;">
-              <div class="dropdown-entry"><a href="fractal_zh.html">簡介</a></div>
-              <div class="dropdown-entry"><a href="menger_zh.html">孟格海綿</a></div>
-            </div>
-          </div>
-          <div><a href="quilts_zh.html">下載</a></div>
-  
-          <!-- Social Icons container with both YouTube and Instagram side by side -->
-          <div class="social-icons">
-            <a href="https://www.youtube.com/@RobHockingMathArt/videos" 
-               target="_blank"
-               rel="noopener noreferrer">
-              <i class="fab fa-youtube"></i>
-            </a>
-            <a href="https://www.instagram.com/robhockingmathart/" 
-               target="_blank" 
-               rel="noopener noreferrer">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="glass_gasket.html" class="lang-toggle">
-              <i class="fa-solid fa-globe"></i> English
-            </a>
+  <div class="home-container">
+    <nav class="navbar">
+      <a href="./index_zh.html">
+        <div class="name-section">
+          <h1>Rob Hocking</h1>
+          <p>數學家與全息藝術家</p>
+        </div>
+      </a>
+      <div class="nav-menu">
+        <!-- Standard nav links in Chinese -->
+        <div><a href="about_zh.html">關於</a></div>
+        <div id="toggle-holography">數位全息
+          <div id="submenu-holography" style="display:none;">
+            <div class="dropdown-entry"><a href="digital_holography_zh.html">簡介</a></div>
+            <div class="dropdown-entry"><a href="apollian_gasket_zh.html">阿波羅尼安墜道</a></div>
+            <div class="dropdown-entry"><a href="black_hole_zh.html">黑洞</a></div>
           </div>
         </div>
-      </nav>
+        <div id="toggle-fractals">分形幾何
+          <div id="submenu-fractals" style="display:none;">
+            <div class="dropdown-entry"><a href="fractal_zh.html">簡介</a></div>
+            <div class="dropdown-entry"><a href="menger_zh.html">孟格海綿</a></div>
+          </div>
+        </div>
+        <div><a href="quilts_zh.html">下載</a></div>
+  
+        <!-- Social Icons container -->
+        <div class="social-icons">
+          <a href="https://www.youtube.com/@RobHockingMathArt/videos" 
+             target="_blank"
+             rel="noopener noreferrer">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.instagram.com/robhockingmathart/" 
+             target="_blank" 
+             rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="glass_gasket.html" class="lang-toggle">
+            <i class="fa-solid fa-globe"></i> English
+          </a>
+        </div>
+      </div>
+    </nav>
 
     <!-- Main Content Area -->
     <div class="content" style="flex-grow: 1;">
@@ -108,23 +108,26 @@
 
       <!-- Two-column layout for the single product -->
       <div class="single-item-container">
-        <!-- Left Column (Image/Video) -->
+        <!-- Left Column (Carousel) -->
         <div class="left-column">
           <div class="shop-item">
-            <div class="img-container">
-                <!-- Static image: first frame -->
-                <img src="images/Gasket_frame_1.jpg" alt="Apollonian gasket">
-                <!-- Video on hover -->
-                <video
-                  src="videos/Gasket_loop_comp.mp4"
-                  class="hover-video"
-                  muted
-                  loop
-                  playsinline>
-                </video>
-            <!-- Optional item info or title below image -->
+            <!-- Carousel container with arrow controls -->
+            <div class="img-container" id="carousel-container">
+              <!-- Left arrow control -->
+              <a href="javascript:void(0);" class="arrow left-arrow" onclick="prevImage()">&#10094;</a>
+              
+              <!-- Image and video elements (populated by JS) -->
+              <img id="product-image" src="" alt="阿波羅尼亞墊">
+              <video id="product-video" class="hover-video" muted loop playsinline></video>
+              
+              <!-- Right arrow control -->
+              <a href="javascript:void(0);" class="arrow right-arrow" onclick="nextImage()">&#10095;</a>
+            </div>
+            <!-- Caption element for carousel item description -->
+            <div id="carousel-caption" class="carousel-caption"></div>
+            
+            <!-- Optional item info or title below carousel -->
             <div class="shop-item-info">
-              <h2>阿波羅尼亞墊玻璃蝕刻</h2>
             </div>
           </div>
         </div>
@@ -136,33 +139,87 @@
             <p>旋轉的玻璃蝕刻，呈現一個由數百萬個球體構成的三維阿波羅尼亞墊。</p>
             <p class="price-tag">$2,500</p>
 
-              <!-- Quantity Input -->
-          <label for="gasket-qty">數量:</label>
-          <input
-            id="gasket-qty"
-            class="snipcart-item-quantity"
-            name="quantity"
-            type="number"
-            value="1"
-            min="1"
-          />
+            <!-- Quantity Input -->
+            <label for="gasket-qty">數量:</label>
+            <input id="gasket-qty" class="snipcart-item-quantity" name="quantity" type="number" value="1" min="1">
 
-          <!-- Snipcart Add to Cart Button -->
-          <button
-            class="snipcart-add-item"
-            data-item-id="gasket-fractal-etching"
-            data-item-name="gasket Fractal Etching"
-            data-item-price="2500.00"
-            data-item-url="/glass_gasket.html"
-            data-item-description="阿波羅尼亞墊玻璃蝕刻.">
-            放入購物車
-          </button>
+            <!-- Snipcart Add to Cart Button -->
+            <button class="snipcart-add-item"
+              data-item-id="gasket-fractal-etching"
+              data-item-name="gasket Fractal Etching"
+              data-item-price="2500.00"
+              data-item-url="/glass_gasket.html"
+              data-item-description="阿波羅尼亞墊玻璃蝕刻.">
+              放入購物車
+            </button>
 
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- Inline script for carousel data -->
+  <script>
+    window.carouselItems = [
+      { 
+        image: "images/Gasket_frame_1.jpg", 
+        video: "videos/Gasket_loop_comp.mp4",
+        description: "阿波羅尼亞墊的旋轉視角。"
+      },
+      { 
+        image: "images/gasket_base_1000.jpg", 
+        video: null,
+        description: "詳細展示墊底部（無影片）。"
+      }
+    ];
+    window.currentIndex = 0;
+  </script>
+  
+  <!-- Inline carousel script -->
+  <script>
+    function updateMedia() {
+      var items = window.carouselItems || [];
+      var imgEl = document.getElementById("product-image");
+      var vidEl = document.getElementById("product-video");
+      var container = document.getElementById("carousel-container");
+      var captionEl = document.getElementById("carousel-caption");
+      
+      if (!items.length) return;
+      
+      // 更新圖片來源與說明文字
+      imgEl.src = items[window.currentIndex].image;
+      captionEl.textContent = items[window.currentIndex].description || "";
+      
+      // 如果有影片，則顯示影片；否則隱藏影片
+      if (items[window.currentIndex].video) {
+        container.classList.remove("no-video");
+        vidEl.src = items[window.currentIndex].video;
+        vidEl.load();
+        vidEl.style.display = "block";
+      } else {
+        container.classList.add("no-video");
+        vidEl.pause();
+        vidEl.removeAttribute("src");
+        vidEl.load();
+        vidEl.style.display = "none";
+      }
+    }
+    
+    function prevImage() {
+      var items = window.carouselItems || [];
+      window.currentIndex = (window.currentIndex - 1 + items.length) % items.length;
+      updateMedia();
+    }
+    
+    function nextImage() {
+      var items = window.carouselItems || [];
+      window.currentIndex = (window.currentIndex + 1) % items.length;
+      updateMedia();
+    }
+    
+    document.addEventListener("DOMContentLoaded", updateMedia);
+  </script>
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {

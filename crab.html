@@ -118,8 +118,9 @@
               <!-- Right arrow control -->
               <a href="javascript:void(0);" class="arrow right-arrow" onclick="nextImage()">&#10095;</a>
             </div>
+            <!-- Caption element for carousel item description -->
+            <div id="carousel-caption" class="carousel-caption"></div>
             <div class="shop-item-info">
-              <h2>Crab Glass Etching</h2>
             </div>
           </div>
         </div>
@@ -154,8 +155,16 @@
   <!-- Inline script for page-specific carousel data -->
   <script>
     window.carouselItems = [
-      { image: "images/ball_cropped_frame_1.jpg", video: "videos/ball_cropped_comp.mp4" },
-      { image: "images/base_1080.jpg", video: null }
+      { 
+        image: "images/ball_cropped_frame_1.jpg", 
+        video: "videos/ball_cropped_comp.mp4",
+        description: "A dynamic view of the fractal in motion, highlighting its intricate structure."
+      },
+      { 
+        image: "images/base_1080.jpg", 
+        video: null,
+        description: "The battery powered base and USB recharging cable."
+      }
     ];
     window.currentIndex = 0;
   </script>
@@ -167,11 +176,15 @@
       var imgEl = document.getElementById("product-image");
       var vidEl = document.getElementById("product-video");
       var container = document.getElementById("carousel-container");
+      var captionEl = document.getElementById("carousel-caption");
       
       if (!items.length) return;
       
       // Update the image source
       imgEl.src = items[window.currentIndex].image;
+      
+      // Update caption text from the current item
+      captionEl.textContent = items[window.currentIndex].description || "";
       
       // If a video is provided, remove no-video class and show video;
       // otherwise, add no-video class and hide video.
