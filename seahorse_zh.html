@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta property="og:title" content="Rob Hocking Mathematical Art - Seahorse Fractal">
   <meta property="og:image" content="https://robhockingmath.github.io/images/background.jpg">
-  <meta property="og:url" content="https://robhockingmath.github.io/seahorse.html">
+  <meta property="og:url" content="https://robhockingmath.github.io/seahorse_zh.html">
   <meta property="og:type" content="website">
   <meta property="og:image:width" content="2400">
   <meta property="og:image:height" content="1800">
@@ -46,16 +46,10 @@
 </head>
 
 <body>
-
-  <script>
-    window.SnipcartSettings = {
-        publicApiKey: 'MzE3MzY0OGEtZGRkOS00ZmFiLTgxZGEtZDYyYzNhOTIxMWJmNjM4NzU1NjQ3Mzk3NDQ3NzU2',
-        loadStrategy: 'on-user-interaction',
-        language: 'zh' // Forces Snipcart to stay in Chinese
-    };
-
-    (()=>{var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var f=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,m=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(m.forEach(t=>document.addEventListener(t,o)),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],e=document.querySelector("#snipcart"),i=document.querySelector(`src[src^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][src$="snipcart.js"]`),n=document.querySelector(`link[href^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][href$="snipcart.css"]`);e||(e=document.createElement("div"),e.id="snipcart",e.setAttribute("hidden","true"),document.body.appendChild(e)),v(e),i||(i=document.createElement("script"),i.src=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.js`,i.async=!0,t.appendChild(i)),n||(n=document.createElement("link"),n.rel="stylesheet",n.type="text/css",n.href=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.css`,t.prepend(n)),m.forEach(g=>document.removeEventListener(g,o))}function v(t){!f||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
-  </script>
+  <div id="snipcart" data-api-key="MzE3MzY0OGEtZGRkOS00ZmFiLTgxZGEtZDYyYzNhOTIxMWJmNjM4NzU1NjQ3Mzk3NDQ3NzU2" hidden></div>
+  <script src="snipcart-init.js"></script>
+  <script src="currency-switcher.js"></script>
+  <script src="update-price.js"></script>
 
   <div class="home-container">
     <nav class="navbar">
@@ -100,6 +94,23 @@
           </a>
         </div>
       </div>
+
+      <!-- Optionally place your cart button + currency switcher right in the nav -->
+      <div style="display: flex; align-items: center; gap: 20px; margin-left: auto;">
+        <!-- Example currency switcher (if you want multi-currency) -->
+        <select id="currency-switcher" style="padding: 4px 8px;">
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="GBP">GBP</option>
+          <!-- add more currency codes if your Snipcart supports them -->
+        </select>
+
+        <!-- Cart Button (placed in the nav) -->
+        <button class="snipcart-checkout" style="position: static; padding: 8px 16px; background-color: #0073e6; color: #fff; border: none; border-radius: 4px; cursor: pointer;">
+          🛒 <span class="snipcart-items-count"></span>
+        </button>
+      </div>
+
     </nav>
 
     <!-- Main Content Area -->
@@ -138,7 +149,7 @@
             <h2>關於</h2>
             <p>這幅海馬玻璃蝕刻實際上是一個由無限多個球體構成的克萊尼極限集合分形。<br>
                它僅僅是這類無限分形族中的一個成員，所有這些分形都可以連續地相互變形。</p>
-            <p class="price-tag">$2,500</p>
+            <p class="price-tag" data-base-price="2500">$2,500</p>
 
             <!-- Quantity Input -->
             <label for="seahorse-qty">數量:</label>
@@ -148,7 +159,7 @@
             <button class="snipcart-add-item"
               data-item-id="seahorse-fractal-etching"
               data-item-name="Seahorse Fractal Etching"
-              data-item-price="2500.00"
+              data-item-price="{&quot;usd&quot;:2500,&quot;eur&quot;:2100,&quot;gbp&quot;:1900}"
               data-item-url="/seahorse_zh.html"
               data-item-description="一個玻璃蝕刻的克萊尼極限集合分形">
               放入購物車
@@ -219,17 +230,6 @@
     }
     
     document.addEventListener("DOMContentLoaded", updateMedia);
-  </script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      if (!document.querySelector('.snipcart-checkout')) {
-        let cartButton = document.createElement('button');
-        cartButton.classList.add('snipcart-checkout');
-        cartButton.innerHTML = '🛒 <span class="snipcart-items-count"></span>';
-        document.body.appendChild(cartButton);
-      }
-    });
   </script>
 
   <script src="snipcart-lang-switch.js"></script>

@@ -534,7 +534,7 @@ input[type=radio] {
   border-radius: 0;            /* Remove rounded corners */
   /* width and max-width can remain if you want to constrain text width */
   width: 100%;
-  max-width: 400px;
+  max-width: 1500px;
 }
 
 .description-box h2 {
@@ -585,6 +585,7 @@ input[type=radio] {
 }
 
 .snipcart-checkout {
+  position: relative; /* Add this line */
   background-color: #0b1422;
   color: rgb(215, 244, 253);
   border: none;
@@ -614,6 +615,18 @@ input[type=radio] {
   text-align: center;
 }
 
+button.snipcart-checkout {
+  position: relative !important;
+}
+
+button.snipcart-checkout > .snipcart-items-count {
+  position: absolute !important;
+  top: -5px !important;
+  right: -5px !important;
+}
+
+/**
+
 .snipcart-checkout {
   position: fixed;
   bottom: 20px;
@@ -634,6 +647,8 @@ input[type=radio] {
 .snipcart-checkout:hover {
   background-color: #005bb5;
 }
+
+**/
 
 /* Ensure the red notification badge is positioned correctly */
 .snipcart-items-count {
