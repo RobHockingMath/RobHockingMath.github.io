@@ -86,8 +86,8 @@
       <!-- Example currency switcher (if you want multi-currency) -->
       <select id="currency-switcher" style="padding: 4px 8px;">
         <option value="USD">USD</option>
+        <option value="CAD">CAD</option>
         <option value="EUR">EUR</option>
-        <option value="GBP">GBP</option>
         <!-- add more currency codes if your Snipcart supports them -->
       </select>
 
@@ -127,13 +127,13 @@
             <p>
               這個略呈螃蟹狀的分形，是《因陀羅之珠》第363頁中克萊尼極限集合的三維推廣。它可通過使用一對莫比烏斯變換及其反變換來生成，產生各種組合。
             </p>
-            <p class="price-tag">$2,500</p>
+            <p class="price-tag" data-base-price="2500">$2,500</p>
             <label for="crab-qty">數量:</label>
             <input id="crab-qty" class="snipcart-item-quantity" name="quantity" type="number" value="1" min="1">
             <button class="snipcart-add-item"
                     data-item-id="crab-fractal-etching"
                     data-item-name="Crab Glass Etching"
-                    data-item-price="2500.00"
+                    data-item-price="{&quot;usd&quot;:2500,&quot;eur&quot;:2100,&quot;cad&quot;:1900}"
                     data-item-url="/crab_zh.html"
                     data-item-image="images/ball_thumbnail.jpg"
                     data-item-description="螃蟹玻璃蝕刻.">
