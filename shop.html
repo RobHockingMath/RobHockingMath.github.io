@@ -99,8 +99,8 @@
         <!-- Example currency switcher (if you want multi-currency) -->
         <select id="currency-switcher" style="padding: 4px 8px;">
           <option value="USD">USD</option>
+          <option value="CAD">CAD</option>
           <option value="EUR">EUR</option>
-          <option value="GBP">GBP</option>
           <!-- add more currency codes if your Snipcart supports them -->
         </select>
 
@@ -153,9 +153,9 @@
         <div class="shop-item">
           <a href="glass_gasket.html" class="item-link">
             <div class="img-container">
-              <img src="images/Gasket_frame_1.jpg" alt="Apollonian Gasket">
+              <img src="images/Gasket_no_wire.jpg" alt="Apollonian Gasket">
               <video 
-                src="videos/Gasket_loop_comp.mp4" 
+                src="videos/Gasket_no_wire_h265.mp4" 
                 class="hover-video" 
                 muted loop autoplay playsinline>
               </video>
@@ -169,52 +169,6 @@
       </div>
     </div>
   </div>
-
-  <!-- If you want a fallback script that adds a bottom-floating cart button, remove/comment it out 
-       because you're now placing the button in the nav. 
-       e.g.:
-       <script>
-         document.addEventListener('DOMContentLoaded', function () {
-           if (!document.querySelector('.snipcart-checkout')) {
-             let cartButton = document.createElement('button');
-             cartButton.classList.add('snipcart-checkout');
-             cartButton.innerHTML = '🛒 <span class="snipcart-items-count"></span>';
-             document.body.appendChild(cartButton);
-           }
-         });
-       </script>
-  -->
-
-  <!-- Optionally, if you want currency switching to work: -->
-  <!--
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const currencySwitcher = document.getElementById('currency-switcher');
-      if (currencySwitcher) {
-        currencySwitcher.addEventListener('change', function() {
-          const newCurrency = this.value;
-          Snipcart.api.settings.set('currency', newCurrency).then(() => {
-            Snipcart.api.cart.refresh();
-          });
-        });
-      }
-    });
-  </script>
-  -->
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const currencySwitcher = document.getElementById('currency-switcher');
-      if (currencySwitcher) {
-        currencySwitcher.addEventListener('change', function() {
-          const newCurrency = this.value;
-          Snipcart.api.settings.set('currency', newCurrency).then(() => {
-            Snipcart.api.cart.refresh();
-          });
-        });
-      }
-    });
-  </script>
 
   <script src="snipcart-lang-switch.js"></script>
   <script src="script.js"></script>

@@ -97,8 +97,8 @@
       <!-- Example currency switcher (if you want multi-currency) -->
       <select id="currency-switcher" style="padding: 4px 8px;">
         <option value="USD">USD</option>
+        <option value="CAD">CAD</option>
         <option value="EUR">EUR</option>
-        <option value="GBP">GBP</option>
         <!-- add more currency codes if your Snipcart supports them -->
       </select>
 
@@ -142,7 +142,7 @@
             <h2>Description</h2>
             <p>This vaguely crab-shaped fractal is a 3D generalization of the Kleinian limit set on page 363 of "Indra's Pearls."</p>
             <p>A battery powerd oak base giving off a gentle orange/yellow light is included.  A switch on the bottom turns the base on and off.  A USB cord, also included, recharges it.</p>
-            <p class="price-tag">$2,500</p>
+            <p class="price-tag" data-base-price="2500">$2,500</p>
   
             <!-- Quantity Input -->
             <label for="crab-qty">Quantity:</label>
@@ -152,7 +152,7 @@
             <button class="snipcart-add-item"
                     data-item-id="crab-fractal-etching"
                     data-item-name="Crab Glass Etching"
-                    data-item-price="2500.00"
+                    data-item-price="{&quot;usd&quot;:2500,&quot;eur&quot;:2100,&quot;cad&quot;:1900}"
                     data-item-url="/crab.html"
                     data-item-description="A Kleinian limit set fractal etched in glass.">
               Add to Cart

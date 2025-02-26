@@ -716,3 +716,17 @@ button.snipcart-checkout > .snipcart-items-count {
   color: rgb(215, 244, 253);
   margin-top: 10px;
 }
+
+.description-box label.base-choice-label {
+  margin-top: 1.2em;     /* extra spacing above */
+  display: block;        /* let it occupy its own line */
+  margin-bottom: 0.5em;  /* small gap below label */
+  font-size: 1.1em;      /* slightly bigger text */
+  font-weight: bold;     /* emphasize the label */
+}
+
+.description-box select#base-choice {
+  font-size: 1.1em;      /* enlarge select text */
+  padding: 8px 12px;     /* extra white space around text */
+  margin-bottom: 1em;    /* spacing below the dropdown */
+}

@@ -18,9 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles-new.css"> 
-  <!-- IMPORTANT: Make sure the .snipcart-checkout rule 
-       that pins the cart to the bottom is removed/commented out 
-       in styles-new.css -->
+  <!-- Make sure any .snipcart-checkout floating CSS is removed/commented out in styles-new.css -->
 
   <!-- Snipcart CSS & JS -->
   <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.css" />
@@ -46,8 +44,9 @@
 </head>
 
 <body>
+  <!-- Snipcart container -->
   <div id="snipcart" data-api-key="MzE3MzY0OGEtZGRkOS00ZmFiLTgxZGEtZDYyYzNhOTIxMWJmNjM4NzU1NjQ3Mzk3NDQ3NzU2" hidden></div>
-  <!-- Snipcart Settings & Lazy Loader -->
+  <!-- Additional scripts -->
   <script src="snipcart-init.js"></script>
   <script src="currency-switcher.js"></script>
   <script src="update-price.js"></script>
@@ -61,7 +60,6 @@
           <p>Mathematician and Holographer</p>
         </div>
       </a>
-
       <div class="nav-menu">
         <!-- Standard nav links -->
         <div><a href="about.html">About</a></div>
@@ -82,10 +80,14 @@
 
         <!-- Social Icons -->
         <div class="social-icons">
-          <a href="https://www.youtube.com/@RobHockingMathArt/videos" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.youtube.com/@RobHockingMathArt/videos" 
+             target="_blank" 
+             rel="noopener noreferrer">
             <i class="fab fa-youtube"></i>
           </a>
-          <a href="https://www.instagram.com/robhockingmathart/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/robhockingmathart/" 
+             target="_blank" 
+             rel="noopener noreferrer">
             <i class="fab fa-instagram"></i>
           </a>
         </div>
@@ -96,31 +98,24 @@
           </a>
         </div>
       </div>
-
-      <!-- Optionally place your cart button + currency switcher right in the nav -->
+      <!-- Cart & Currency Switcher in the nav -->
       <div style="display: flex; align-items: center; gap: 20px; margin-left: auto;">
-        <!-- Example currency switcher (if you want multi-currency) -->
         <select id="currency-switcher" style="padding: 4px 8px;">
           <option value="USD">USD</option>
+          <option value="CAD">CAD</option>
           <option value="EUR">EUR</option>
-          <option value="GBP">GBP</option>
-          <!-- add more currency codes if your Snipcart supports them -->
         </select>
-
-        <!-- Cart Button (placed in the nav) -->
         <button class="snipcart-checkout" style="position: static; padding: 8px 16px; background-color: #0073e6; color: #fff; border: none; border-radius: 4px; cursor: pointer;">
           🛒 <span class="snipcart-items-count"></span>
         </button>
       </div>
     </nav>
 
-    <!-- Main Content Area -->
     <div class="content" style="flex-grow: 1;">
       <h1 style="text-align: center; margin-top: 20px;">Apollonian Gasket</h1>
 
-      <!-- Two-column layout for the single product -->
       <div class="single-item-container">
-        <!-- Left Column (Carousel) -->
+        <!-- Left: Carousel -->
         <div class="left-column">
           <div class="shop-item">
             <div class="img-container" id="carousel-container">
@@ -130,11 +125,10 @@
               <a href="javascript:void(0);" class="arrow right-arrow" onclick="nextImage()">&#10095;</a>
             </div>
             <div id="carousel-caption" class="carousel-caption"></div>
-            <div class="shop-item-info"></div>
           </div>
         </div>
 
-        <!-- Right Column (Description) -->
+        <!-- Right: Description -->
         <div class="right-column">
           <div class="description-box">
             <h2>Product Description</h2>
@@ -148,25 +142,72 @@
             <h2>Product Details</h2>
             <p>Pictures of all components may be found in the carousel.</p>
             <ul style="margin-left: 20px;">
-                <li>Crystal cube – 10x10x10cm</li>
-                <li>LED plug-in base – 7x7x1cm (included)</li>
-                <li>Protective Box (included)</li>
-                <li>USB power cord (included)</li>
+              <li>Crystal cube – 10x10x10cm</li>
+              <li id="baseTypeText">Choice of plug in or battery powered LED base (select below).</li>
+              <li>Protective Box</li>
+              <li>USB power cord</li>
             </ul>
+            
+            <!-- Main product base choice -->
+            <label for="base-choice" class="base-choice-label">
+              Choose your main base:
+            </label>
+            <select id="base-choice">
+              <option value="plugIn" selected>Plug In Base</option>
+              <option value="wireless">Wireless Base</option>
+            </select>
 
-            <p class="price-tag" data-base-price="2500">$2,500</p>
-            <!-- Quantity Input -->
+            <p class="price-tag" id="price-tag" data-base-price="2500">$2,500</p>
             <label for="gasket-qty">Quantity:</label>
             <input id="gasket-qty" class="snipcart-item-quantity" name="quantity" type="number" value="1" min="1">
 
-            <!-- Snipcart Add to Cart Button -->
-            <button class="snipcart-add-item"
+            <!-- The fractal item is a normal snipcart-add-item. -->
+            <button 
+              id="addToCartButton"
+              class="snipcart-add-item"
               data-item-id="gasket-fractal-etching"
-              data-item-name="gasket Fractal Etching"
-              data-item-price="{&quot;usd&quot;:2500,&quot;eur&quot;:2100,&quot;gbp&quot;:1900}"
+              data-item-name="Gasket Fractal Etching"
+              data-item-price="2500"
               data-item-url="/glass_gasket.html"
-              data-item-description="An Apollonian gasket fractal etched in glass.">
+              data-item-description="An Apollonian gasket fractal etched in glass."
+              data-item-custom1-name="Base Type"
+              data-item-custom1-type="text"
+              data-item-custom1-disabled="true"
+              data-item-custom1-value="Plug In Base"
+            >
               Add to Cart
+            </button>
+
+            <hr style="margin: 1.5em 0;">
+            <h2>Add an additional base?</h2>
+            <p>If you'd like to purchase an extra base (either plug-in or wireless), select it below:</p>
+
+            <label for="extra-base-choice" class="base-choice-label">
+              Extra base type:
+            </label>
+            <select id="extra-base-choice">
+              <option value="none" selected>None</option>
+              <option value="plugIn">Plug-in Base (+$20)</option>
+              <option value="wireless">Wireless Base (+$30)</option>
+            </select>
+
+            <label for="extra-base-qty" class="base-choice-label" style="margin-top:1em;">
+              Quantity:
+            </label>
+            <input id="extra-base-qty" class="snipcart-item-quantity" name="quantity" type="number" value="1" min="1">
+
+            <p class="price-tag" id="extra-price-tag">$0</p>
+            <!-- This second item remains exactly the same as your code. -->
+            <button
+              id="addExtraBaseBtn"
+              class="snipcart-add-item"
+              data-item-id="additional-led-base-none"
+              data-item-name="Extra LED Base (None)"
+              data-item-price="0"
+              data-item-url="/glass_gasket.html"
+              data-item-description="A separate LED base purchase."
+            >
+              Add Extra Base
             </button>
           </div>
         </div>
@@ -174,40 +215,68 @@
     </div>
   </div>
 
-  <!-- Inline script for carousel data -->
+  <!-- ARRAYS for plugIn vs wireless main product carousel -->
   <script>
-    window.carouselItems = [
-      { 
-        image: "images/Gasket_frame_1.jpg", 
-        video: "videos/Gasket_loop_comp.mp4",
-        description: "Rotating view of the Apollonian gasket."
+    window.carouselItemsPlugIn = [
+      {
+        image: "images/gasket_with_wire.jpg",
+        video: "videos/Gasket_with_wire_h265.mp4",
+        description: "Rotating view with plug-in LED base."
       },
-      { 
-        image: "images/Gasket_Natural_Light.jpg", 
+      {
+        image: "images/gasket_base_1000.jpg",
+        video: null,
+        description: "7x7x1cm LED plug-in base with USB power cord."
+      },
+      {
+        image: "images/Gasket_Natural_Light.jpg",
         video: null,
         description: "Natural lighting conditions."
       },
-      { 
+      {
         image: "images/gasket_box.jpg",
         video: null,
         description: "Protective box."
       },
-      { 
+      {
         image: "images/gasket_box_open.jpg",
         video: null,
         description: "View inside the box."
-      },
-      { 
-        image: "images/gasket_base_1000.jpg", 
-        video: null,
-        description: "7x7x1cm LED base with USB power cord."
       }
     ];
+
+    window.carouselItemsWireless = [
+      {
+        image: "images/Gasket_no_wire.jpg",
+        video: "videos/Gasket_no_wire_h265.mp4",
+        description: "Rotating view with wireless LED base."
+      },
+      {
+        image: "images/gasket_wireless_base_1000.jpg",
+        video: null,
+        description: "7x7x3cm wireless LED base using AAA batteries."
+      },
+      {
+        image: "images/Gasket_Natural_Light.jpg",
+        video: null,
+        description: "Natural lighting conditions."
+      },
+      {
+        image: "images/gasket_box.jpg",
+        video: null,
+        description: "Protective box."
+      },
+      {
+        image: "images/gasket_box_open.jpg",
+        video: null,
+        description: "View inside the box."
+      }
+    ];
+
+    // Default to plugIn
+    window.carouselItems = window.carouselItemsPlugIn;
     window.currentIndex = 0;
-  </script>
-  
-  <!-- Inline carousel script -->
-  <script>
+
     function updateMedia() {
       var items = window.carouselItems || [];
       var imgEl = document.getElementById("product-image");
@@ -216,12 +285,11 @@
       var captionEl = document.getElementById("carousel-caption");
       
       if (!items.length) return;
+      window.currentIndex = window.currentIndex % items.length;
       
-      // Update image & caption
       imgEl.src = items[window.currentIndex].image;
       captionEl.textContent = items[window.currentIndex].description || "";
       
-      // Toggle video if available
       if (items[window.currentIndex].video) {
         container.classList.remove("no-video");
         vidEl.src = items[window.currentIndex].video;
@@ -235,37 +303,120 @@
         vidEl.style.display = "none";
       }
     }
-    
     function prevImage() {
       var items = window.carouselItems || [];
       window.currentIndex = (window.currentIndex - 1 + items.length) % items.length;
       updateMedia();
     }
-    
     function nextImage() {
       var items = window.carouselItems || [];
       window.currentIndex = (window.currentIndex + 1) % items.length;
       updateMedia();
     }
-    
-    document.addEventListener("DOMContentLoaded", updateMedia);
-  </script>
 
-  <!-- If you want to auto-generate a bottom-floating cart, remove or comment out the code that appends the cart button at the bottom -->
-  <!-- Instead, we rely on the cart button in the nav above. -->
+    document.addEventListener("DOMContentLoaded", function() {
+      updateMedia();
 
-  <script>
-    // Optional: if you want currency switching to work dynamically
-    document.addEventListener('DOMContentLoaded', function () {
-      const currencySwitcher = document.getElementById('currency-switcher');
-      if (currencySwitcher) {
-        currencySwitcher.addEventListener('change', function() {
-          const newCurrency = this.value;
-          // Switch currency in Snipcart:
-          Snipcart.api.settings.set('currency', newCurrency).then(() => {
-            Snipcart.api.cart.refresh();
-          });
+      // Base selection for main fractal
+      const baseSelect    = document.getElementById("base-choice");
+      const priceTag      = document.getElementById("price-tag");
+      const addToCartBtn  = document.getElementById("addToCartButton");
+      const baseTypeText  = document.getElementById("baseTypeText");
+
+      baseSelect.addEventListener("change", function(){
+        if(baseSelect.value === "plugIn"){
+          window.carouselItems = window.carouselItemsPlugIn;
+          window.currentIndex = 0;
+          updateMedia();
+
+          baseTypeText.textContent = "Choice of plug in or battery powered LED base (select below).";
+          priceTag.textContent = "$2,500";
+          addToCartBtn.setAttribute("data-item-price", "2500");
+          addToCartBtn.setAttribute("data-item-custom1-value", "Plug In Base");
+        } else {
+          window.carouselItems = window.carouselItemsWireless;
+          window.currentIndex = 0;
+          updateMedia();
+
+          baseTypeText.textContent = "Choice of plug in or battery powered LED base (select below).";
+          priceTag.textContent = "$2,700"; // e.g. +$200
+          addToCartBtn.setAttribute("data-item-price", "2700");
+          addToCartBtn.setAttribute("data-item-custom1-value", "Wireless Base");
+        }
+      });
+
+      // Additional base item logic for the second product
+      const extraBaseSelect = document.getElementById("extra-base-choice");
+      const extraPriceTag   = document.getElementById("extra-price-tag");
+      const extraBaseBtn    = document.getElementById("addExtraBaseBtn");
+      const extraBaseQty    = document.getElementById("extra-base-qty");
+
+      extraBaseSelect.addEventListener("change", function(){
+        if(extraBaseSelect.value === "none"){
+          extraPriceTag.textContent = "$0";
+          extraBaseBtn.setAttribute("data-item-id", "additional-led-base-none");
+          extraBaseBtn.setAttribute("data-item-name", "Extra LED Base (None)");
+          extraBaseBtn.setAttribute("data-item-price", "0");
+        } else if (extraBaseSelect.value === "plugIn"){
+          extraPriceTag.textContent = "$20";
+          extraBaseBtn.setAttribute("data-item-id", "additional-led-base-plugIn");
+          extraBaseBtn.setAttribute("data-item-name", "Extra Plug-In LED Base");
+          extraBaseBtn.setAttribute("data-item-price", "20");
+        } else {
+          // wireless
+          extraPriceTag.textContent = "$30";
+          extraBaseBtn.setAttribute("data-item-id", "additional-led-base-wireless");
+          extraBaseBtn.setAttribute("data-item-name", "Extra Wireless LED Base");
+          extraBaseBtn.setAttribute("data-item-price", "30");
+        }
+      });
+    });
+
+    // The crucial event for automatically adding a free base after fractal is added
+    Snipcart.events.on('item.added', async (item) => {
+      // Only do this logic if it's the fractal item
+      if(item.id !== 'gasket-fractal-etching') return;
+
+      // If we already marked this line as "baseAlreadyAdded", skip
+      if(item.customFields && item.customFields.baseAlreadyAdded) {
+        return;
+      }
+
+      try {
+        // 1) figure out which base from item.customFields["Base Type"]
+        let chosenBase = "Plug In Base";
+        if(item.customFields && item.customFields["Base Type"]) {
+          chosenBase = item.customFields["Base Type"];
+        }
+
+        // 2) decide ID & name
+        let includedBaseId   = "included-base-plugin";
+        let includedBaseName = "Included Plug-In LED Base";
+        if(chosenBase === "Wireless Base") {
+          includedBaseId   = "included-base-wireless";
+          includedBaseName = "Included Wireless LED Base";
+        }
+
+        // 3) Add the free base line
+        await Snipcart.api.cart.addItem({
+          id: includedBaseId,
+          name: includedBaseName,
+          price: 0,
+          url: item.url,
+          description: "Base included with fractal purchase",
+          quantity: item.quantity
         });
+
+        // 4) Mark this fractal item so we don't do it again
+        await Snipcart.api.cart.updateItem(item.uid, {
+          customFields: {
+            ...item.customFields,
+            baseAlreadyAdded: true
+          }
+        });
+
+      } catch(e) {
+        console.error("Error while adding free base item:", e);
       }
     });
   </script>
@@ -273,6 +424,8 @@
   <script src="snipcart-lang-switch.js"></script>
   <script src="script.js"></script>
   <script type="module" src="./dropdowns.js"></script>
-
 </body>
 </html>
+
+
+
