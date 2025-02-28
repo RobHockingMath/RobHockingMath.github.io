@@ -1,6 +1,6 @@
 window.SnipcartSettings = {
     publicApiKey: 'MzE3MzY0OGEtZGRkOS00ZmFiLTgxZGEtZDYyYzNhOTIxMWJmNjM4NzU1NjQ3Mzk3NDQ3NzU2',
-    loadStrategy: 'on-user-interaction',
+    loadStrategy: 'onload',
     language: 'en', // or 'zh' depending on your page’s language
   };
   

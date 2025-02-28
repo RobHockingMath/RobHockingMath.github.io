@@ -31,7 +31,7 @@
     integrity="sha512-..."
     crossorigin="anonymous"
   />
-  
+
   <!-- Mobile detection and stylesheet loading -->
   <script>
     if (/Mobi|Android/i.test(navigator.userAgent)) {
@@ -104,6 +104,7 @@
           <option value="USD">USD</option>
           <option value="CAD">CAD</option>
           <option value="EUR">EUR</option>
+          <option value="HKD">HKD</option>
         </select>
         <button class="snipcart-checkout" style="position: static; padding: 8px 16px; background-color: #0073e6; color: #fff; border: none; border-radius: 4px; cursor: pointer;">
           🛒 <span class="snipcart-items-count"></span>
@@ -134,8 +135,9 @@
             <h2>Product Description</h2>
             <p>The <em>Apollonian gasket</em> originates from Apollonius of Perga (c. 200 BCE), 
                who studied the problem of constructing a circle tangent to three given circles.</p>
-            <p>One 3D generalization is called the <em>Apollonian sphere packing</em>, and was first described in the 1930s by Frederick Soddy.
-               However, as the sphere packing completely fills a sphere with smaller spheres, it is not very interesting to look at.</p>
+            <p>One 3D generalization is called the <em>Apollonian sphere packing</em>, and was first described in 
+               the 1930s by Frederick Soddy. However, as the sphere packing completely fills a sphere with smaller
+               spheres, it is not very interesting to look at.</p>
             <p>This is a variant in which half of the spheres in the packing are “turned off”, 
                and which naturally arises in the study of 3D Kleinian limit set fractals.</p>
 
@@ -143,12 +145,14 @@
             <p>Pictures of all components may be found in the carousel.</p>
             <ul style="margin-left: 20px;">
               <li>Crystal cube – 10x10x10cm</li>
-              <li id="baseTypeText">Choice of plug in or battery powered LED base (select below).</li>
               <li>Protective Box</li>
               <li>USB power cord</li>
+              <li id="baseTypeText">
+                Choice of plug in or battery powered LED base (select below).
+              </li>
             </ul>
-            
-            <!-- Main product base choice -->
+
+            <!-- Dropdown to pick which fractal version (plugIn or wireless) to display -->
             <label for="base-choice" class="base-choice-label">
               Choose your main base:
             </label>
@@ -157,63 +161,117 @@
               <option value="wireless">Wireless Base</option>
             </select>
 
-            <p class="price-tag" id="price-tag" data-base-price="2500">$2,500</p>
-            <label for="gasket-qty">Quantity:</label>
-            <input id="gasket-qty" class="snipcart-item-quantity" name="quantity" type="number" value="1" min="1">
+            <!-- Displayed price (purely visual, no comma) -->
+            <p class="price-tag" data-base-price="2500">$2,500</p>
 
-            <!-- The fractal item is a normal snipcart-add-item. -->
-            <button 
-              id="addToCartButton"
-              class="snipcart-add-item"
-              data-item-id="gasket-fractal-etching"
-              data-item-name="Gasket Fractal Etching"
-              data-item-price="2500"
-              data-item-url="/glass_gasket.html"
-              data-item-description="An Apollonian gasket fractal etched in glass."
-              data-item-custom1-name="Base Type"
-              data-item-custom1-type="text"
-              data-item-custom1-disabled="true"
-              data-item-custom1-value="Plug In Base"
-            >
-              Add to Cart
-            </button>
+            <!-- 
+               TWO separate blocks, each with its own quantity input & "Add to Cart" button
+               for a different Snipcart item. 
+            -->
+            <!-- PLUG-IN FRACTAL ITEM -->
+            <div id="plugInItem" class="snipcart-item-block" style="margin-top:10px;">
+              <div style="display:flex; align-items:center; gap:10px;">
+                <label for="plugInQty">Quantity:</label>
+                <input
+                  id="plugInQty"
+                  name="quantity"
+                  type="number"
+                  min="1"
+                  value="1"
+                  class="snipcart-item-quantity"
+                  style="width:60px;"
+                />
+              </div>
+              <button
+                id="plugInFractalBtn"
+                class="snipcart-add-item"
+                data-item-id="gasket-fractal-plugin"
+                data-item-name="Gasket Fractal (Plug-In Base)"
+                data-item-price="{&quot;usd&quot;:2500,&quot;eur&quot;:2100,&quot;cad&quot;:1900,&quot;hkd&quot;:8000}"
+                data-item-url="/glass_gasket.html"
+                data-item-description="An Apollonian fractal with a plug-in LED base"
+                data-item-image="images/Gasket_with_wire_thumbnail.jpg"
+                style="background-color:#f48642; color:#fff; padding:10px 20px; border:none; border-radius:4px; cursor:pointer; margin-top:10px;"
+              >
+                Add to Cart
+              </button>
+            </div>
+
+            <!-- WIRELESS FRACTAL ITEM (hidden by default) -->
+            <div id="wirelessItem" class="snipcart-item-block" style="display:none; margin-top:10px;">
+              <div style="display:flex; align-items:center; gap:10px;">
+                <label for="wirelessQty">Quantity:</label>
+                <input
+                  id="wirelessQty"
+                  name="quantity"
+                  type="number"
+                  min="1"
+                  value="1"
+                  class="snipcart-item-quantity"
+                  style="width:60px;"
+                />
+              </div>
+              <button
+                id="wirelessFractalBtn"
+                class="snipcart-add-item"
+                data-item-id="gasket-fractal-wireless"
+                data-item-name="Gasket Fractal (Wireless Base)"
+                data-item-price="{&quot;usd&quot;:2500,&quot;eur&quot;:2100,&quot;cad&quot;:1900,&quot;hkd&quot;:8000}"
+                data-item-url="/glass_gasket.html"
+                data-item-image="images/Gasket_no_wire_thumbnail.jpg"
+                data-item-description="An Apollonian fractal with a wireless LED base"
+                style="background-color:#f48642; color:#fff; padding:10px 20px; border:none; border-radius:4px; cursor:pointer; margin-top:10px;"
+              >
+                Add to Cart
+              </button>
+            </div>
 
             <hr style="margin: 1.5em 0;">
             <h2>Add an additional base?</h2>
-            <p>If you'd like to purchase an extra base (either plug-in or wireless), select it below:</p>
+            <p>Select which extra base you would like to purchase, if any.</p>
 
             <label for="extra-base-choice" class="base-choice-label">
               Extra base type:
             </label>
             <select id="extra-base-choice">
-              <option value="none" selected>None</option>
-              <option value="plugIn">Plug-in Base (+$20)</option>
+              <!-- Remove 'none' option -->
+              <option value="plugIn" selected>Plug-in Base (+$20)</option>
               <option value="wireless">Wireless Base (+$30)</option>
             </select>
 
             <label for="extra-base-qty" class="base-choice-label" style="margin-top:1em;">
               Quantity:
             </label>
-            <input id="extra-base-qty" class="snipcart-item-quantity" name="quantity" type="number" value="1" min="1">
+            <input
+              id="extra-base-qty"
+              class="snipcart-item-quantity"
+              name="quantity"
+              type="number"
+              value="1"
+              min="1"
+              style="width:60px;"
+            />
 
-            <p class="price-tag" id="extra-price-tag">$0</p>
-            <!-- This second item remains exactly the same as your code. -->
+            <p class="price-tag" id="extra-price-tag">$20</p>
             <button
               id="addExtraBaseBtn"
               class="snipcart-add-item"
-              data-item-id="additional-led-base-none"
-              data-item-name="Extra LED Base (None)"
-              data-item-price="0"
+              data-item-id="additional-led-base-plugIn"
+              data-item-name="Extra Plug-In LED Base"
+              data-item-image="images/wire_base_thumbnail.jpg"
+              data-item-price="20"
               data-item-url="/glass_gasket.html"
               data-item-description="A separate LED base purchase."
+              style="background-color:#f48642; color:#fff; padding:10px 20px; border:none; border-radius:4px; cursor:pointer; margin-top:10px;"
             >
               Add Extra Base
             </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+
+          </div><!-- end description-box -->
+        </div><!-- end right-column -->
+      </div><!-- end single-item-container -->
+    </div><!-- end content -->
+  </div><!-- end home-container -->
 
   <!-- ARRAYS for plugIn vs wireless main product carousel -->
   <script>
@@ -273,7 +331,7 @@
       }
     ];
 
-    // Default to plugIn
+    // Start with plugIn
     window.carouselItems = window.carouselItemsPlugIn;
     window.currentIndex = 0;
 
@@ -283,13 +341,13 @@
       var vidEl = document.getElementById("product-video");
       var container = document.getElementById("carousel-container");
       var captionEl = document.getElementById("carousel-caption");
-      
+
       if (!items.length) return;
       window.currentIndex = window.currentIndex % items.length;
-      
+
       imgEl.src = items[window.currentIndex].image;
       captionEl.textContent = items[window.currentIndex].description || "";
-      
+
       if (items[window.currentIndex].video) {
         container.classList.remove("no-video");
         vidEl.src = items[window.currentIndex].video;
@@ -303,121 +361,81 @@
         vidEl.style.display = "none";
       }
     }
+
     function prevImage() {
-      var items = window.carouselItems || [];
-      window.currentIndex = (window.currentIndex - 1 + items.length) % items.length;
+      window.currentIndex = (window.currentIndex - 1 + window.carouselItems.length) % window.carouselItems.length;
       updateMedia();
     }
+
     function nextImage() {
-      var items = window.carouselItems || [];
-      window.currentIndex = (window.currentIndex + 1) % items.length;
+      window.currentIndex = (window.currentIndex + 1) % window.carouselItems.length;
       updateMedia();
     }
 
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function(){
       updateMedia();
 
-      // Base selection for main fractal
-      const baseSelect    = document.getElementById("base-choice");
-      const priceTag      = document.getElementById("price-tag");
-      const addToCartBtn  = document.getElementById("addToCartButton");
-      const baseTypeText  = document.getElementById("baseTypeText");
+      // The main fractal base selection
+      const baseSelect   = document.getElementById("base-choice");
+      const priceTag     = document.getElementById("price-tag");
+
+      const plugInItem   = document.getElementById("plugInItem");
+      const wirelessItem = document.getElementById("wirelessItem");
 
       baseSelect.addEventListener("change", function(){
         if(baseSelect.value === "plugIn"){
+          // Show plug-in block
+          plugInItem.style.display = "block";
+          wirelessItem.style.display = "none";
+
+          // Switch carousel
           window.carouselItems = window.carouselItemsPlugIn;
           window.currentIndex = 0;
           updateMedia();
 
-          baseTypeText.textContent = "Choice of plug in or battery powered LED base (select below).";
-          priceTag.textContent = "$2,500";
-          addToCartBtn.setAttribute("data-item-price", "2500");
-          addToCartBtn.setAttribute("data-item-custom1-value", "Plug In Base");
+          // Show $2500
+          priceTag.textContent = "$2500";
         } else {
+          // Show wireless block
+          plugInItem.style.display = "none";
+          wirelessItem.style.display = "block";
+
+          // Switch carousel
           window.carouselItems = window.carouselItemsWireless;
           window.currentIndex = 0;
           updateMedia();
 
-          baseTypeText.textContent = "Choice of plug in or battery powered LED base (select below).";
-          priceTag.textContent = "$2,700"; // e.g. +$200
-          addToCartBtn.setAttribute("data-item-price", "2700");
-          addToCartBtn.setAttribute("data-item-custom1-value", "Wireless Base");
+          // Show $2700
+          priceTag.textContent = "$2700";
         }
       });
 
-      // Additional base item logic for the second product
+      // Additional base item logic
       const extraBaseSelect = document.getElementById("extra-base-choice");
       const extraPriceTag   = document.getElementById("extra-price-tag");
       const extraBaseBtn    = document.getElementById("addExtraBaseBtn");
       const extraBaseQty    = document.getElementById("extra-base-qty");
 
+      // By default, show $20 for "plugIn" 
+      extraBaseSelect.value = "plugIn";
+      extraPriceTag.textContent = "$20";
+
       extraBaseSelect.addEventListener("change", function(){
-        if(extraBaseSelect.value === "none"){
-          extraPriceTag.textContent = "$0";
-          extraBaseBtn.setAttribute("data-item-id", "additional-led-base-none");
-          extraBaseBtn.setAttribute("data-item-name", "Extra LED Base (None)");
-          extraBaseBtn.setAttribute("data-item-price", "0");
-        } else if (extraBaseSelect.value === "plugIn"){
+        if (extraBaseSelect.value === "plugIn"){
           extraPriceTag.textContent = "$20";
           extraBaseBtn.setAttribute("data-item-id", "additional-led-base-plugIn");
           extraBaseBtn.setAttribute("data-item-name", "Extra Plug-In LED Base");
           extraBaseBtn.setAttribute("data-item-price", "20");
+          extraBaseBtn.setAttribute("data-item-image","images/wire_base_thumbnail.jpg");
         } else {
           // wireless
           extraPriceTag.textContent = "$30";
           extraBaseBtn.setAttribute("data-item-id", "additional-led-base-wireless");
           extraBaseBtn.setAttribute("data-item-name", "Extra Wireless LED Base");
           extraBaseBtn.setAttribute("data-item-price", "30");
+          extraBaseBtn.setAttribute("data-item-image","images/wireless_base_thumbnail.jpg");
         }
       });
-    });
-
-    // The crucial event for automatically adding a free base after fractal is added
-    Snipcart.events.on('item.added', async (item) => {
-      // Only do this logic if it's the fractal item
-      if(item.id !== 'gasket-fractal-etching') return;
-
-      // If we already marked this line as "baseAlreadyAdded", skip
-      if(item.customFields && item.customFields.baseAlreadyAdded) {
-        return;
-      }
-
-      try {
-        // 1) figure out which base from item.customFields["Base Type"]
-        let chosenBase = "Plug In Base";
-        if(item.customFields && item.customFields["Base Type"]) {
-          chosenBase = item.customFields["Base Type"];
-        }
-
-        // 2) decide ID & name
-        let includedBaseId   = "included-base-plugin";
-        let includedBaseName = "Included Plug-In LED Base";
-        if(chosenBase === "Wireless Base") {
-          includedBaseId   = "included-base-wireless";
-          includedBaseName = "Included Wireless LED Base";
-        }
-
-        // 3) Add the free base line
-        await Snipcart.api.cart.addItem({
-          id: includedBaseId,
-          name: includedBaseName,
-          price: 0,
-          url: item.url,
-          description: "Base included with fractal purchase",
-          quantity: item.quantity
-        });
-
-        // 4) Mark this fractal item so we don't do it again
-        await Snipcart.api.cart.updateItem(item.uid, {
-          customFields: {
-            ...item.customFields,
-            baseAlreadyAdded: true
-          }
-        });
-
-      } catch(e) {
-        console.error("Error while adding free base item:", e);
-      }
     });
   </script>
 
@@ -426,6 +444,8 @@
   <script type="module" src="./dropdowns.js"></script>
 </body>
 </html>
+
+
 
 
 

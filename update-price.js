@@ -9,7 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const conversionRates = {
     usd: 1,
     cad: 1.25,  // Example: 1 USD = 1.25 CAD
-    gbp: 0.8,    // Example: 1 USD = 0.8 GBP
+    eur: 0.8,    // Example: 1 USD = 0.8 Euro
+    hkd: 7.78,
   };
 
   function updatePrice() {

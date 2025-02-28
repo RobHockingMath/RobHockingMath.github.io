@@ -36,7 +36,7 @@
     if (/Mobi|Android/i.test(navigator.userAgent)) {
       var mobileLink = document.createElement('link');
       mobileLink.rel = 'stylesheet';
-      mobileLink.href = 'mobile.css'; 
+      mobileLink.href = 'mobile.css';
       document.head.appendChild(mobileLink);
     }
   </script>
@@ -44,7 +44,12 @@
 
 <body>
   <!-- Snipcart Container -->
-  <div id="snipcart" data-api-key="MzE3MzY0OGEtZGRkOS00ZmFiLTgxZGEtZDYyYzNhOTIxMWJmNjM4NzU1NjQ3Mzk3NDQ3NzU2" hidden></div>
+  <div id="snipcart" 
+       data-api-key="MzE3MzY0OGEtZGRkOS00ZmFiLTgxZGEtZDYyYzNhOTIxMWJmNjM4NzU1NjQ3Mzk3NDQ3NzU2"
+       hidden>
+  </div>
+
+  <!-- Additional scripts -->
   <script src="snipcart-init.js"></script>
   <script src="currency-switcher.js"></script>
   <script src="update-price.js"></script>
@@ -74,16 +79,16 @@
           </div>
         </div>
         <div><a href="quilts_zh.html">下載</a></div>
-  
+
         <!-- Social Icons container -->
         <div class="social-icons">
-          <a href="https://www.youtube.com/@RobHockingMathArt/videos" 
+          <a href="https://www.youtube.com/@RobHockingMathArt/videos"
              target="_blank"
              rel="noopener noreferrer">
             <i class="fab fa-youtube"></i>
           </a>
-          <a href="https://www.instagram.com/robhockingmathart/" 
-             target="_blank" 
+          <a href="https://www.instagram.com/robhockingmathart/"
+             target="_blank"
              rel="noopener noreferrer">
             <i class="fab fa-instagram"></i>
           </a>
@@ -100,8 +105,12 @@
           <option value="USD">USD</option>
           <option value="CAD">CAD</option>
           <option value="EUR">EUR</option>
+          <option value="HKD">HKD</option>
         </select>
-        <button class="snipcart-checkout" style="position: static; padding: 8px 16px; background-color: #0073e6; color: #fff; border: none; border-radius: 4px; cursor: pointer;">
+        <button 
+          class="snipcart-checkout"
+          style="position: static; padding: 8px 16px; background-color: #0073e6; color: #fff; border: none; border-radius: 4px; cursor: pointer;"
+        >
           🛒 <span class="snipcart-items-count"></span>
         </button>
       </div>
@@ -122,7 +131,7 @@
               <a href="javascript:void(0);" class="arrow right-arrow" onclick="nextImage()">&#10095;</a>
             </div>
             <div id="carousel-caption" class="carousel-caption"></div>
-            <div class="shop-item-info"></div>
+            <!-- No direct "shop-item-info" needed here. -->
           </div>
         </div>
 
@@ -131,75 +140,135 @@
           <div class="description-box">
             <h2>關於</h2>
             <p>這幅阿波羅尼亞墊的玻璃蝕刻，可以看作數以百萬計球體所構成的三維圖案。</p>
-            <p>可選擇插電式或電池式 LED 底座 (請在下方選擇)，詳細照片請見輪播。</p>
-            
+            <p>可選擇插電式或電池式 LED 燈座 (請在下方選擇)，詳細照片請見輪播。</p>
+
             <h2>產品細節</h2>
             <ul style="margin-left: 20px;">
               <li>10 x 10 x 10 公分 水晶立方體</li>
-              <li id="baseTypeText">可選擇插電或電池供電的 LED 底座（以下選擇）</li>
               <li>保護盒</li>
               <li>USB 電源線</li>
+              <li id="baseTypeText">
+                可選擇插電或電池式 LED 燈座
+              </li>
             </ul>
-            
-            <!-- Main base choice (PRIMARY item) -->
-            <label for="base-choice" class="base-choice-label">
-              選擇主要底座：
-            </label>
+
+            <!-- 下拉 => 選插電(plugIn) or 電池(wireless) for fractal -->
+            <label for="base-choice" class="base-choice-label">選擇主要燈座：</label>
             <select id="base-choice">
-              <option value="plugIn" selected>插電式底座</option>
-              <option value="wireless">電池式底座</option>
+              <option value="plugIn" selected>插電式燈座</option>
+              <option value="wireless">電池式燈座</option>
             </select>
 
-            <p class="price-tag" id="price-tag" data-base-price="2500">$2,500</p>
-            <!-- Quantity Input for main fractal -->
-            <label for="gasket-qty">數量：</label>
-            <input id="gasket-qty" class="snipcart-item-quantity" name="quantity" type="number" value="1" min="1">
+            <!-- 顯示價格 (預設 2500 美元) -->
+            <p class="price-tag" data-base-price="2500">$2,500</p>
 
-            <button id="addToCartButton" class="snipcart-add-item"
-              data-item-id="gasket-fractal-etching"
-              data-item-name="阿波羅尼亞墊玻璃蝕刻"
-              data-item-price="2500"
-              data-item-url="/glass_gasket_zh.html"
-              data-item-description="阿波羅尼亞墊玻璃蝕刻.">
-              放入購物車
-            </button>
-            
+            <!-- =============== 2 separate fractal items ================ -->
+
+            <!-- 插電式(plugIn) Fractal -->
+            <div id="plugInItem" class="snipcart-item-block" style="margin-top:10px;">
+              <div style="display:flex; align-items:center; gap:10px;">
+                <label for="plugInQty">數量：</label>
+                <input
+                  id="plugInQty"
+                  name="quantity"
+                  type="number"
+                  min="1"
+                  value="1"
+                  class="snipcart-item-quantity"
+                  style="width:60px;"
+                />
+              </div>
+              <button
+                id="plugInFractalBtn"
+                class="snipcart-add-item"
+                data-item-id="gasket-fractal-china-plugin"
+                data-item-name="阿波羅尼亞墊 (插電式燈座)"
+                data-item-price="{&quot;usd&quot;:2500,&quot;eur&quot;:2100,&quot;cad&quot;:1900,&quot;hkd&quot;:8000}"
+                data-item-url="/glass_gasket_zh.html"
+                data-item-image="images/Gasket_with_wire_thumbnail.jpg"
+                data-item-description="阿波羅尼亞墊 + 插電式燈座"
+                style="background-color:#f48642; color:#fff; padding:10px 20px; border:none; border-radius:4px; cursor:pointer; margin-top:10px;"
+              >
+                放入購物車
+              </button>
+            </div>
+
+            <!-- 電池式(wireless) Fractal (hidden by default) -->
+            <div id="wirelessItem" class="snipcart-item-block" style="display:none; margin-top:10px;">
+              <div style="display:flex; align-items:center; gap:10px;">
+                <label for="wirelessQty">數量：</label>
+                <input
+                  id="wirelessQty"
+                  name="quantity"
+                  type="number"
+                  min="1"
+                  value="1"
+                  class="snipcart-item-quantity"
+                  style="width:60px;"
+                />
+              </div>
+              <button
+                id="wirelessFractalBtn"
+                class="snipcart-add-item"
+                data-item-id="gasket-fractal-china-wireless"
+                data-item-name="阿波羅尼亞墊 (電池式燈座)"
+                data-item-price="{&quot;usd&quot;:2500,&quot;eur&quot;:2100,&quot;cad&quot;:1900,&quot;hkd&quot;:8000}"
+                data-item-url="/glass_gasket_zh.html"
+                data-item-image="images/Gasket_no_wire_thumbnail.jpg"
+                data-item-description="阿波羅尼亞墊 + 電池式燈座"
+                style="background-color:#f48642; color:#fff; padding:10px 20px; border:none; border-radius:4px; cursor:pointer; margin-top:10px;"
+              >
+                放入購物車
+              </button>
+            </div>
+
             <hr style="margin: 1.5em 0;">
-            <h2>另外加購底座？</h2>
-            <p>如果想額外買一個插電或電池式底座，可在此指定型號與數量：</p>
+            <h2>另外加購燈座？</h2>
+            <p>如需額外的插電或電池式燈座，請在此選擇：</p>
 
-            <!-- Additional base type dropdown (SECONDARY items) -->
+            <!-- 移除 'none' 選項，以免加購 "無燈座" -->
             <label for="extra-base-choice" class="base-choice-label">
-              額外底座類型：
+              額外燈座：
             </label>
             <select id="extra-base-choice">
-              <option value="none" selected>無 (不加購)</option>
-              <option value="plugIn">插電式底座 (+$20)</option>
-              <option value="wireless">電池式底座 (+$30)</option>
+              <option value="plugIn" selected>插電式燈座 (+$20)</option>
+              <option value="wireless">電池式燈座 (+$30)</option>
             </select>
 
-            <!-- Additional base quantity -->
             <label for="extra-base-qty" class="base-choice-label" style="margin-top:1em;">
               數量：
             </label>
-            <input id="extra-base-qty" class="snipcart-item-quantity" name="quantity" type="number" value="1" min="1">
-            <p class="price-tag" id="extra-price-tag">$0</p>
+            <input
+              id="extra-base-qty"
+              class="snipcart-item-quantity"
+              name="quantity"
+              type="number"
+              value="1"
+              min="1"
+              style="width:60px;"
+            />
 
-            <!-- The second product's Add to Cart (but we switch item ID/name in JS) -->
-            <button id="addExtraBaseBtn" class="snipcart-add-item"
-              data-item-id="additional-led-base-none"
-              data-item-name="額外 LED 底座 (無選擇)"
-              data-item-price="0"
+            <p class="price-tag" id="extra-price-tag">$20</p>
+            <!-- Add Extra Base (2nd item) -->
+            <button
+              id="addExtraBaseBtn"
+              class="snipcart-add-item"
+              data-item-id="additional-led-base-china-plugIn"
+              data-item-name="插電式燈座 (額外)"
+              data-item-image="images/wire_base_thumbnail.jpg"
+              data-item-price="20"
               data-item-url="/glass_gasket_zh.html"
-              data-item-description="單獨的額外底座">
-              加購底座
+              data-item-description="額外購買的 LED 燈座"
+              style="background-color:#f48642; color:#fff; padding:10px 20px; border:none; border-radius:4px; cursor:pointer; margin-top:10px;"
+            >
+              加購燈座
             </button>
 
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+          </div><!-- end .description-box -->
+        </div><!-- end .right-column -->
+      </div><!-- end .single-item-container -->
+    </div><!-- end .content -->
+  </div><!-- end .home-container -->
 
   <!-- PLUG-IN vs. WIRELESS ARRAYS (Main product) -->
   <script>
@@ -212,7 +281,7 @@
       {
         image: "images/gasket_base_1000.jpg",
         video: null,
-        description: "7x7x1cm LED 插電式底座，附 USB 電源線。"
+        description: "7x7x1cm LED 插電式燈座，附 USB 電源線。"
       },
       {
         image: "images/Gasket_Natural_Light.jpg",
@@ -235,12 +304,12 @@
       {
         image: "images/Gasket_no_wire.jpg",
         video: "videos/Gasket_no_wire_h265.mp4",
-        description: "顯示電池式 LED 底座的旋轉視角。"
+        description: "顯示電池式 LED 燈座的旋轉視角。"
       },
       {
         image: "images/gasket_wireless_base_1000.jpg",
         video: null,
-        description: "7x7x3cm 電池式 LED 底座，可使用 AAA 電池。"
+        description: "7x7x3cm 電池式 LED 燈座，可使用 AAA 電池。"
       },
       {
         image: "images/Gasket_Natural_Light.jpg",
@@ -262,23 +331,21 @@
     // Default to plugIn
     window.carouselItems = window.carouselItemsPlugIn;
     window.currentIndex = 0;
-  </script>
 
-  <!-- Main carousel script -->
-  <script>
+    // Update the carousel with the correct item, video, caption, etc.
     function updateMedia() {
       var items = window.carouselItems || [];
       var imgEl = document.getElementById("product-image");
       var vidEl = document.getElementById("product-video");
       var container = document.getElementById("carousel-container");
       var captionEl = document.getElementById("carousel-caption");
-      
+
       if (!items.length) return;
       window.currentIndex = window.currentIndex % items.length;
-      
+
       imgEl.src = items[window.currentIndex].image;
       captionEl.textContent = items[window.currentIndex].description || "";
-      
+
       if (items[window.currentIndex].video) {
         container.classList.remove("no-video");
         vidEl.src = items[window.currentIndex].video;
@@ -292,12 +359,12 @@
         vidEl.style.display = "none";
       }
     }
-    
+
     function prevImage() {
       window.currentIndex = (window.currentIndex - 1 + window.carouselItems.length) % window.carouselItems.length;
       updateMedia();
     }
-    
+
     function nextImage() {
       window.currentIndex = (window.currentIndex + 1) % window.carouselItems.length;
       updateMedia();
@@ -306,59 +373,69 @@
     document.addEventListener("DOMContentLoaded", function(){
       updateMedia();
 
-      // Main product base
-      const baseSelect = document.getElementById("base-choice");
-      const priceTag = document.getElementById("price-tag");
-      const addToCartBtn = document.getElementById("addToCartButton");
+      // Main fractal base choice
+      const baseSelect   = document.getElementById("base-choice");
+      const priceTag     = document.getElementById("price-tag");
       const baseTypeText = document.getElementById("baseTypeText");
+
+      // Blocks for separate fractal items
+      const plugInItem   = document.getElementById("plugInItem");
+      const wirelessItem = document.getElementById("wirelessItem");
 
       baseSelect.addEventListener("change", function(){
         if(baseSelect.value === "plugIn"){
-          // Switch arrays
+          // Show plug-in fractal block, hide wireless
+          plugInItem.style.display = "block";
+          wirelessItem.style.display = "none";
+
+          // Switch carousel
           window.carouselItems = window.carouselItemsPlugIn;
           window.currentIndex = 0;
           updateMedia();
 
-          baseTypeText.textContent = "可選擇插電或電池供電的 LED 底座（以下選擇）";
-          priceTag.textContent = "$2,500";
-          addToCartBtn.setAttribute("data-item-price", "2500");
+          // Show $2500
+          priceTag.textContent = "$2500";
         } else {
-          // Wireless
+          // Show wireless fractal block, hide plug-in
+          plugInItem.style.display = "none";
+          wirelessItem.style.display = "block";
+
           window.carouselItems = window.carouselItemsWireless;
           window.currentIndex = 0;
           updateMedia();
 
-          baseTypeText.textContent = "可選擇插電或電池供電的 LED 底座（以下選擇）";
-          priceTag.textContent = "$2,700"; // e.g. $200 more
-          addToCartBtn.setAttribute("data-item-price", "2700");
+          // Show $2700
+          priceTag.textContent = "$2700";
         }
       });
 
-      // Additional base => create separate products
+      // Additional base item logic
       const extraBaseSelect = document.getElementById("extra-base-choice");
-      const extraPriceTag  = document.getElementById("extra-price-tag");
-      const extraBaseBtn   = document.getElementById("addExtraBaseBtn");
-      const extraQtyInput  = document.getElementById("extra-base-qty");
+      const extraPriceTag   = document.getElementById("extra-price-tag");
+      const extraBaseBtn    = document.getElementById("addExtraBaseBtn");
+      const extraBaseQty    = document.getElementById("extra-base-qty");
+
+      // By default, use "plugIn" => $20
+      extraBaseSelect.value = "plugIn";
+      extraPriceTag.textContent = "$20";
+      extraBaseBtn.setAttribute("data-item-id", "additional-led-base-china-plugin");
+      extraBaseBtn.setAttribute("data-item-name", "插電式燈座 (額外)");
+      extraBaseBtn.setAttribute("data-item-price", "20");
 
       extraBaseSelect.addEventListener("change", function(){
-        if(extraBaseSelect.value === "none"){
-          // No extra base => price $0, item ID "none"
-          extraPriceTag.textContent = "$0";
-          extraBaseBtn.setAttribute("data-item-id", "additional-led-base-none");
-          extraBaseBtn.setAttribute("data-item-name", "額外 LED 底座 (無)");
-          extraBaseBtn.setAttribute("data-item-price", "0");
-        } else if (extraBaseSelect.value === "plugIn"){
-          // Distinct product ID for plug-in base
+        if(extraBaseSelect.value === "plugIn"){
           extraPriceTag.textContent = "$20";
-          extraBaseBtn.setAttribute("data-item-id", "additional-led-base-plugIn");
-          extraBaseBtn.setAttribute("data-item-name", "插電式底座 (額外)");
+          extraBaseBtn.setAttribute("data-item-id", "additional-led-base-china-plugin");
+          extraBaseBtn.setAttribute("data-item-name", "插電式燈座 (額外)");
           extraBaseBtn.setAttribute("data-item-price", "20");
+          extraBaseBtn.setAttribute("data-item-image","images/wire_base_thumbnail.jpg");
         } else {
-          // "wireless"
+          // wireless
           extraPriceTag.textContent = "$30";
-          extraBaseBtn.setAttribute("data-item-id", "additional-led-base-wireless");
-          extraBaseBtn.setAttribute("data-item-name", "電池式底座 (額外)");
+          extraBaseBtn.setAttribute("data-item-id", "additional-led-base-china-wireless");
+          extraBaseBtn.setAttribute("data-item-name", "電池式燈座 (額外)");
           extraBaseBtn.setAttribute("data-item-price", "30");
+          extraBaseBtn.setAttribute("data-item-image","images/wireless_base_thumbnail.jpg");
         }
       });
     });
@@ -367,6 +444,5 @@
   <script src="snipcart-lang-switch.js"></script>
   <script src="script.js"></script>
   <script type="module" src="./dropdowns.js"></script>
-
 </body>
 </html>
