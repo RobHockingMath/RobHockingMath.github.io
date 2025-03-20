@@ -1,6 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Only run carousel code if the carousel exists.
+  if (!document.getElementById('slide1')) {
+    console.log("No carousel found; skipping carousel code.");
+    return;
+  }
+
   const slides = ['slide1', 'slide2', 'slide3', 'slide4', 'slide5'];
-  let currentIndex = 0; // 0 means slide1, 1 means slide2, 2 means slide3
+  let currentIndex = 0; // 0 means slide1, 1 means slide2, etc.
   let autoRotateInterval = null;
   let revertTimeout = null;
 
@@ -11,11 +17,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function showSlide(index) {
     currentIndex = index;
-    document.getElementById(slides[currentIndex]).checked = true;
+    const slideEl = document.getElementById(slides[currentIndex]);
+    if (slideEl) {
+      slideEl.checked = true;
+    } else {
+      console.error(`Element with id "${slides[currentIndex]}" not found in the DOM.`);
+    }
   }
 
   function startAutoRotate() {
-    // Clear any existing interval before starting a new one
+    // Clear any existing interval before starting a new one.
     if (autoRotateInterval) {
       clearInterval(autoRotateInterval);
     }
@@ -30,47 +41,48 @@ document.addEventListener('DOMContentLoaded', () => {
     autoRotateInterval = null;
   }
 
-  // Initially show the first slide and start auto rotation
+  // Initially show the first slide and start auto rotation.
   showSlide(currentIndex);
   startAutoRotate();
 
   navLabels.forEach((label, idx) => {
     label.addEventListener('click', () => {
-      // User clicked a dot. Stop current auto-rotation first.
+      // User clicked a navigation dot. Stop auto-rotation.
       stopAutoRotate();
 
-      // Show the chosen slide
+      // Show the chosen slide.
       showSlide(idx);
 
-      // Clear any previous revert timeout to avoid stacking multiple timers
+      // Clear any previous revert timeout.
       if (revertTimeout) {
         clearTimeout(revertTimeout);
       }
 
-      // After a pause, resume auto rotation
+      // After a pause, resume auto-rotation.
       revertTimeout = setTimeout(() => {
         startAutoRotate();
       }, pauseAfterClick);
     });
-  });  
+  });
 });
 
-
+// Hover video functionality (unchanged)
 document.addEventListener('DOMContentLoaded', () => {
-  // Select all hover videos
+  // Select all hover videos.
   const hoverVideos = document.querySelectorAll('.hover-video');
 
   hoverVideos.forEach(video => {
-    // When mouse enters the parent container, play the video
+    // When mouse enters the parent container, play the video.
     video.closest('.img-container').addEventListener('mouseenter', () => {
-      video.currentTime = 0; // Restart at the beginning
+      video.currentTime = 0; // Restart at the beginning.
       video.play();
     });
 
-    // When mouse leaves the parent container, pause and reset the video
+    // When mouse leaves the parent container, pause and reset the video.
     video.closest('.img-container').addEventListener('mouseleave', () => {
       video.pause();
-      video.currentTime = 0; // Ensure it starts from the beginning next hover
+      video.currentTime = 0;
     });
   });
 });
+
